@@ -1,2 +1,3 @@
-# SCHKnowlegeBase
-SCH Knowlege Base
+# SCH Knowledge Wiki
+SCH Knowledge Wiki
+

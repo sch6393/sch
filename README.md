@@ -1,8 +1,9 @@
 SCH Knowledge Wiki
 ===
 
-### hhh
-[https://sch6393.github.io/](https://sch6393.github.io/){:target="_blank"}
+<a href="https://sch6393.github.io" target="_blank">https://sch6393.github.io</a>
+
+<a href="https://github.com/sch6393/SCHKnowledgeWiki" target="_blank">https://github.com/sch6393/SCHKnowledgeWiki</a>
 
 ---
 

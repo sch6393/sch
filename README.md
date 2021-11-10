@@ -1,9 +1,9 @@
 SCH Knowledge Wiki
 ===
 
-<a href="https://sch6393.github.io" target="_blank">https://sch6393.github.io</a>
+[https://sch6393.github.io](https://sch6393.github.io)
 
-<a href="https://github.com/sch6393/SCHKnowledgeWiki" target="_blank">https://github.com/sch6393/SCHKnowledgeWiki</a>
+[https://github.com/sch6393/SCHKnowledgeWiki](https://github.com/sch6393/SCHKnowledgeWiki)
 
 ---
 

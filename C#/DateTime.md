@@ -3,7 +3,8 @@ DateTime
 
 ### 기본 날짜 표현 형식
 ```C#
-"yyyy MM dd HH mm ss"
+// 년(0000) 월(00) 일(00) 시(24) 분(00) 초(00)
+  "yyyy     MM     dd     HH     mm     ss"
 ```
 >https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings?redirectedfrom=MSDN
 

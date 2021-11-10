@@ -6,3 +6,16 @@ git
 git config --global user.name "Son ChangHan"
 git config --global user.email sch6393@gmail.com
 ```
+
+### git command
+```
+git add .
+git commmit -m "Modify"
+git push origin main
+```
+
+### git branch
+```
+git branch
+git checkout branch_name
+```

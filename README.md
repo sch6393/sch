@@ -8,7 +8,7 @@ SCH Knowledge Wiki
 ---
 
 ### Wiki
-### [C＃](./C＃/README.md)
+### [C#](./C＃/README.md)
 ### [git](./git/README.md)
 ### [Oracle](./Oracle/README.md)
 ### [Shell](./Shell/README.md)

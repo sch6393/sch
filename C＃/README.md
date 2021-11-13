@@ -2,5 +2,5 @@ C#
 ===
 
 ### [DataTable](./DataTable.md)
-### [DataTime](./DataTime.md)
+### [DateTime](./DateTime.md)
 ### [StringReader](./StringReader.md)

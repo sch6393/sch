@@ -1,0 +1,28 @@
+Character Set
+===
+
+### 캐릭터 셋 확인
+```sql
+SELECT * FROM NLS_DATABASE_PARAMETERS;
+
+--데이터베이스에 저장되는 캐릭터 셋
+SELECT * FROM NLS_DATABASE_PARAMETERS WHERE PARAMETER = 'NLS_CHARACTERSET';
+```
+
+<br>
+
+### NLS_LANG 변경
+```sql
+UPDATE SYS.PROPS$ SET VALUE$ = 'AMERICAN_AMERICA.AL32UTF8' WHERE NAME = 'NLS_LANGUAGE';
+```
+
+### 
+
+
+
+
+
+
+
+
+

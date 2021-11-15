@@ -21,7 +21,16 @@ crontab -l
 for user in $(cut -f1 -d: /etc/passwd); do echo $user; crontab -u $user -l; done
 ```
 
+<br>
+
 ### crontab 수정
 ```sh
 crontab -e
+```
+
+<br>
+
+### `bash: command not found` 라는 에러가 발생했을 경우
+```sh
+*/5 * * * * cd /aaa/bbb; bash --login -c 'sh script.sh'
 ```

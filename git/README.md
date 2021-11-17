@@ -7,6 +7,8 @@ git config --global user.name "Son ChangHan"
 git config --global user.email sch6393@gmail.com
 ```
 
+<br>
+
 ### git commit
 ```
 git add .
@@ -15,6 +17,8 @@ git push origin main
 
 git pull
 ```
+
+<br>
 
 ### git branch
 ```

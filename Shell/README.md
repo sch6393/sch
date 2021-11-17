@@ -1,10 +1,16 @@
 Shell
 ===
 
+### [crontab](./crontab.md)
+
+<br>
+
 ### 쓰기방지 해제
 ```sh
 chattr -i /etc/sysctl.conf
 ```
+
+<br>
 
 ### 스크립트 원격 서버에서 실행
 ```sh
@@ -17,4 +23,16 @@ ssh user@hostname bash --login < script.sh
 
 <br>
 
-### [crontab](./crontab.md)
+### 절대경로
+```sh
+abspath="$( cd "$( dirname "$0" )" && pwd -P )"
+```
+
+<br>
+
+### 하위 디렉토리 용량 확인
+```sh
+du -sh ./* | sort -rh
+```
+
+<br>

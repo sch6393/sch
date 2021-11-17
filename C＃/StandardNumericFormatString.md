@@ -3,6 +3,8 @@ Standard Numeric Format String
 
 >https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings
 
+<br>
+
 ### 정수 표현 형식
 ```C#
 int iNumber = 1234;
@@ -30,3 +32,8 @@ Console.WriteLine(dNumber.ToString("F1"));
 Console.WriteLine(dNumber.ToString("F3", CultureInfo.CreateSpecificCulture("ja-JP")));
 // Displays 123.456
 ```
+
+<br>
+
+### 
+

@@ -7,7 +7,7 @@ crontab
 # 分 時 日 月 曜日
 
 # 평일 11시 30분, 15시 30분에 실행
-30 11,15 * * 1-5 cd /AAA/BBB CCC.sh > DDD.txt
+30 11,15 * * 1-5 cd /AAA/BBB; scripts.sh > text.txt
 ```
 >https://crontab.guru/
 
@@ -32,5 +32,5 @@ crontab -e
 
 ### `bash: command not found` 라는 에러가 발생했을 경우
 ```sh
-*/5 * * * * cd /aaa/bbb; bash --login -c 'sh script.sh'
+*/5 * * * * cd /AAA/BBB; bash --login -c 'sh script.sh'
 ```

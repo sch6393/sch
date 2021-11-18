@@ -1,0 +1,113 @@
+expdp impdp
+===
+
+### expdp 기본 형식
+```sql
+--디렉토리 설정 확인
+SELECT * FROM ALL_DIRECTORIES;
+
+--Export 디렉토리 생성
+CREATE OR REPLACE DIRECTORY directory_name as '/AAA/BBB';
+
+--Export 명령 실행
+--Schema 단위
+EXPDP id/pw SCHEMAS=schema_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
+
+--Table 단위
+EXPDP id/pw TABLES=schema_name.table_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
+
+--DB Link 연결
+EXPDP id/pw NETWORK_LINK=dblink_name TABLES=schema_name.table_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
+```
+
+<br>
+
+### expdp 옵션
+1. Export 단위 설정
+    ```sql
+    --전체
+    FULL=Y
+
+    --테이블 스페이스 단위
+    TABLESPACES=tablespace_name
+
+    --Schema 단위
+    SCHEMAS=schema_name
+
+    --Table 단위
+    TABLES=schema_name.table_name
+    ```
+1. 데이터 범위 설정
+    ```sql
+    --테이블 레코드 데이터
+    CONTENT=DATA_ONLY
+
+    --테이블 정의 데이터
+    CONTENT=METADATA_ONLY
+
+    --테이블 전체 (기본값)
+    CONTENT=ALL
+
+    --제외할 데이터 (TABLE, INDEX, CONSTRAINT, GRANT)
+    EXCLUDE=INDEX
+    ```
+
+<br>
+
+### impdp 기본 형식
+```sql
+--디렉토리 설정 확인
+SELECT * FROM ALL_DIRECTORIES;
+
+--Import 디렉토리 생성
+CREATE OR REPLACE DIRECTORY directory_name as '/AAA/BBB';
+
+--Export 명령 실행
+--Schema 단위
+IMPDP id/pw DIRECTORY=directory_name DUMPFILE=dumpfile.dmp SCHEMAS=schema_name TABLE_EXISTS_ACTION=REPLACE LOGFILE=logfile.log
+
+--Table 단위
+IMPDP id/pw DIRECTORY=directory_name DUMPFILE=dumpfile.dmp TABLES=schema_name.table_name TABLE_EXISTS_ACTION=REPLACE LOGFILE=logfile.log
+```
+
+<br>
+
+### impdp 옵션
+1. Import 단위 설정
+    ```sql
+    --전체
+    FULL=Y
+
+    --테이블 스페이스 단위
+    TABLESPACES=tablespace_name
+
+    --테이블 스페이스가 다른 경우 (Export한 테이블 스페이스 → Import할 테이블 스페이스)
+    REMAP_TABLESPACE=tablespace_name:tablespace_name
+
+    --Schema 단위
+    SCHEMAS=schema_name
+
+    --Schema가 다른 경우 (Export한 Schema → Import할 Schema)
+    REMAP_SCHEMA=schema_name:schema_name
+
+    --Table 단위
+    TABLES=schema_name.table_name
+    ```
+1. 데이터 범위 설정
+    ```sql
+    --테이블 레코드 데이터
+    CONTENT=DATA_ONLY
+
+    --테이블 정의 데이터
+    CONTENT=METADATA_ONLY
+
+    --테이블 전체 (기본값)
+    CONTENT=ALL
+
+    --테이블이 이미 존재하는 경우 (SKIP, TRUNCATE, APPEND, REPLACE)
+    TABLE_EXISTS_ACTION=SKIP
+
+    --제외할 데이터 (TABLE, INDEX, CONSTRAINT, GRANT)
+    EXCLUDE=INDEX
+    ```
+

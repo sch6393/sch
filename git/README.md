@@ -11,6 +11,10 @@ git config --global commit.template .gitmessage.txt
 
 <br>
 
+### [gitmessage.txt](./gitmessage.txt.md)
+
+<br>
+
 ### git commit
 ```
 git add .

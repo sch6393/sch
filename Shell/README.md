@@ -36,3 +36,16 @@ du -sh ./* | sort -rh
 ```
 
 <br>
+
+### 파일 내용 검색
+```sh
+grep -r 'text' /AAA/BBB/CCC.txt
+
+# 하위 디렉토리 파일 포함
+grep -r 'text' ./*
+```
+
+<br>
+
+###
+

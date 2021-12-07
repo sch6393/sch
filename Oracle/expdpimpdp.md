@@ -11,13 +11,13 @@ CREATE OR REPLACE DIRECTORY directory_name as '/AAA/BBB';
 
 --Export 명령 실행
 --Schema 단위
-EXPDP id/pw SCHEMAS=schema_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
+expdp id/pw SCHEMAS=schema_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
 
 --Table 단위
-EXPDP id/pw TABLES=schema_name.table_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
+expdp id/pw TABLES=schema_name.table_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
 
 --DB Link 연결
-EXPDP id/pw NETWORK_LINK=dblink_name TABLES=schema_name.table_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
+expdp id/pw NETWORK_LINK=dblink_name TABLES=schema_name.table_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
 ```
 
 <br>
@@ -64,10 +64,10 @@ CREATE OR REPLACE DIRECTORY directory_name as '/AAA/BBB';
 
 --Export 명령 실행
 --Schema 단위
-IMPDP id/pw DIRECTORY=directory_name DUMPFILE=dumpfile.dmp SCHEMAS=schema_name TABLE_EXISTS_ACTION=REPLACE LOGFILE=logfile.log
+impdp id/pw DIRECTORY=directory_name DUMPFILE=dumpfile.dmp SCHEMAS=schema_name TABLE_EXISTS_ACTION=REPLACE LOGFILE=logfile.log
 
 --Table 단위
-IMPDP id/pw DIRECTORY=directory_name DUMPFILE=dumpfile.dmp TABLES=schema_name.table_name TABLE_EXISTS_ACTION=REPLACE LOGFILE=logfile.log
+impdp id/pw DIRECTORY=directory_name DUMPFILE=dumpfile.dmp TABLES=schema_name.table_name TABLE_EXISTS_ACTION=REPLACE LOGFILE=logfile.log
 ```
 
 <br>

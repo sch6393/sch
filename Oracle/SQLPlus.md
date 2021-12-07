@@ -54,6 +54,19 @@ sqlplus id/pw@'tns_name'
 
 <br>
 
-###
+### 아카이브 모드 확인
+```sql
+ARCHIVE LOG LIST;
+
+/*
+Database log mode              No Archive Mode
+Automatic archival             Disabled
+Archive destination            /AAA/BBB/archive
+Oldest online log sequence     00000
+Current log sequence           00000
+*/
+```
+
+<br>
 
 

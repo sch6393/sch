@@ -9,6 +9,9 @@ SELECT * FROM ALL_DIRECTORIES;
 --Export 디렉토리 생성
 CREATE OR REPLACE DIRECTORY directory_name as '/AAA/BBB';
 
+--디렉토리 제거
+DROP DIRECTORY directory_name;
+
 --Export 명령 실행
 --Schema 단위
 expdp id/pw SCHEMAS=schema_name DIRECTORY=directory_name DUMPFILE=dumpfile.dmp LOGFILE=logfile.log
@@ -61,6 +64,9 @@ SELECT * FROM ALL_DIRECTORIES;
 
 --Import 디렉토리 생성
 CREATE OR REPLACE DIRECTORY directory_name as '/AAA/BBB';
+
+--디렉토리 제거
+DROP DIRECTORY directory_name;
 
 --Export 명령 실행
 --Schema 단위

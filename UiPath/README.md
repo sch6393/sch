@@ -14,5 +14,15 @@ UiPath (C#)
 
 <br>
 
+### 마우스 우클릭을 Send Hotkey로 처리하는 방법
+* `Shift + F10`
+
+<br>
+
+### 크로미움 기반 브라우저의 URL 복사하기
+* `Alt + d`를 하면 주소창이 선택된 상태로 바뀌게 되는데 그 때 `Copy Selected Text` 액티비티로 가져올 수 있다.
+
+<br>
+
 ###
 

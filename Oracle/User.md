@@ -21,6 +21,9 @@ GRANT CONNECT, RESOURCE, DBA TO user_name;
 
 --SYSDBA 권한
 GRANT SYSDBA TO user_name;
+
+--테이블 스페이스 권한
+GRANT UNLIMITED TABLESPACE TO user_name;
 ```
 
 <br>

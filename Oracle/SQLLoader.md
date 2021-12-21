@@ -29,5 +29,5 @@ OPTIONS (
 
 ### SQL Loader
 ```sql
-SQLLDR USERID=user_name/password CONTROL='/AAA/BBB/CCC.ctl'
+sqlldr USERID=user_name/password CONTROL='/AAA/BBB/CCC.ctl'
 ```

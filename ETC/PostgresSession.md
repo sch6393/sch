@@ -9,7 +9,7 @@ Postgres Session
     npm i connect-pg-simple
     ```
 
-2. 해당 모듈 안의 `table.sql`을 실행
+1. 해당 모듈 안의 `table.sql`을 실행
     ```sql
     CREATE TABLE "session" (
       "sid" varchar NOT NULL COLLATE "default",
@@ -23,7 +23,7 @@ Postgres Session
     CREATE INDEX "IDX_session_expire" ON "session" ("expire");
     ```
 
-3. Session
+1. Session
     ```js
     import session from 'express-session';
     import pgSession from 'connect-pg-simple';

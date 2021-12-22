@@ -11,6 +11,7 @@ SCH
 
 ### Wiki
 ### [C#](./C＃/README.md)
+### [ETC](./ETC/README.md)
 ### [git](./git/README.md)
 ### [Linux](./Linux/README.md)
 ### [Markdown](https://ja.wikipedia.org/wiki/Markdown)

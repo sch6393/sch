@@ -50,14 +50,14 @@ sqlplus user_name/password @sqlfile_name.sql
   SELECT 'FROM owner_name.table_name;'
   FROM DUAL;
 
-  --결과에서 마지막 컬럼의 ||'",'|| → ||'"||로 변경
+  --결과에서 마지막 컬럼의 ||'",'|| → ||'"'로 변경
   /*
   SELECT
   '"'||column_name1||'",'||
   '"'||column_name2||'",'||
   ...
   '"'||column_name8||'",'||
-  '"'||column_name9||'",'||  →  '"'||column_name9||'"||
+  '"'||column_name9||'",'||  →  '"'||column_name9||'"'
   FROM owner_name.table_name;
   */
   ```

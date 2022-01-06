@@ -33,7 +33,7 @@ abspath="$( cd "$( dirname "$0" )" && pwd -P )"
 
 ### 하위 디렉토리 용량 확인
 ```sh
-du -sh ./* | sort -rh
+du -sh ./* | sort -r
 ```
 
 <br>

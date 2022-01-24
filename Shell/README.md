@@ -48,6 +48,13 @@ grep -r 'text' ./*
 
 <br>
 
+### 파일 이름 검색
+```sh
+find . -name "*.sh"
+```
+
+<br>
+
 ### 환경변수 확인
 ```sh
 export
@@ -55,6 +62,4 @@ export
 
 <br>
 
-### 
-
-
+###

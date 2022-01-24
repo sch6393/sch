@@ -5,6 +5,7 @@ DB Link
 ```sql
 CREATE DATABASE LINK database_link_name CONNECT TO remote_user_name IDENTIFIED BY remote_password USING 'tnsname.ora_alias_name';
 ```
+>되도록이면 SID에 바로 지정하지 않고 tnsname.ora에 지정해서 사용
 
 <br>
 
@@ -13,4 +14,11 @@ CREATE DATABASE LINK database_link_name CONNECT TO remote_user_name IDENTIFIED B
 
 <br>
 
-###
+### 리스트 확인
+```sql
+SELECT * FROM ALL_DB_LINKS;
+```
+
+<br>
+
+### 리스트 확인

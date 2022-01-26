@@ -31,7 +31,7 @@ quit
 
 ### csv 추출
 ```sql
-sqlplus user_name/password @sqlfile_name.sql
+sqlplus -S user_name/password @sqlfile_name.sql
 ```
 
 <br>

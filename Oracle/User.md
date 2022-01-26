@@ -24,6 +24,15 @@ GRANT SYSDBA TO user_name;
 
 --테이블 스페이스 권한
 GRANT UNLIMITED TABLESPACE TO user_name;
+
+--가지고 있는 시스템 권한 확인
+SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE = 'user_name';
+
+--가지고 있는 롤 확인 (시스템 권한은 롤에 포함)
+SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = 'user_name';
+
+--가지고 있는 롤에 있는 시스템 권한 확인
+SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE = 'role_name';
 ```
 
 <br>

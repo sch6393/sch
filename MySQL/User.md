@@ -29,6 +29,9 @@ ALTER USER 'user_name'@'hostname' IDENTIFIED BY 'password';
 ### 권한
 ```sql
 GRANT ALL PRIVILEGES ON *.* TO 'user_name'@'hostname';
+
+--확인
+SHOW GRANTS FOR 'user_name'@'hostname';
 ```
 
 <br>

@@ -6,6 +6,7 @@ Oracle
 ### [Error](./Error.md)
 ### [expdp, impdp](./expdpimpdp.md)
 ### [Export csv](./exportcsv.md)
+### [Patch](./Patch.md)
 ### [Regular Expression](./RegularExpression.md)
 ### [SQL Loader](./SQLLoader.md)
 ### [SQL Plus](./SQLPlus.md)

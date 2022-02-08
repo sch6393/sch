@@ -6,6 +6,8 @@ Oracle
 ### [Error](./Error.md)
 ### [expdp, impdp](./expdpimpdp.md)
 ### [Export csv](./exportcsv.md)
+### [Install Oracle Client csv](./InstallOracleClient.md)
+### [Merge Into](./MergeInto.md)
 ### [Patch](./Patch.md)
 ### [Regular Expression](./RegularExpression.md)
 ### [SQL Loader](./SQLLoader.md)

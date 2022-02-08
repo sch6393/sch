@@ -10,7 +10,7 @@ SCH
 ---
 
 ### Wiki
-### [C#](./C＃/README.md)
+### [C#](./CSharp/README.md)
 ### [ETC](./ETC/README.md)
 ### [git](./git/README.md)
 ### [Linux](./Linux/README.md)

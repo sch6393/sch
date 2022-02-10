@@ -33,4 +33,8 @@ UiPath (C#)
 
 <br>
 
-###
+### 컴퓨터 기본 디렉토리 가져오기
+* `Get Environment Folder` 액티비티 사용
+
+<br>
+

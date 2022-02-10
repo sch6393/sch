@@ -3,6 +3,8 @@ SCH
 
 [https://sch6393.github.io](https://sch6393.github.io)
 
+[https://sch6393.github.io/SCH](https://sch6393.github.io/SCH)
+
 [https://github.com/sch6393/SCH](https://github.com/sch6393/SCH)
 
 [https://github.com/sch6393/SCH/wiki](https://github.com/sch6393/SCH/wiki)

@@ -22,14 +22,14 @@ mysql -u USER -pPASSWORD
 ### 3. 그 외의 옵션
 ```sh
 # 원격접속을 위한 호스트, 포트 지정
-mysql -u USER -pPASSWORD -h HOST -P PORT
+mysql -h HOST -u USER -pPASSWORD -P PORT
 
 # 스키마 지정
 mysql -u USER -pPASSWORD -D SCHEMA
 
 # 쿼리를 입력하여 결과 출력 (csv)
 query="SELECT column FROM table;"
-mysql -u USER -pPASSWORD -h HOST -P PORT -D SCHEMA -e "$query" | tr '\t' ',' > /aaa/bbb/query.csv
+mysql -h HOST -u USER -pPASSWORD -P PORT -D SCHEMA -e "$query" | tr '\t' ',' > /aaa/bbb/query.csv
 
 ```
 

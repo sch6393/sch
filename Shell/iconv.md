@@ -9,6 +9,14 @@ iconv -f UTF8 -t CP932 CCC_UTF8.csv > CCC_CP932.csv
 
 <br>
 
+### `iconv: illegal input sequence at position 0` 라는 메시지가 뜨는 경우
+```sh
+iconv -c -f UTF8 -t CP932 CCC_UTF8.csv > CCC_CP932.csv
+```
+>`-c` 옵션을 추가 (내용 손실이 있을 수 있음) ➞ 손실을 없애려면 [nkf](../ETC/nkf.md)를 사용
+
+<br>
+
 ### 문자 인코딩 목록
 ```
 437, 500, 500V1, 850, 851, 852, 855, 856, 857, 860, 861, 862, 863, 864, 865,

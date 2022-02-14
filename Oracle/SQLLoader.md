@@ -8,6 +8,7 @@ infile '/AAA/BBB/CCC.csv'
 append
 into table table
 fields terminated by ','
+optionally enclosed by '"'
 (column_name1, column_name2, column_name3 ...)
 ```
 
@@ -29,5 +30,6 @@ OPTIONS (
 
 ### SQL Loader
 ```sql
-sqlldr USERID=user_name/password CONTROL='/AAA/BBB/CCC.ctl' LOG='/AAA/BBB/CCC.log'
+sqlldr USERID=user_name/password CONTROL='/AAA/BBB/CCC.ctl' LOG='/AAA/BBB/CCC.log' skip=1
 ```
+>skip : 해당 라인 무시 옵션 (csv 파일의 첫 라인에 컬럼명이 있을 경우 사용)

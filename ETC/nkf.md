@@ -5,6 +5,13 @@ nkf Network Kanji Filter (Shift JIS의 특수문자 처리)
 
 ### nkf Network Kanji Filter
 1. `nkf-2.1.5.tar.gz` 설치
+    ```sh
+    gzip -d nkf-2.1.5.tar.gz
+    tar xvf nkf-2.1.5.tar
+    cd nkf-2.1.5
+    make
+    sudo make install
+    ```
 
 1. 사용 예시
     ```sh

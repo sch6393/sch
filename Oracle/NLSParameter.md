@@ -1,10 +1,15 @@
 NLS Parameter
 ===
 
-### 캐릭터 셋 확인
+### NLS Parameter 확인
 ```sql
 SELECT * FROM NLS_DATABASE_PARAMETERS;
+```
 
+<br>
+
+### 캐릭터 셋 확인
+```sql
 --데이터베이스에 저장되는 캐릭터 셋
 SELECT * FROM NLS_DATABASE_PARAMETERS WHERE PARAMETER = 'NLS_CHARACTERSET';
 ```

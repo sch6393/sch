@@ -21,4 +21,4 @@ SELECT * FROM ALL_DB_LINKS;
 
 <br>
 
-### 리스트 확인
+###

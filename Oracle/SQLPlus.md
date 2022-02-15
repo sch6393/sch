@@ -27,6 +27,9 @@ SET PAGES 0
 # 레코드 길이를 지정
 SET LINES 300
 
+# csv 파일 형식
+SET MARKUP CSV ON
+
 # SQL Plus 연결 정보 미표시
 sqlplus -S
 ```

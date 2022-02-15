@@ -10,22 +10,19 @@ set colsep ','
 set lines 10000
 set termout off
 set feed off
+set markup csv on
 
 spool /aaa/table_name.csv;
 
-SELECT
-'"'||column_name1||'",'||
-'"'||column_name2||'",'||
-...
-'"'||column_name8||'",'||
-'"'||column_name9||'"'
-FROM table_name;
+SELECT * FROM table_name;
 
 spool off
 
 quit
 ```
->`SELECT * FROM table_name;` 이런 쿼리라면 빈 공간이 전부 스페이스로 채워지는 현상이 생기기 때문에 쿼리를 변형해서 사용
+>~~`SELECT * FROM table_name;` 이런 쿼리라면 빈 공간이 전부 스페이스로 채워지는 현상이 생기기 때문에 쿼리를 변형해서 사용~~
+<br>
+`set markup csv on` 옵션을 사용하면 csv 포맷에 맞춰서 출력됨
 
 <br>
 
@@ -38,7 +35,7 @@ sqlplus -S user_name/password @sqlfile_name.sql
 
 ### 참고
 * [sql 파일의 set 옵션](./SQLPlus.md#sql-plus-옵션)
-* 추출 쿼리 작성
+* ~~추출 쿼리 작성~~ `set markup csv on` 옵션을 사용하면 해당 쿼리를 쓰지 않아도 됨
   ```sql
   SELECT 'SELECT'
   FROM DUAL

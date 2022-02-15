@@ -3,6 +3,7 @@ Shell
 
 ### [crontab](./crontab.md)
 ### [iconv](./iconv.md)
+### [iostat](./iostat.md)
 ### [sar](./sar.md)
 ### [top](./top.md)
 

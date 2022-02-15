@@ -2,13 +2,13 @@ Oracle
 ===
 
 ### [ActiveDuplication](./ActiveDuplication.md)
-### [Character Set](./CharacterSet.md)
 ### [DB Link](./DBLink.md)
 ### [Error](./Error.md)
 ### [expdp, impdp](./expdpimpdp.md)
 ### [Export csv](./exportcsv.md)
 ### [Install Oracle Client](./InstallOracleClient.md)
 ### [Merge Into](./MergeInto.md)
+### [NLS Parameter](./NLSParameter.md)
 ### [Patch](./Patch.md)
 ### [Regular Expression](./RegularExpression.md)
 ### [SQL Loader](./SQLLoader.md)

@@ -12,6 +12,9 @@ set termout off
 set feed off
 set markup csv on
 
+--Date Format
+ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY/MM/DD HH24:MI:SS';
+
 spool /aaa/table_name.csv;
 
 SELECT * FROM table_name;

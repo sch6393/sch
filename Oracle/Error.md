@@ -13,3 +13,6 @@ Error
 ### [ORA-38104: Columns referenced in the ON Clause cannot be updated](./Error/38104.md)
 ### [ORA-39002: invalid operation, ORA-39070: Unable to open the log file., ORA-29283: invalid file operation, ORA-06512: at "SYS.UTL_FILE", line 536, ORA-29283: invalid file operation](./Error/expdp.md)
 
+<br>
+
+### [SP2-0591: Unable to allocate dynamic space needed (0000 bytes)](./Error/SP2-0591.md)

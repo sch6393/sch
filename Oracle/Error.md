@@ -1,6 +1,7 @@
 Error
 ===
 
+### [ORA-00955: name is already used by an existing object](./Error/00955.md)
 ### [ORA-00972: identifier is too long](./Error/00972.md)
 ### [ORA-01153: an incompatible media recovery is active](./Error/01153.md)
 ### [ORA-01654: unable to extend index](./Error/01654.md)
@@ -16,3 +17,4 @@ Error
 <br>
 
 ### [SP2-0591: Unable to allocate dynamic space needed (0000 bytes)](./Error/SP2-0591.md)
+

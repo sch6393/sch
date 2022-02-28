@@ -8,6 +8,7 @@ Error
 ### [ORA-01795: maximum number of expressions in a list is 1000 error](./Error/01795.md)
 ### [ORA-01861: literal does not match format string](./Error/01861.md)
 ### [ORA-12703: this character set conversion is not supported.](./Error/12703.md)
+### [ORA-12719: operation requires database is in RESTRICTED mode](./Error/12719.md)
 ### [ORA-12899: value too large for column](./Error/12899.md)
 ### [ORA-14047: ALTER TABLE|INDEX RENAME May Not Be Combined With Other Operations](./Error/14047.md)
 ### [ORA-19573: cannot obtain exclusive enqueue for datafile 0000](./Error/19573.md)

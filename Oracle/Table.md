@@ -13,4 +13,25 @@ ALTER TABLE owner.table_name RENAME TO change_name;
 
 <br>
 
-###
+### BIN$... Table
+```sql
+--Recyclebin 테이블 조회
+SHOW RECYCLEBIN;
+
+--Recyclebin 테이블 복원
+FLASHBACK TABLE table_name TO BEFORE DROP;
+
+--Recyclebin 테이블 전체 제거
+PURGE RECYCLEBIN;
+
+--Recyclebin 특정 테이블만 제거
+PURGE TABLE table_name;
+
+--DBA 권한으로 Recyclebin 테이블 전체 제거
+PURGE DBA_RECYCLEBIN;
+```
+>10g 이후 버전부터 DROP 테이블 할 경우 Recyclebin 이라는 곳으로 보내진다
+
+<br>
+
+### 

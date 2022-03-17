@@ -17,7 +17,13 @@ ALTER USER user_name IDENTIFIED BY password;
 
 ### 권한
 ```sql
-GRANT CONNECT, RESOURCE, DBA TO user_name;
+GRANT CONNECT, RESOURCE TO user_name;
+
+--프로시저 실행 권한
+GRANT EXECUTE ON procedure_name TO user_name;
+
+--DBA 권한
+GRANT DBA TO user_name;
 
 --SYSDBA 권한
 GRANT SYSDBA TO user_name;

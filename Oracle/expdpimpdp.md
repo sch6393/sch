@@ -57,6 +57,24 @@ expdp id/pw NETWORK_LINK=dblink_name TABLES=schema_name.table_name DIRECTORY=dir
 
 <br>
 
+### Duplication 상태에서의 expdp
+```sql
+--PRIMARY에서 STANDBY의 디비 링크 생성
+--CREATE PUBLIC DATABASE LINK STANDBY CONNECT TO SYSTEM IDENTIFIED BY abcd1234 USING 'STANDBY';
+CREATE PUBLIC DATABASE LINK database_link_name CONNECT TO remote_user_name IDENTIFIED BY remote_password USING 'tnsname.ora_alias_name';
+
+--확인
+--SELECT SYSDATE FROM DUAL@STANDBY;
+SELECT SYSDATE FROM DUAL@database_link_name;
+
+--PRIMARY에서 STANDBY로 원격 접속으로 expdp
+--expdp NETWORK_LINK=STANDBY SCHEMAS=ABCD DIRECTORY=directory_name DUMPFILE=dumpfile_name.dmp LOGFILE=logfile_name.log
+expdp NETWORK_LINK=database_link_name SCHEMAS=schema_name DIRECTORY=directory_name DUMPFILE=dumpfile_name.dmp LOGFILE=logfile_name.log
+--Username: / as sysdba
+```
+
+<br>
+
 ### impdp 기본 형식
 ```sql
 --디렉토리 설정 확인
@@ -117,3 +135,4 @@ impdp id/pw DIRECTORY=directory_name DUMPFILE=dumpfile.dmp TABLES=schema_name.ta
     EXCLUDE=INDEX
     ```
 
+<br>

@@ -6,6 +6,7 @@ Oracle
 ### [Error](./Error.md)
 ### [expdp, impdp](./expdpimpdp.md)
 ### [Export csv](./exportcsv.md)
+### [Index](./Index.md)
 ### [Install Oracle Client](./InstallOracleClient.md)
 ### [Merge Into](./MergeInto.md)
 ### [NLS Parameter](./NLSParameter.md)

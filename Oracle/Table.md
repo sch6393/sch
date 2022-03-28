@@ -2,12 +2,23 @@ Table
 ===
 
 ### Table 생성
+```sql
+CREATE TABLE owner_name.table_name (
+   column_name1  data_type  constraint_name
+  ,column_name2  data_type  constraint_name
+  ...
+  ,column_name8  data_type  constraint_name
+  ,column_name9  data_type  constraint_name
+  ,CONSTRAINT "pk_name" PRIMARY KEY ("column_name")
+  --,CONSTRAINT "pk_name" PRIMARY KEY ("column_name1, column_name2, ...")
+) TABLESPACE tablespace_name;
+```
 
 <br>
 
 ### Table 이름 변경
 ```sql
-ALTER TABLE owner.table_name RENAME TO change_name;
+ALTER TABLE owner_name.table_name RENAME TO change_name;
 ```
 >자주 발생하는 에러 : [ORA-14047: ALTER TABLE|INDEX RENAME May Not Be Combined With Other Operations](./Error/14047.md), [ORA-00972: identifier is too long](./Error/00972.md)
 

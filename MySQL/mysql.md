@@ -1,14 +1,14 @@
 mysql
 ===
 
-### 1. 기본 형식
+### 기본 형식
 ```sh
 mysql -u USER
 ```
 
 <br>
 
-### 2. 비밀번호 지정 시
+### 비밀번호 지정 시
 ```sh
 mysql -u USER -p
 # Enter password: PASSWORD
@@ -19,7 +19,7 @@ mysql -u USER -pPASSWORD
 
 <br>
 
-### 3. 그 외의 옵션
+### 그 외의 옵션
 ```sh
 # 원격접속을 위한 호스트, 포트 지정
 mysql -h HOST -u USER -pPASSWORD -P PORT

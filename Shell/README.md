@@ -52,6 +52,14 @@ grep -r 'text' ./*
 
 <br>
 
+### 파일 내용 치환
+```sh
+# AAA ➞ BBB
+sed 's/AAA/BBB/g' test.txt
+```
+
+<br>
+
 ### 파일 이름 검색
 ```sh
 find . -name "*.sh"

@@ -1,7 +1,7 @@
 nkf Network Kanji Filter (Shift JIS의 특수문자 처리)
 ===
 
-[https://osdn.net/projects/nkf/](https://osdn.net/projects/nkf/)
+>[https://osdn.net/projects/nkf/](https://osdn.net/projects/nkf/)
 
 ### nkf Network Kanji Filter
 1. `nkf-2.1.5.tar.gz` 설치
@@ -23,6 +23,11 @@ nkf Network Kanji Filter (Shift JIS의 특수문자 처리)
 
     # 문자 인코딩을 직접 지정 (CP932를 UTF8로 변환)
     nkf --ic=CP932 --oc=UTF-8 ccc_cp932.csv > ccc_utf8.csv
+    ```
+
+1. 파일 인코딩 확인
+    ```sh
+    nkf --guess ccc.csv
     ```
 
 1. 참고

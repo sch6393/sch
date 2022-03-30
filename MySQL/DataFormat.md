@@ -17,7 +17,7 @@ utf8mb4_unicode_520_ci   |  O  |     O     |     O     |           O           |
 utf8mb4_ja_0900_as_cs    |  X  |     X     |     O     |           X           |    X    |  O
 utf8mb4_ja_0900_as_cs_ks |  X  |     X     |     X     |           X           |    X    |  O
 ```
->https://mita2db.hateblo.jp/entry/2020/12/07/000000
+>[https://mita2db.hateblo.jp/entry/2020/12/07/000000](https://mita2db.hateblo.jp/entry/2020/12/07/000000)
 
 <br>
 

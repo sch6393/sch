@@ -1,10 +1,10 @@
 MySQL
 ===
 
-### [DataFormat](./DataFormat.md)
-### [DateFormat](./DateFormat.md)
+### [Data Format](./DataFormat.md)
+### [Date Format](./DateFormat.md)
 ### [Error](./Error.md)
-### [LoadData](./LoadData.md)
+### [Load Data](./LoadData.md)
 ### [mysql](./mysql.md)
 ### [User](./User.md)
 

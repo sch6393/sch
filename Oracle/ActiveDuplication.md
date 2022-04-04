@@ -191,7 +191,7 @@ Active Duplication
 
 * Primary 
   ```sql
-  ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;
+  ALTER DATABASE ADD SUPPLEMENTAL LOG DATA; --현재 시점부터 DML을 기록
   ```
   >LGWR
 

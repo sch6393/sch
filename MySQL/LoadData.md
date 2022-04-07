@@ -60,7 +60,7 @@ IGNORE
 
 <br>
 
-### LOAD DATA를 사용하기위한 권한 설정
+### LOAD DATA를 사용하기 위한 권한 설정
 ```sql
 -- 확인
 SHOW VARIABLES LIKE 'local_infile';

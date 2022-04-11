@@ -12,6 +12,7 @@ Oracle
 ### [Merge Into](./MergeInto.md)
 ### [NLS Parameter](./NLSParameter.md)
 ### [Patch](./Patch.md)
+### [Process](./Process.md)
 ### [Regular Expression](./RegularExpression.md)
 ### [SQL Loader](./SQLLoader.md)
 ### [SQL Plus](./SQLPlus.md)
@@ -19,3 +20,4 @@ Oracle
 ### [Tablespace](./Tablespace.md)
 ### [User](./User.md)
 ### [View](./View.md)
+

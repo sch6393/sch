@@ -24,6 +24,20 @@ ALTER TABLE owner_name.table_name RENAME TO change_name;
 
 <br>
 
+### Column 변경
+```sql
+--추가
+ALTER TABLE owner_name.table_name ADD column_name data_type;
+
+--삭제
+ALTER TABLE owner_name.table_name DROP COLUMN column_name;
+
+--수정
+ALTER TABLE owner_name.table_name MODIFY column_name data_type;
+```
+
+<br>
+
 ### BIN$... Table
 ```sql
 --Recyclebin 테이블 조회

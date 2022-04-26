@@ -12,6 +12,7 @@ SCH
 ---
 
 ### Wiki
+### [AWS](./AWS/README.md)
 ### [C#](./CSharp/README.md)
 ### [ETC](./ETC/README.md)
 ### [Flutter](./Flutter/README.md)

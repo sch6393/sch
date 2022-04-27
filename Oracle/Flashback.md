@@ -20,7 +20,7 @@ Flashback
   */
 
   --AUTO로 변경
-  ALTER SYSTEM SET UNDO_MANAGEMENT = AUTO SCOPE=BOTH;
+  ALTER SYSTEM SET UNDO_MANAGEMENT = AUTO SCOPE = BOTH;
  
   --UNDO 테이블 스페이스 생성
   CREATE UNDO TABLESPACE tablespace_name DATAFILE 'directory\tablespace_name.dbf' SIZE size;

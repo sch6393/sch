@@ -2,6 +2,8 @@ Oracle
 ===
 
 ### [ActiveDuplication](./ActiveDuplication.md)
+### [ash Repoty](./ashReport.md)
+### [awr Report](./awrReport.md)
 ### [Constraint](./Constraint.md)
 ### [DB Link](./DBLink.md)
 ### [Error](./Error.md)

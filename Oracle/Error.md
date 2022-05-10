@@ -15,6 +15,7 @@ oerr sp2 591
 ### [ORA-01795: maximum number of expressions in a list is 1000 error](./Error/01795.md)
 ### [ORA-01861: literal does not match format string](./Error/01861.md)
 ### [ORA-01922: CASCADE must be specified to drop '%s'](./Error/01922.md)
+### [ORA-01950: no privileges on tablespace '%s'](./Error/01950.md)
 ### [ORA-04031: unable to allocate %s bytes of shared memory ("%s","%s","%s","%s")](./Error/04031.md)
 ### [ORA-12703: this character set conversion is not supported.](./Error/12703.md)
 ### [ORA-12719: operation requires database is in RESTRICTED mode](./Error/12719.md)

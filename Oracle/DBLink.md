@@ -9,6 +9,9 @@ DB Link
 ### 리스트 확인
 ```sql
 SELECT * FROM ALL_DB_LINKS;
+
+--전체
+SELECT * FROM DBA_DB_LINKS;
 ```
 
 <br>

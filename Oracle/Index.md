@@ -8,6 +8,13 @@ CREATE INDEX owner_name.index_name ON owner_name.table_name(column_name1, column
 
 <br>
 
+### Remap
+```sql
+ALTER INDEX owner_name.index_name REBUILD TABLESPACE tablespace_name;
+```
+
+<br>
+
 ### 테이블의 인덱스 확인
 ```sql
 SELECT   INDEX_NAME, COLUMN_NAME, COLUMN_POSITION

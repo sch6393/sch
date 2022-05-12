@@ -19,6 +19,7 @@ Oracle
 ### [Regular Expression](./RegularExpression.md)
 ### [SQL Loader](./SQLLoader.md)
 ### [SQL Plus](./SQLPlus.md)
+### [Synonym](./Synonym.md)
 ### [Table](./Table.md)
 ### [Tablespace](./Tablespace.md)
 ### [User](./User.md)

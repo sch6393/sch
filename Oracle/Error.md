@@ -24,6 +24,7 @@ oerr sp2 591
 ### [ORA-19573: cannot obtain %s enqueue for datafile %s](./Error/19573.md)
 ### [ORA-22858: invalid alteration of datatype](./Error/22858.md)
 ### [ORA-28040: No matching authentication protocol](./Error/28040.md)
+### [ORA-30036: ORA-30036: unable to extend segment by %s in undo tablespace '%s'](./Error/30036.md)
 ### [ORA-38104: Columns referenced in the ON Clause cannot be updated: %s](./Error/38104.md)
 ### [ORA-39002: invalid operation, ORA-39070: Unable to open the log file., ORA-29283: invalid file operation, ORA-06512: at "SYS.UTL_FILE", line 536, ORA-29283: invalid file operation](./Error/expdp.md)
 

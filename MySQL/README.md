@@ -8,6 +8,7 @@ MySQL
 ### [Index](./Index.md)
 ### [Load Data](./LoadData.md)
 ### [mysql](./mysql.md)
+### [Partition](./Partition.md)
 ### [Table](./Table.md)
 ### [User](./User.md)
 

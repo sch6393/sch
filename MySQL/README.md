@@ -5,6 +5,7 @@ MySQL
 ### [Date Format](./DateFormat.md)
 ### [Error](./Error.md)
 ### [Explain](./Explain.md)
+### [Function](./Function.md)
 ### [Index](./Index.md)
 ### [Load Data](./LoadData.md)
 ### [mysql](./mysql.md)

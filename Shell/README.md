@@ -74,4 +74,7 @@ export
 
 <br>
 
-###
+### zip 파일 압축 풀기
+```sh
+unzip file_name.zip
+```

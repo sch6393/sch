@@ -24,6 +24,7 @@ oerr sp2 591
 ### [ORA-14047: ALTER TABLE|INDEX RENAME may not be combined with other operations](./Error/14047.md)
 ### [ORA-19573: cannot obtain %s enqueue for datafile %s](./Error/19573.md)
 ### [ORA-22858: invalid alteration of datatype](./Error/22858.md)
+### [ORA-24344: success with compilation error](./Error/24344.md)
 ### [ORA-28040: No matching authentication protocol](./Error/28040.md)
 ### [ORA-30036: ORA-30036: unable to extend segment by %s in undo tablespace '%s'](./Error/30036.md)
 ### [ORA-38104: Columns referenced in the ON Clause cannot be updated: %s](./Error/38104.md)

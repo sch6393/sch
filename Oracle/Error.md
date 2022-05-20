@@ -7,6 +7,7 @@ oerr ora 955
 oerr sp2 591
 ```
 
+### [ORA-00439: feature not enabled: %s](./Error/00439.md)
 ### [ORA-00955: name is already used by an existing object](./Error/00955.md)
 ### [ORA-00972: identifier is too long](./Error/00972.md)
 ### [ORA-01153: an incompatible media recovery is active](./Error/01153.md)

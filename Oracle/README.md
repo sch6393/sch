@@ -22,6 +22,7 @@ Oracle
 ### [Synonym](./Synonym.md)
 ### [Table](./Table.md)
 ### [Tablespace](./Tablespace.md)
+### [Trigger](./Trigger.md)
 ### [User](./User.md)
 ### [View](./View.md)
 

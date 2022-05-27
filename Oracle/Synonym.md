@@ -7,6 +7,13 @@ Synonym
 GRANT CREATE PUBLIC SYNONYM TO owner_name;
 ```
 
+<Br>
+
+### 확인
+```sql
+SELECT * FROM ALL_SYNONYMS;
+```
+
 <br>
 
 ### 생성

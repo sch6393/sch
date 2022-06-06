@@ -18,6 +18,7 @@ Oracle
 ### [Patch](./Patch.md)
 ### [Process](./Process.md)
 ### [Regular Expression](./RegularExpression.md)
+### [Sequence](./Sequence.md)
 ### [SQL Loader](./SQLLoader.md)
 ### [SQL Plus](./SQLPlus.md)
 ### [Synonym](./Synonym.md)

@@ -18,6 +18,7 @@ oerr sp2 591
 ### [ORA-01922: CASCADE must be specified to drop '%s'](./Error/01922.md)
 ### [ORA-01950: no privileges on tablespace '%s'](./Error/01950.md)
 ### [ORA-04031: unable to allocate %s bytes of shared memory ("%s","%s","%s","%s")](./Error/04031.md)
+### [ORA-12162: TNS:net service name is incorrectly specified](./Error/12162.md)
 ### [ORA-12703: this character set conversion is not supported.](./Error/12703.md)
 ### [ORA-12719: operation requires database is in RESTRICTED mode](./Error/12719.md)
 ### [ORA-12899: value too large for column %s (actual: %s, maximum: %s)](./Error/12899.md)

@@ -2,8 +2,6 @@ Oracle
 ===
 
 ### [ActiveDuplication](./ActiveDuplication.md)
-### [ash Repoty](./ashReport.md)
-### [awr Report](./awrReport.md)
 ### [Constraint](./Constraint.md)
 ### [DB Link](./DBLink.md)
 ### [Error](./Error.md)
@@ -18,6 +16,7 @@ Oracle
 ### [Patch](./Patch.md)
 ### [Process](./Process.md)
 ### [Regular Expression](./RegularExpression.md)
+### [Report](./Report.md)
 ### [Sequence](./Sequence.md)
 ### [SQL Loader](./SQLLoader.md)
 ### [SQL Plus](./SQLPlus.md)

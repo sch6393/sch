@@ -11,7 +11,4 @@ MySQL
 ### [mysql](./mysql.md)
 ### [Partition](./Partition.md)
 ### [Process](./Process.md)
-### [Table](./Table.md)
-### [User](./User.md)
-### [View](./View.md)
 

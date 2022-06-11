@@ -19,4 +19,4 @@ Linux 3.10.0-1160.25.1.el7.x86_64 (hostname)     01/31/2022      _x86_64_       
 
 ### 계산
 * `%user`가 높다면 CPU, `%iowait`가 높다면 I/O의 부하가 있음
-  >I/O에 대한 더 자세한 내용 ➞ [iostat](./iostat.md)
+  >I/O에 대한 더 자세한 내용 ➞ [iostat](../iostat/README.md)

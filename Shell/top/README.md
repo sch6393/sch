@@ -33,4 +33,4 @@ load average: 0.00, 0.01, 0.05
 * 커널이 CPU를 사용하기 위해 대기 중인 프로세스 (RUNNING), I/O 완료를 대기 중인 프로세스 (UNINTERRUPTIBLE) 의 수를 계산한 값 
   >Load Average로 확인할 수 있는 시스템 부하는 CPU와 I/O 2가지
   <br>
-  CPU 바운드인지 I/O 바운드인지 확인 ➞ [sar](./sar.md)
+  CPU 바운드인지 I/O 바운드인지 확인 ➞ [sar](../sar/README.md)

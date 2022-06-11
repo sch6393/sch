@@ -34,6 +34,3 @@ Console.WriteLine(dNumber.ToString("F3", CultureInfo.CreateSpecificCulture("ja-J
 ```
 
 <br>
-
-### 
-

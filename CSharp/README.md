@@ -1,8 +1,8 @@
 C#
 ===
 
-### [DataTable](./DataTable.md)
-### [DateTime](./DateTime.md)
-### [Directory](./Directory.md)
-### [Standard Numeric Format String](./StandardNumericFormatString.md)
-### [StringReader](./StringReader.md)
+### [DataTable](./DataTable/README.md)
+### [DateTime](./DateTime/README.md)
+### [Directory](./Directory/README.md)
+### [Standard Numeric Format String](./StandardNumericFormatString/README.md)
+### [StringReader](./StringReader/README.md)

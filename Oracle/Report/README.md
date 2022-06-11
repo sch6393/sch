@@ -1,11 +1,11 @@
 Report
 ===
 
-### [awr Report](./Report/awrReport.md)
+### [awr Report](./awrReport.md)
 
 <br>
 
-### [ash Report](./Report/ashReport.md)
+### [ash Report](./ashReport.md)
 
 <br>
 

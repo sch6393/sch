@@ -1,7 +1,7 @@
 Regular Expression
 ===
 
-[Regular Expression](../ETC/RegularExpression.md)
+[Regular Expression](../../ETC/RegularExpression.md)
 
 ### 종류
 ```sql

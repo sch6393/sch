@@ -3,7 +3,7 @@ Active Duplication
 
 ### 사전준비
 * 11.2.0.4 패치
-  * [Patch](./Patch.md)
+  * [Patch](../Patch/READMD.md)
 
 <br>
 

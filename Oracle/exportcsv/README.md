@@ -37,7 +37,7 @@ sqlplus -S user_name/password @sqlfile_name.sql
 <br>
 
 ### 참고
-* [sql 파일의 set 옵션](./SQLPlus.md#sql-plus-옵션)
+* [sql 파일의 set 옵션](../SQLPlus/README.md#sql-plus-옵션)
 * ~~추출 쿼리 작성~~ `set markup csv on` 옵션을 사용하면 해당 쿼리를 쓰지 않아도 됨
   ```sql
   SELECT 'SELECT'

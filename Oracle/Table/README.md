@@ -58,5 +58,3 @@ PURGE DBA_RECYCLEBIN;
 >10g 이후 버전부터 DROP 테이블 할 경우 Recyclebin 이라는 곳으로 보내진다
 
 <br>
-
-### 

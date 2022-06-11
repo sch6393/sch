@@ -49,5 +49,3 @@ DROP USER user_name;
 ```
 
 <br>
-
-### 

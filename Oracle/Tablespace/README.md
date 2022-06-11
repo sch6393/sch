@@ -1,7 +1,7 @@
 Tablespace
 ===
 
-### [BIGFILE과 SMALLFILE 차이](./Tablespace_bigfile_smallfile.md)
+### [BIGFILE과 SMALLFILE 차이](./bigfile_smallfile.md)
 
 <br>
 

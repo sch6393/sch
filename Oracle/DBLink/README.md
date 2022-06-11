@@ -2,7 +2,7 @@ DB Link
 ===
 
 ### 원격 접속
-* [원격 데이터베이스 접속](./SQLPlus.md#원격-데이터베이스-접속)
+* [원격 데이터베이스 접속](../SQLPlus/README.md#원격-데이터베이스-접속)
 
 <br>
 
@@ -39,5 +39,3 @@ DROP PUBLIC DATABASE LINK database_link_name;
 ```
 
 <br>
-
-###

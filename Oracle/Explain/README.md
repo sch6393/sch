@@ -22,6 +22,6 @@ DROP TABLE PLAN_TABLE;
 
 <br>
 
-### 더 자세한 정보 확인 ➞ [Trace](./Trace.md)
+### 더 자세한 정보 확인 ➞ [Trace](../Trace/README.md)
 
 

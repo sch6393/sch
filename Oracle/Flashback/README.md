@@ -43,4 +43,3 @@ SELECT * FROM owner_name.table_name AS OF TIMESTAMP TO_TIMESTAMP('20220427 09382
 ```
 
 <br>
-

@@ -71,5 +71,3 @@ Current log sequence           00000
 ```
 
 <br>
-
-

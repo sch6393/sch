@@ -153,5 +153,3 @@ EXPLAIN FORMAT = JSON query;
 ```
 
 <br>
-
-### 

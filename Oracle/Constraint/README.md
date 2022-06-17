@@ -34,7 +34,7 @@ SELECT * FROM ALL_CONSTRAINTS WHERE TABLE_NAME = 'table_name';
 <br>
 
 ### 생성
-* [CREATE TABLE](./Table.md#table-생성) 할 때 정의하여 생성
+* [CREATE TABLE](../Table/README.md#table-생성) 할 때 정의하여 생성
 
 <br>
 

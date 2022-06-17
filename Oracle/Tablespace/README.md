@@ -48,6 +48,12 @@ ALTER TABLESPACE tablespace_name ADD DATAFILE '/AAA/BBB/CCC/tablespace_filename'
 
 <br>
 
+### Remap
+* [Table](../Table/README.md#remap)
+* [Index](../Index/README.md#remap)
+
+<br>
+
 ### 삭제
 ```sql
 DROP TABLESPACE tablespace_name;

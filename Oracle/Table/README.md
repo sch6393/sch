@@ -38,6 +38,13 @@ ALTER TABLE owner_name.table_name MODIFY column_name data_type;
 
 <br>
 
+### Remap
+```sql
+ALTER TABLE owner_name.table_name MOVE TABLESPACE tablespace_name;
+```
+
+<br>
+
 ### BIN$... Table
 ```sql
 --Recyclebin 테이블 조회

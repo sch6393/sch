@@ -9,8 +9,8 @@ CREATE TABLE owner_name.table_name (
   ...
   ,column_name8  data_type  constraint_name
   ,column_name9  data_type  constraint_name
-  ,CONSTRAINT "pk_name" PRIMARY KEY ("column_name")
-  --,CONSTRAINT "pk_name" PRIMARY KEY ("column_name1, column_name2, ...")
+  ,CONSTRAINT "pk_name" PRIMARY KEY (column_name)
+  --,CONSTRAINT "pk_name" PRIMARY KEY (column_name1, column_name2, ... )
 ) TABLESPACE tablespace_name;
 ```
 

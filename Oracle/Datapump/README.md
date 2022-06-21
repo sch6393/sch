@@ -1,4 +1,4 @@
-expdp impdp
+Datapump
 ===
 
 ### expdp 기본 형식

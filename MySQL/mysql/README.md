@@ -35,6 +35,12 @@ mysql -h HOST -u USER -pPASSWORD -P PORT -D SCHEMA -e "$query" | tr '\t' ',' > /
 
 <br>
 
-### 
+### 시작, 정지, 재시작, 상태 확인
+|분류|우분투|CentOS 6|CentOS 7|
+|-|-|-|-|
+|시작|`service mysql start`|`service mysqld start`|`systemctl start mysqld`|
+|정지|`service mysql stop`|`service mysqld stop`|`systemctl stop mysqld`|
+|재시작|`service mysql restart`|`service mysqld restart`|`systemctl restart mysqld`|
+|상태 확인|`service mysql status`|`service mysqld status`|`systemctl status mysqld`|
 
 <br>

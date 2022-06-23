@@ -71,3 +71,20 @@ Current log sequence           00000
 ```
 
 <br>
+
+### 시작, 정지, 모드 진입
+```sql
+--시작
+startup
+
+--마운트하지 않고 시작
+startup nomount
+
+--정지
+shutdown
+
+--강제 정지
+shutdown immediate
+```
+
+<br>

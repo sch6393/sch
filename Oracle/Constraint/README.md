@@ -56,6 +56,13 @@ ALTER TABLE owner_name.table_name MODIFY column_name constraint_type;
 
 <br>
 
+### 이름 변경
+```sql
+ALTER TABLE owner_name.table_name RENAME CONSTRAINT constraint_name to constraint_name;
+```
+
+<br>
+
 ### 삭제
 ```sql
 ALTER TABLE owner_name.table_name DROP CONSTRAINT constraint_name;

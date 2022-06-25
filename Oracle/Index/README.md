@@ -13,7 +13,7 @@ ALTER TABLE owner_name.table_name ADD CONSTRAINT index_name PRIMARY KEY(column_n
 
 ### 이름 변경
 ```sql
-ALTER INDEX owner_name.index_name RENAME TO index_name
+ALTER INDEX owner_name.index_name RENAME TO index_name;
 ```
 
 <br>

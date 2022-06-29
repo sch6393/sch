@@ -14,7 +14,7 @@ CREATE TABLE schema_name.table_name (
   column_name9   type_name   constraint_name
 )
 --Range
-PARTITION BY RANGE (column_name) (
+PARTITION BY RANGE COLUMNS (column_name) (
   PARTITION partition_name1 VALUES LESS THAN ( value ),
   PARTITION partition_name2 VALUES LESS THAN ( value ),
   ...
@@ -41,7 +41,7 @@ PARTITIONS 2;
 
 
 --테이블 생성 후 정의 (Range)
-ALTER TABLE schema_name.table_name PARTITION BY RANGE (column_name) (
+ALTER TABLE schema_name.table_name PARTITION BY RANGE COLUMNS (column_name) (
   PARTITION partition_name1 VALUES LESS THAN ( value ),
   PARTITION partition_name2 VALUES LESS THAN ( value ),
   ...

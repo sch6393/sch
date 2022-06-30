@@ -49,6 +49,13 @@ ALTER SEQUENCE owner_name.seq_name NOCYCLE;
 
 <br>
 
+### 시퀀스 현재 값 확인
+```sql
+SELECT LAST_NUMBER FROM USER_SEQUENCES WHERE SEQUENCE_NAME = 'seq_name';
+```
+
+<br>
+
 ### 삭제
 ```sql
 DROP SEQUENCE owner_name.seq_name;

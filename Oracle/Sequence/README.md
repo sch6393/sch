@@ -39,8 +39,8 @@ ALTER SEQUENCE owner_name.seq_name INCREMENT BY 1000;
 ALTER SEQUENCE owner_name.seq_name MAXVALUE 9999999;
 
 --CACHE
-ALTER SEQUENCE owner_name.seq_name CASHE 1000;
-ALTER SEQUENCE owner_name.seq_name NOCASHE;
+ALTER SEQUENCE owner_name.seq_name CACHE 1000;
+ALTER SEQUENCE owner_name.seq_name NOCACHE;
 
 --CYCLE
 ALTER SEQUENCE owner_name.seq_name CYCLE;

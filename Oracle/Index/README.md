@@ -50,4 +50,6 @@ ORDER BY INDEX_NAME, COLUMN_POSITION;
 <br>
 
 ### 참고
-* 
+* [PCT](../PCT/README.md)
+
+<br>

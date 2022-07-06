@@ -32,6 +32,20 @@ CREATE DATABASE LINK database_link_name CONNECT TO remote_user_name IDENTIFIED B
 
 <br>
 
+### 권한 확인
+```sql
+--PUBLIC 링크 생성 권한 부여
+GRANT CREATE PUBLIC DATABASE LINK TO owner_name;
+
+--PUBLIC 링크 생성 권한 회수
+GRANT DROP PUBLIC DATABASE LINK TO owner_name;
+
+--일반 링크 생성 권한 부여
+GRANT CREATE DATABASE LINK TO owner_name;
+```
+
+<br>
+
 ### 삭제
 ```sql
 DROP DATABASE LINK database_link_name;

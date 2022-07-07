@@ -4,9 +4,6 @@ Index
 ### 생성
 ```sql
 CREATE INDEX owner_name.index_name ON owner_name.table_name(column_name1, column_name2, column_name3 ...) TABLESPACE tablespace_name;
-
---PK를 별도로 생성해야할 경우
-ALTER TABLE owner_name.table_name ADD CONSTRAINT index_name PRIMARY KEY(column_name1, column_name2, column_name3 ...) USING INDEX TABLESPACE tablespace_name;
 ```
 
 <br>
@@ -43,7 +40,7 @@ ALTER INDEX owner_name.index_name REBUILD TABLESPACE tablespace_name;
 ```sql
 SELECT   INDEX_NAME, COLUMN_NAME, COLUMN_POSITION
 FROM     ALL_IND_COLUMNS
-WHERE    OWNER = 'owner_name' AND TABLE_NAME = 'table_name'
+WHERE    TABLE_OWNER = 'owner_name' AND TABLE_NAME = 'table_name'
 ORDER BY INDEX_NAME, COLUMN_POSITION;
 ```
 

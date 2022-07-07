@@ -35,6 +35,10 @@ SELECT * FROM ALL_CONSTRAINTS WHERE TABLE_NAME = 'table_name';
 
 ### 생성
 * [CREATE TABLE](../Table/README.md#table-생성) 할 때 정의하여 생성
+* PK를 별도로 생성해야할 경우
+    ```sql
+    ALTER TABLE owner_name.table_name ADD CONSTRAINT index_name PRIMARY KEY(column_name1, column_name2, column_name3 ...) USING INDEX TABLESPACE tablespace_name;
+    ```
 
 <br>
 

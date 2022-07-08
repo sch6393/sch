@@ -2,6 +2,7 @@ Oracle
 ===
 
 ### [ActiveDuplication](./ActiveDuplication/README.md)
+### [Analyze](./Analyze/README.md)
 ### [Constraint](./Constraint/README.md)
 ### [Datapump](./Datapump/README.md)
 ### [DB Link](./DBLink/README.md)

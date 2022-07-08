@@ -32,3 +32,5 @@ BIGFILE과 SMALLFILE의 차이
 |BBBBBB|실제 Row를 가지고 있는 데이터 블록 Number|
 |RRR|특정 블록 안의 Row를 지정하고 있는 슬롯 Number|
 |LLL, LLLLLL|Encoded 블록 Number|
+
+<br>

@@ -13,5 +13,10 @@ DateFormat
 --시 %h ➞ 01 ~ 12
 --분 %i ➞ 00 ~ 59
 --초 %S ➞ 00 ~ 59
+
+--format
 DATE_FORMAT(datetime, '%Y%m%d%H%i%S')
+
+--character ➞ datetime
+str_to_date('20220707', '%Y%m%d')
 ```

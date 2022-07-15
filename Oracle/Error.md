@@ -9,6 +9,7 @@ oerr sp2 591
 
 <br>
 
+### [ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired](./Error/00054.md)
 ### [ORA-00439: feature not enabled: %s](./Error/00439.md)
 ### [ORA-00955: name is already used by an existing object](./Error/00955.md)
 ### [ORA-00959: tablespace '%s' does not exist](./Error/00959.md)

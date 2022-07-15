@@ -12,6 +12,13 @@ ALTER TABLE schema_name.table_name ADD INDEX index_name(column_name1, column_nam
 
 <br>
 
+### 확인
+```sql
+SHOW INDEX FROM schema_name.table_name;
+```
+
+<br>
+
 ### 삭제
 ```sql
 DROP INDEX schema_name.index_name ON schema_name.table_name;

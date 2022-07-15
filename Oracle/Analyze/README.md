@@ -50,6 +50,7 @@ ANALYZE object_type owner_name.object_name VALIDATE STRUCTURE;
     1. 대량의 데이터를 처리한 경우
 1. `USER_TABLES`, `USER_COLUMNS`, `USER_INDEXS`, `USER_CLUSTER` 등의 딕셔너리 관련된 항목들도 ANALYZE를 해주면 좋음
 1. 2만 레코드를 기준으로 작다면 `COMPUTE`, 많다면 `ESTIMATE` 사용을 권장
+1. [DBMS_STATS과의 차이](./Analyze_DBMS_STAT.md)
 1. [ORA-38029: object statistics are locked](../Error/38029.md) 에러가 발생할 경우
 
 <br>

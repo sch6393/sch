@@ -16,6 +16,7 @@ oerr sp2 591
 ### [ORA-00972: identifier is too long](./Error/00972.md)
 ### [ORA-01153: an incompatible media recovery is active](./Error/01153.md)
 ### [ORA-01555: snapshot too old: rollback segment number %s with name "%s" too small](./Error/01555.md)
+### [ORA-01652: unable to extend temp segment by %s in tablespace %s](./Error/01652.md)
 ### [ORA-01654: unable to extend index %s.%s by %s in tablespace %s](./Error/01654.md)
 ### [ORA-01795: maximum number of expressions in a list is 1000 error](./Error/01795.md)
 ### [ORA-01861: literal does not match format string](./Error/01861.md)

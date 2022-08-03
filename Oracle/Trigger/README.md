@@ -19,9 +19,12 @@ END;
 
 <br>
 
-### 설명
+### 트리거 상태 확인
 ```sql
+SELECT OWNER, TRIGGER_NAME, STATUS FROM DBA_TRIGGERS WHERE TRIGGER_NAME = 'trigger_name';
 
+--활성화
+ALTER TRIGGER owner_name.trigger_name ENABLE;
 ```
 
 <br>

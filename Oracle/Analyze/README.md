@@ -81,7 +81,7 @@ WHERE OWNER = 'owner_name';
 
 --인덱스 ANALYZE SQL
 SELECT
-    'ANALYZE INDEX ' || owner || '.' || table_name ||
+    'ANALYZE INDEX ' || owner || '.' || index_name ||
     CASE
         WHEN NUM_ROWS >= 20000
             THEN ' ESTIMATE '

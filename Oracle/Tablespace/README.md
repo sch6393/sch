@@ -2,6 +2,7 @@ Tablespace
 ===
 
 ### [BIGFILE과 SMALLFILE 차이](./bigfile_smallfile.md)
+### [Temporary Tablespace](./temporary_tablespace.md)
 
 <br>
 

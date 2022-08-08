@@ -18,6 +18,7 @@ oerr sp2 591
 ### [ORA-01555: snapshot too old: rollback segment number %s with name "%s" too small](./Error/01555.md)
 ### [ORA-01652: unable to extend temp segment by %s in tablespace %s](./Error/01652.md)
 ### [ORA-01654: unable to extend index %s.%s by %s in tablespace %s](./Error/01654.md)
+### [ORA-01790: expression must have same datatype as corresponding expression](./Error/01790.md)
 ### [ORA-01795: maximum number of expressions in a list is 1000 error](./Error/01795.md)
 ### [ORA-01861: literal does not match format string](./Error/01861.md)
 ### [ORA-01922: CASCADE must be specified to drop '%s'](./Error/01922.md)

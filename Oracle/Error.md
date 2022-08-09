@@ -14,6 +14,7 @@ oerr sp2 591
 ### [ORA-00955: name is already used by an existing object](./Error/00955.md)
 ### [ORA-00959: tablespace '%s' does not exist](./Error/00959.md)
 ### [ORA-00972: identifier is too long](./Error/00972.md)
+### [ORA-01017: invalid username/password; logon denied](./Error/01017.md)
 ### [ORA-01153: an incompatible media recovery is active](./Error/01153.md)
 ### [ORA-01502: index '%s.%s' or partition of such index is in unusable state](./Error/01502.md)
 ### [ORA-01555: snapshot too old: rollback segment number %s with name "%s" too small](./Error/01555.md)

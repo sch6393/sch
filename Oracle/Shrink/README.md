@@ -1,6 +1,13 @@
 Shrink
 ===
 
+### 목적
+1. HWM (High Water Mark) 를 줄임
+1. 블록 크기 감소
+1. 블록 크기가 줄어들면서 용량 감소 및 성능 향상
+
+<br>
+
 ### 실행
 ```sql
 ALTER TABLE owner_name.table_name SHRINK SPACE;

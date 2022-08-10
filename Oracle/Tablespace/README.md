@@ -63,6 +63,17 @@ DROP TABLESPACE tablespace_name;
 
 <br>
 
+### 권한
+```sql
+--size만큼 사용할 수 있도록 함
+ALTER USER owner_name QUOTA size ON tablespace_name;
+
+--전체 권한
+GRANT UNLIMITED TABLESPACE to owner_name;
+```
+
+<br>
+
 ### 구조 설명
 * 데이터 할당
   |종류|설명|

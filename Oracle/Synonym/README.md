@@ -5,6 +5,9 @@ Synonym
 ```sql
 --owner_name에 대해 Public Synonym 생성 권한 부여
 GRANT CREATE PUBLIC SYNONYM TO owner_name;
+
+--일반 Synonym 생성 권한 부여
+GRANT CREATE SYNONYM TO owner_name;
 ```
 
 <Br>

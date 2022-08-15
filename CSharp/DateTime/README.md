@@ -11,6 +11,13 @@ DateTime
 
 <br>
 
+### 현재 날짜 가져오기
+```C#
+string strDatetime = DateTime.Now.ToString("yyyyMMdd HHmmss");
+```
+
+<br>
+
 ### 매주 특정 요일 날짜 취득
 ```C#
 // Monday

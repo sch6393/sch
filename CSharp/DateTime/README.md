@@ -35,3 +35,14 @@ namespace System
   }
 }
 ```
+
+<br>
+
+### 날짜 계산
+```C#
+DateTime dt1 = new DateTime(2022, 02, 02);
+DateTime dt2 = new DateTime(2022, 07, 07);
+Console.WriteLine((dt2 - dt1).Days);
+```
+
+<br>

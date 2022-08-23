@@ -34,6 +34,12 @@ ALTER TABLE owner_name.table_name DROP COLUMN column_name;
 
 --수정
 ALTER TABLE owner_name.table_name MODIFY column_name data_type;
+
+--이름 변경
+ALTER TABLE owner_name.table_name RENAME COLUMN column_name_old TO column_name_new;
+
+--코멘트
+COMMENT ON COLUMN owner_name.table_name.column_name IS 'comment';
 ```
 
 <br>

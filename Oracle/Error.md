@@ -48,3 +48,9 @@ oerr sp2 591
 <br>
 
 ### [SP2-0591: Unable to allocate dynamic space needed (%s bytes)](./Error/SP2-0591.md)
+
+<br>
+
+### [LPX-00216: invalid character ~1u (~2X)](./Error/LPX-00216.md)
+
+<br>

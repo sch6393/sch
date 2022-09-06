@@ -1,6 +1,13 @@
 User
 ===
 
+### 조회
+```sql
+SELECT * FROM DBA_USERS;
+```
+
+<br>
+
 ### 생성
 ```sql
 CREATE USER user_name IDENTIFIED BY password;
@@ -39,6 +46,21 @@ SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = 'user_name';
 
 --가지고 있는 롤에 있는 시스템 권한 확인
 SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE = 'role_name';
+```
+
+<br>
+
+### 잠금
+```sql
+ALTER USER user_name ACCOUNT LOCK;
+ALTER USER user_name ACCOUNT UNLOCK;
+```
+
+<br>
+
+### 비밀번호 만료 명령
+```sql
+ALTER USER user_name PASSWORD EXPIRE;
 ```
 
 <br>

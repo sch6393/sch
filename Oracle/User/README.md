@@ -67,7 +67,8 @@ ALTER USER user_name PASSWORD EXPIRE;
 
 ### 삭제
 ```sql
-DROP USER user_name;
+DROP USER user_name CASCADE;
 ```
+>CASCADE가 없으면 [ORA-01922](../Error/01922.md)가 발생함
 
 <br>

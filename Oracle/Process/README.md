@@ -51,8 +51,7 @@ parallel_max_servers	0	8	        48	      3600
 
 <br>
 
-### 최대 접속 세션 수
-* SESSIONS = (1.5 * PROCESSES) + 22
-  >[https://docs.oracle.com/cd/E18283_01/server.112/e17110/initparams229.htm](https://docs.oracle.com/cd/E18283_01/server.112/e17110/initparams229.htm)
+### 참고
+* [Session](../Session/README.md)
 
 <br>

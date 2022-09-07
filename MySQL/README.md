@@ -11,6 +11,7 @@ MySQL
 ### [mysql](./mysql/README.md)
 ### [Partition](./Partition/README.md)
 ### [Process](./Process/README.md)
+### [Schema](./Schema/README.md)
 ### [Table](./Table/README.md)
 ### [User](./User/README.md)
 ### [View](./View/README.md)

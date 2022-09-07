@@ -1,4 +1,4 @@
-DataFormat
+Data Format
 ===
 >[https://mita2db.hateblo.jp/entry/2020/12/07/000000](https://mita2db.hateblo.jp/entry/2020/12/07/000000)
 

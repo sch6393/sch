@@ -43,3 +43,10 @@ git merge branch_name
 |`git config –global core.autocrlf false`|자동변환 없음 (기본 값)|
 
 <br>
+
+### git remote
+```
+git remote set-url origin https://github.com/sch6393/SCH.git
+```
+
+<br>

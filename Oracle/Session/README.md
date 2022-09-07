@@ -33,6 +33,8 @@ WHERE
 ### 최대 접속 세션 수
 * SESSIONS = (1.5 * PROCESSES) + 22
   >[https://docs.oracle.com/cd/E18283_01/server.112/e17110/initparams229.htm](https://docs.oracle.com/cd/E18283_01/server.112/e17110/initparams229.htm)
+* RDS의 경우 16GB 기준으로 약 1300개
+  >[Quotas](../../AWS/RDS/Oracle/Quotas/README.md)
 
 <br>
 

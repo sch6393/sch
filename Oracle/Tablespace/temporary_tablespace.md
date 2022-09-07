@@ -60,7 +60,7 @@ SELECT PROPERTY_VALUE FROM DATABASE_PROPERTIES WHERE PROPERTY_NAME = 'DEFAULT_TE
 --5. 기존 Temporary 테이블스페이스 제거
 DROP TABLESPACE temporary_tablespace_old;
 ```
->[3. 변경에서 RDS의 경우](../../AWS/RDS/Oracle/Command/)<br>
+>[3. 변경에서 RDS의 경우](../../AWS/RDS/Oracle/TemporaryTablespace/README.md)<br>
 [5. 기존 Temporary 테이블스페이스 제거가 되지 않을 경우](../Error/60100.md)
 
 <br>

@@ -10,7 +10,7 @@ npm init quasar
 √ What would you like to build? » App with Quasar CLI, let's go!
 √ Project folder: ... project_name
 √ Pick Quasar version: » Quasar v2 (Vue 3 | latest and greatest)
-√ Pick script type: » Javascript, Typescript
+√ Pick script type: » Javascript
 √ Pick Quasar App CLI variant: » Quasar App CLI with Webpack
 √ Package name: ... project_name
 √ Project product name: (must start with letter if building mobile apps) ... Quasar App
@@ -108,39 +108,38 @@ quasar build
 
 <br>
 
-### 파이어베이스 호스팅, 디플로이, 깃헙 액션
-* Set Hosting Init
-  1. `npm install -g firebase-tools`
-  1. `firebase login`
-  1. `firebase init`
-  1. `? Are you ready to proceed?` ➞ Yes
-  1. `Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`
-  1. `Use an existing project` ➞ sch6393-system (sch6393-system)
-  1. `? What do you want to use as your public directory?` ➞ dist/spa
-  1. `? Configure as a single-page app (rewrite all urls to /index.html)` ➞ No
-  1. `? Set up automatic builds and deploys with GitHub?` ➞ No
-  1. `? File build/web/index.html already exists. Overwrite?` ➞ No
+### 파이어베이스 호스팅
+1. `npm install -g firebase-tools`
+1. `firebase login`
+1. `firebase init`
+1. `? Are you ready to proceed?` ➞ Yes
+1. `Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys`
+1. `Use an existing project` ➞ sch6393-system (sch6393-system)
+1. `? What do you want to use as your public directory?` ➞ dist/spa
+1. `? Configure as a single-page app (rewrite all urls to /index.html)` ➞ No
+1. `? Set up automatic builds and deploys with GitHub?` ➞ No
+1. `? File build/web/index.html already exists. Overwrite?` ➞ No
 
 <br>
 
-* Deploy
-  1. `firebase deploy`
+### 파이어베이스 디플로이
+* `firebase deploy`
 
 <br>
 
-* Set GiyHub Action
-  1. `firebase init`
-  1. `? Are you ready to proceed?` ➞ Yes
-  1. `Hosting: Set up GitHub Action deploys`
-  1. Firebase CLI Login
-  1. `? For which GitHub repository would you like to set up a GitHub workflow? (format: user/repository)` ➞ sch6393/sch6393-system-quasar
-  1. `? Set up the workflow to run a build script before every deploy?` ➞ Yes
-  1. `? What script should be run before every deploy?` ➞ quasar build
-      ```
-      "build": "quasar build",
-      ```
-  1. `? Set up automatic deployment to your site's live channel when a PR is merged?` ➞ Yes
-  1. `? What is the name of the GitHub branch associated with your site's live channel?` ➞ main
+### 파이어베이스 깃헙 액션
+1. `firebase init`
+1. `? Are you ready to proceed?` ➞ Yes
+1. `Hosting: Set up GitHub Action deploys`
+1. Firebase CLI Login
+1. `? For which GitHub repository would you like to set up a GitHub workflow? (format: user/repository)` ➞ sch6393/sch6393-system-quasar
+1. `? Set up the workflow to run a build script before every deploy?` ➞ Yes
+1. `? What script should be run before every deploy?` ➞ quasar build
+    ```
+    "build": "quasar build",
+    ```
+1. `? Set up automatic deployment to your site's live channel when a PR is merged?` ➞ Yes
+1. `? What is the name of the GitHub branch associated with your site's live channel?` ➞ main
 
 <br>
 
@@ -159,7 +158,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 ```
-```json
+```js
 // quasar.config.js 수정
 boot: [
   'firebase'
@@ -200,7 +199,7 @@ export default boot(({ app }) => {
 
 export { api }
 ```
-```json
+```js
 // quasar.config.js 수정
 boot: [
   'axios'

@@ -46,7 +46,7 @@ git merge branch_name
 
 ### git remote
 ```
-git remote set-url origin https://github.com/sch6393/SCH.git
+git remote set-url origin https://github.com/sch6393/sch.git
 ```
 
 <br>

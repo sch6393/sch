@@ -16,6 +16,7 @@ SCH
 ### [MySQL](./MySQL/README.md)
 ### [Oracle](./Oracle/README.md)
 ### [PostgreSQL](./PostgreSQL/README.md)
+### [REST API](RESTAPI/README.md)
 ### [Shell](./Shell/README.md)
 ### [UiPath](./UiPath/README.md)
 ### [Vue](./Vue/README.md)

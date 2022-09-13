@@ -1,4 +1,4 @@
 AWS
 ===
 
-### [RDS](./RDS/README.md)
+### [RDS](./rds/README.md)

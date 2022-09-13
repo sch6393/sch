@@ -1,5 +1,5 @@
 RDS
 ===
 
-### [MySQL](./MySQL/README.md)
-### [Oracle](./Oracle/README.md)
+### [MySQL](./mysql/README.md)
+### [Oracle](./oracle/README.md)

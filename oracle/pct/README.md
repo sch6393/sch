@@ -45,3 +45,10 @@ TABLESPACE tablespace_name;
 ```
 
 <br>
+
+### 수정
+```sql
+ALTER TABLE owner_name.table_name PCTUSED 20 PCTFREE 10;
+```
+
+<br>

@@ -72,3 +72,18 @@ DROP USER user_name CASCADE;
 >CASCADE가 없으면 [ORA-01922](../error/01922.md)가 발생함
 
 <br>
+
+### 비밀번호 대소문자 구분 여부
+```sql
+--확인
+SHOW PARAMETER sec_case;
+/*
+TRUE  : 구분 O
+FALSE : 구분 X
+*/
+
+--변경
+ALTER SYSTEM SET sec_case_sensitive_logon=FALSE;
+```
+
+<br>

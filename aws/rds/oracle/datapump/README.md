@@ -6,7 +6,30 @@ Datapump
 
 ### expdp
 ```sql
+--Schema
+DECLARE
+  v_hdnl NUMBER;
+BEGIN
+  v_hdnl := DBMS_DATAPUMP.open( operation => 'EXPORT', job_mode => 'SCHEMA', job_name=>null);
+  DBMS_DATAPUMP.ADD_FILE(handle => v_hdnl, filename => 'dmpfile.dmp', directory => 'DATA_PUMP_DIR', filetype => dbms_datapump.ku$_file_type_dump_file);
+  DBMS_DATAPUMP.ADD_FILE(handle => v_hdnl, filename => 'logfile.log', directory => 'DATA_PUMP_DIR', filetype => dbms_datapump.ku$_file_type_log_file);
+  DBMS_DATAPUMP.METADATA_FILTER(v_hdnl,'SCHEMA_EXPR','IN (''schema_name1'',''schema_name2'' ... )');
+  DBMS_DATAPUMP.START_JOB(v_hdnl);
+END;
+/
 
+--Table
+DECLARE
+  v_hdnl NUMBER;
+BEGIN
+  v_hdnl := DBMS_DATAPUMP.open( operation => 'EXPORT', job_mode => 'SCHEMA', job_name=>null);
+  DBMS_DATAPUMP.ADD_FILE(handle => v_hdnl, filename => 'dmpfile.dmp', directory => 'DATA_PUMP_DIR', filetype => dbms_datapump.ku$_file_type_dump_file);
+  DBMS_DATAPUMP.ADD_FILE(handle => v_hdnl, filename => 'logfile.log', directory => 'DATA_PUMP_DIR', filetype => dbms_datapump.ku$_file_type_log_file);
+  DBMS_DATAPUMP.METADATA_FILTER(v_hdnl,'SCHEMA_EXPR','IN (''schema_name1'',''schema_name2'' ... )');
+  DBMS_DATAPUMP.METADATA_FILTER(v_hdnl, 'NAME_LIST',' ''table_name1'',''table_name2'' ...  ', 'TABLE');
+  DBMS_DATAPUMP.START_JOB(v_hdnl);
+END;
+/
 ```
 
 <br>
@@ -37,9 +60,18 @@ BEGIN
   
   --테이블 통계 데이터 제외
   DBMS_DATAPUMP.METADATA_FILTER(v_hdnl, 'EXCLUDE_PATH_EXPR', 'IN (''TABLE_STATISTICS'')');
+
+  --스키마 지정
+  DBMS_DATAPUMP.METADATA_FILTER(v_hdnl,'SCHEMA_EXPR','IN (''schema_name1'',''schema_name2'' ... )');
+
+  --테이블 리스트 정의
+  DBMS_DATAPUMP.METADATA_FILTER(v_hdnl, 'NAME_LIST',' ''table_name1'',''table_name2'' ...  ', 'TABLE');
   
   --테이블이 이미 존재할 경우의 작업 지정
   DBMS_DATAPUMP.SET_PARAMETER(v_hdnl,'TABLE_EXISTS_ACTION', 'TRUNCATE');
+
+  --Remap Tablespace
+  DBMS_DATAPUMP.METADATA_REMAP(v_hdnl, 'REMAP_TABLESPACE', 'tablespace_old', 'tablespace_new');
   
   DBMS_DATAPUMP.START_JOB(v_hdnl);
 END;

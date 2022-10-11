@@ -52,13 +52,14 @@ expdp id/pw NETWORK_LINK=dblink_name TABLES=schema_name.table_name DIRECTORY=dir
     CONTENT=ALL
 
     --제외할 데이터 (TABLE, INDEX, CONSTRAINT, GRANT)
-    EXCLUDE=INDEX
+    EXCLUDE=TABLE:"IN ('table_name1','table_name2' ... )"
 
     --데이터 범위 지정
     QUERY=owner_name.table_name:"where column_name > 10"
     
     --쉘에서 명령어를 실행하는 경우 특수 문자 앞에 \ (Backslash) 문자가 들어가야함
-    QUERY=owner_name.table_name::\"where date_column \>\= TO_DATE\(\'20220101\',\'YYYYMMDD\'\)\"
+    EXCLUDE=TABLE:\"IN \(\'table_name1\', \'table_name2\'\)\"
+    QUERY=owner_name.table_name:\"where date_column \>\= TO_DATE\(\'20220101\',\'YYYYMMDD\'\)\"
     ```
 
 <br>

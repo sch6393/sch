@@ -23,10 +23,10 @@ CREATE PUBLIC DATABASE LINK database_link_name CONNECT TO remote_user_name IDENT
 
 --바로 지정해서 생성하는 법
 CREATE DATABASE LINK database_link_name CONNECT TO remote_user_name IDENTIFIED BY remote_password USING
-'(description=(address=(protocol=tcp)
-(host=0.0.0.0)
-(port=1521))
-(connect_data=(sid=sid_name)))';
+'(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)
+(HOST=0.0.0.0)
+(PORT=0000))
+(CONNECT_DATA=(SID=sid_name)))';
 ```
 >되도록이면 SID에 바로 지정하지 않고 tnsname.ora에 지정해서 사용, RDS의 경우 바로 지정해서 생성해야 함
 

@@ -39,6 +39,7 @@ oerr sp2 591
 ### [ORA-14047: ALTER TABLE|INDEX RENAME may not be combined with other operations](./error/14047.md)
 ### [ORA-19573: cannot obtain %s enqueue for datafile %s](./error/19573.md)
 ### [ORA-22858: invalid alteration of datatype](./error/22858.md)
+### [ORA-22868: table with LOBs contains segments in different tablespaces](./error/22868.md)
 ### [ORA-24344: success with compilation error](./error/24344.md)
 ### [ORA-28000: The account is locked](./error/28000.md)
 ### [ORA-28040: No matching authentication protocol](./error/28040.md)

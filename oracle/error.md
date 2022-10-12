@@ -28,6 +28,7 @@ oerr sp2 591
 ### [ORA-01922: CASCADE must be specified to drop '%s'](./error/01922.md)
 ### [ORA-01940: cannot drop a user that is currently connected](./error/01940.md)
 ### [ORA-01950: no privileges on tablespace '%s'](./error/01950.md)
+### [ORA-02429: cannot drop index used for enforcement of unique/primary key](./error/02429.md)
 ### [ORA-04031: unable to allocate %s bytes of shared memory ("%s","%s","%s","%s")](./error/04031.md)
 ### [ORA-10636: ROW MOVEMENT is not enabled](./error/10636.md)
 ### [ORA-12162: TNS:net service name is incorrectly specified](./error/12162.md)

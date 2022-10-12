@@ -18,6 +18,7 @@ oerr sp2 591
 ### [ORA-01017: invalid username/password; logon denied](./error/01017.md)
 ### [ORA-01153: an incompatible media recovery is active](./error/01153.md)
 ### [ORA-01502: index '%s.%s' or partition of such index is in unusable state](./error/01502.md)
+### [ORA-01549: tablespace not empty, use INCLUDING CONTENTS option](./error/01549.md)
 ### [ORA-01555: snapshot too old: rollback segment number %s with name "%s" too small](./error/01555.md)
 ### [ORA-01652: unable to extend temp segment by %s in tablespace %s](./error/01652.md)
 ### [ORA-01654: unable to extend index %s.%s by %s in tablespace %s](./error/01654.md)

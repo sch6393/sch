@@ -48,5 +48,13 @@ ORDER BY INDEX_NAME, COLUMN_POSITION;
 
 ### 참고
 * [PCT](../pct/README.md)
+* 인덱스의 컬럼 이름이 `SYS_NC...$` 의 형태일 경우
+  >컬럼을 DESC (역순) 으로 생성할 경우 해당 컬럼 이름으로 지정됨
+    ```sql
+    --DESC로 생성된 컬럼 이름 확인
+    SELECT INDEX_NAME, COLUMN_EXPRESSION, COLUMN_POSITION
+    FROM   DBA_IND_EXPRESSIONS
+    WHERE  TABLE_OWNER = 'owner_name' AND TABLE_NAME = 'table_name';
+    ```
 
 <br>

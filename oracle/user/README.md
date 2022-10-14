@@ -3,6 +3,10 @@ User
 
 ### 조회
 ```sql
+--User
+SELECT * FROM ALL_USERS;
+
+--DBA
 SELECT * FROM DBA_USERS;
 ```
 

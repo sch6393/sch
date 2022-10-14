@@ -73,6 +73,13 @@ DROP USER user_name CASCADE;
 
 <br>
 
+### 기본 테이블스페이스 변경
+```sql
+ALTER USER user_name DEFAULT TABLESPACE tablespace_name;
+```
+
+<br>
+
 ### 비밀번호 대소문자 구분 여부
 ```sql
 --확인

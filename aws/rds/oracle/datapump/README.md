@@ -71,7 +71,7 @@ BEGIN
   DBMS_DATAPUMP.SET_PARAMETER(v_hdnl,'TABLE_EXISTS_ACTION', 'TRUNCATE');
 
   --Remap Tablespace
-  DBMS_DATAPUMP.METADATA_REMAP(v_hdnl, 'REMAP_TABLESPACE', 'tablespace_old', 'tablespace_new');
+  DBMS_DATAPUMP.METADATA_REMAP(v_hdnl, 'REMAP_TABLESPACE', 'tablespace_name_old', 'tablespace_name_new');
 
   --Remap Schema
   DBMS_DATAPUMP.METADATA_REMAP(v_hdnl, 'REMAP_SCHEMA', 'schema_name_old', 'schema_name_new');

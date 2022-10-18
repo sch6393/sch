@@ -31,6 +31,9 @@ TEMP	8	100	YES
 ### 크기 변경
 ```sql
 ALTER TABLESPACE temp_tablespace_name SHRINK SPACE KEEP 8G;
+
+--MAX 값 변경
+ALTER TABLESPACE temp_tablespace_name AUTOEXTEND ON MAXSIZE 100G;
 ```
 
 <br>

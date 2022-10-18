@@ -8,9 +8,10 @@ DB Link
 
 ### 리스트 확인
 ```sql
+--User
 SELECT * FROM ALL_DB_LINKS;
 
---전체
+--DBA
 SELECT * FROM DBA_DB_LINKS;
 ```
 

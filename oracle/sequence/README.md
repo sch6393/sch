@@ -51,7 +51,11 @@ ALTER SEQUENCE owner_name.seq_name NOCYCLE;
 
 ### 시퀀스 현재 값 확인
 ```sql
+--User
 SELECT LAST_NUMBER FROM USER_SEQUENCES WHERE SEQUENCE_NAME = 'seq_name';
+
+--DBA
+SELECT LAST_NUMBER FROM DBA_SEQUENCES  WHERE SEQUENCE_NAME = 'seq_name';
 ```
 
 <br>

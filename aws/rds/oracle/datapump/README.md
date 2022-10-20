@@ -70,11 +70,10 @@ BEGIN
   --테이블이 이미 존재할 경우의 작업 지정
   DBMS_DATAPUMP.SET_PARAMETER(v_hdnl,'TABLE_EXISTS_ACTION', 'TRUNCATE');
 
-  --Remap Tablespace
+  --Remap
   DBMS_DATAPUMP.METADATA_REMAP(v_hdnl, 'REMAP_TABLESPACE', 'tablespace_name_old', 'tablespace_name_new');
-
-  --Remap Schema
   DBMS_DATAPUMP.METADATA_REMAP(v_hdnl, 'REMAP_SCHEMA', 'schema_name_old', 'schema_name_new');
+  DBMS_DATAPUMP.METADATA_REMAP(v_hdnl, 'REMAP_TABLE', 'table_name_old', 'table_name_new');
   
   DBMS_DATAPUMP.START_JOB(v_hdnl);
 END;

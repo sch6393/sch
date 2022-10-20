@@ -18,7 +18,11 @@ undo_tablespace   string  UNDO_T1       테이블스페이스 이름
 
 ### 크기 변경
 ```sql
+--테이블 스페이스 파일 크기 변경
 ALTER TABLESPACE undo_tablespace_name RESIZE 8G;
+
+--MAX 크기 변경
+ALTER TABLESPACE undo_tablespace_name AUTOEXTEND ON MAXSIZE 100G;
 ```
 >[ORA-03297: file contains used data beyond requested RESIZE value](../error/03297.md) 에러가 발생한다면 아래의 [교체 항목](#undo-테이블스페이스-교체-순서)을 참조
 

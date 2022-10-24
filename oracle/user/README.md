@@ -84,17 +84,7 @@ ALTER USER user_name DEFAULT TABLESPACE tablespace_name;
 
 <br>
 
-### 비밀번호 대소문자 구분 여부
-```sql
---확인
-SHOW PARAMETER sec_case;
-/*
-TRUE  : 구분 O
-FALSE : 구분 X
-*/
-
---변경
-ALTER SYSTEM SET sec_case_sensitive_logon=FALSE;
-```
+### 참고
+* [비밀번호 대소문자 구분 여부](../parameter/sec-case-sensitive-logon.md)
 
 <br>

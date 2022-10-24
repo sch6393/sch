@@ -17,6 +17,7 @@ oerr sp2 591
 ### [ORA-00972: identifier is too long](./error/00972.md)
 ### [ORA-01017: invalid username/password; logon denied](./error/01017.md)
 ### [ORA-01153: an incompatible media recovery is active](./error/01153.md)
+### [ORA-01476: divisor is equal to zero](./error/01476.md)
 ### [ORA-01502: index '%s.%s' or partition of such index is in unusable state](./error/01502.md)
 ### [ORA-01549: tablespace not empty, use INCLUDING CONTENTS option](./error/01549.md)
 ### [ORA-01555: snapshot too old: rollback segment number %s with name "%s" too small](./error/01555.md)

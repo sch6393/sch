@@ -15,6 +15,7 @@ Oracle
 ### [Install Oracle Client](./install-oracle-client/README.md)
 ### [Merge Into](./merge-into/README.md)
 ### [NLS Parameter](./nls-parameter/README.md)
+### [Parameter](./parameter.md)
 ### [Patch](./patch/README.md)
 ### [PCT](./pct/README.md)
 ### [Process](./process/README.md)

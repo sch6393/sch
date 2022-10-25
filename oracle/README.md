@@ -1,7 +1,7 @@
 Oracle
 ===
 
-### [ActiveDuplication](./active-duplication/README.md)
+### [Active Duplication](./active-duplication/README.md)
 ### [Analyze](./analyze/README.md)
 ### [Constraint](./constraint/README.md)
 ### [Datapump](./datapump/README.md)

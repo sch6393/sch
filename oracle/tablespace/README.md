@@ -52,6 +52,14 @@ ALTER TABLESPACE tablespace_name ADD DATAFILE '/AAA/BBB/CCC/tablespace_filename'
 
 <br>
 
+### 변경
+```sql
+ALTER TABLESPACE tablespace_name RESIZE size;
+```
+>[테이블 스페이스 내부 데이터 크기를 확인하여 변경](./change-tablespace.md)
+
+<br>
+
 ### Remap
 * [Table](../Table/README.md#remap)
 * [Index](../Index/README.md#remap)

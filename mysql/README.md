@@ -12,6 +12,7 @@ MySQL
 ### [mysql](./mysql/README.md)
 ### [Partition](./partition/README.md)
 ### [Process](./process/README.md)
+### [Profiling](./profiling/README.md)
 ### [Schema](./schema/README.md)
 ### [Table](./table/README.md)
 ### [Time Zone](./time-zone/README.md)

@@ -84,6 +84,17 @@ ALTER USER user_name DEFAULT TABLESPACE tablespace_name;
 
 <br>
 
+### 기본 테이블스페이스가 아닌 테이블스페이스에 대한 사용
+```sql
+--size만큼 사용할 수 있도록 함
+ALTER USER owner_name QUOTA size ON tablespace_name;
+
+--제한 없음
+ALTER USER owner_name QUOTA UNLIMITED ON tablespace_name;
+```
+
+<br>
+
 ### 참고
 * [비밀번호 대소문자 구분 여부](../parameter/sec-case-sensitive-logon.md)
 

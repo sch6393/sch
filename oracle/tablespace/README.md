@@ -78,6 +78,9 @@ DROP TABLESPACE tablespace_name;
 --size만큼 사용할 수 있도록 함
 ALTER USER owner_name QUOTA size ON tablespace_name;
 
+--제한 없음
+ALTER USER owner_name QUOTA UNLIMITED ON tablespace_name;
+
 --전체 권한
 GRANT UNLIMITED TABLESPACE to owner_name;
 ```

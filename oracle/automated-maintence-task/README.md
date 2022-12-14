@@ -89,7 +89,7 @@ EXEC DBMS_AUTO_TASK_ADMIN.ENABLE(CLIENT_NAME => 'auto space advisor', OPERATION 
 EXEC DBMS_AUTO_TASK_ADMIN.ENABLE(CLIENT_NAME => 'auto optimizer stats collection', OPERATION => NULL, WINDOW_NAME => NULL);
 
 --auto optimizer stats collection ON (일요일에만)
-EXEC DBMS_AUTO_TASK_ADMIN.enable(CLIENT_NAME => 'auto optimizer stats collection', OPERATION => NULL, WINDOW_NAME => 'SUNDAY_WINDOW');
+EXEC DBMS_AUTO_TASK_ADMIN.ENABLE(CLIENT_NAME => 'auto optimizer stats collection', OPERATION => NULL, WINDOW_NAME => 'SUNDAY_WINDOW');
 ```
 
 <br>

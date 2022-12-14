@@ -47,6 +47,7 @@ ORDER BY INDEX_NAME, COLUMN_POSITION;
 <br>
 
 ### 참고
+* [Compression](../Compression/README.md#인덱스-압축)
 * [PCT](../pct/README.md)
 * 인덱스의 컬럼 이름이 `SYS_NC...$` 의 형태일 경우
   >컬럼을 DESC (역순) 으로 생성할 경우 해당 컬럼 이름으로 지정됨

@@ -39,6 +39,7 @@ oerr sp2 591
 ### [ORA-12537: TNS:connection closed](./error/12537.md)
 ### [ORA-12703: this character set conversion is not supported.](./error/12703.md)
 ### [ORA-12719: operation requires database is in RESTRICTED mode](./error/12719.md)
+### [ORA-12838: cannot read/modify an object after modifying it in parallel](./error/12838.md)
 ### [ORA-12899: value too large for column %s (actual: %s, maximum: %s)](./error/12899.md)
 ### [ORA-14047: ALTER TABLE|INDEX RENAME may not be combined with other operations](./error/14047.md)
 ### [ORA-19573: cannot obtain %s enqueue for datafile %s](./error/19573.md)

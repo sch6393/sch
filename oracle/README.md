@@ -8,6 +8,7 @@ Oracle
 ### [Constraint](./constraint/README.md)
 ### [Datapump](./datapump/README.md)
 ### [DB Link](./db-link/README.md)
+### [Direct Path Load](./direct-path-load/README.md)
 ### [Error](./error.md)
 ### [Explain](./explain/README.md)
 ### [Export csv](./export-csv/README.md)

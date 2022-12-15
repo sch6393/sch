@@ -13,6 +13,7 @@ Oracle
 ### [Export csv](./export-csv/README.md)
 ### [Flashback](./flashback/README.md)
 ### [Gathering](./gathering/README.md)
+### [Hint](./hint/README.md)
 ### [Index](./index/README.md)
 ### [Install Oracle Client](./install-oracle-client/README.md)
 ### [Merge Into](./merge-into/README.md)

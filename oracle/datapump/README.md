@@ -61,6 +61,11 @@ expdp id/pw NETWORK_LINK=dblink_name TABLES=schema_name.table_name DIRECTORY=dir
     EXCLUDE=TABLE:\"IN \(\'table_name1\', \'table_name2\'\)\"
     QUERY=owner_name.table_name:\"where date_column \>\= TO_DATE\(\'20220101\',\'YYYYMMDD\'\)\"
     ```
+1. 기타 옵션
+    ```sql
+    --압축할 데이터 지정
+    COMPRESSION=ALL | DATA_ONLY | METADATA_ONLY | NONE
+    ```
 
 <br>
 

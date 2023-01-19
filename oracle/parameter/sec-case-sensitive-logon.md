@@ -11,7 +11,7 @@ NAME                     TYPE    VALUE
 sec_case_sensitive_logon boolean TRUE
 */
 ```
->TRUE  : 구분 O, FALSE : 구분 X
+>TRUE : 구분 O, FALSE : 구분 X
 
 <br>
 

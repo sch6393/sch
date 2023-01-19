@@ -4,21 +4,18 @@ sort_area_size
 
 ### 확인
 ```sql
-SHOW PARAMETER sec_case;
+SHOW PARAMETER sort_area_size;
 /*
-NAME                     TYPE    VALUE 
------------------------- ------- ----- 
-sec_case_sensitive_logon boolean TRUE
+NAME                    TYPE    VALUE 
+----------------------- ------- ----- 
+sort_area_size          integer 65536 
 */
 ```
->TRUE : 구분 O, FALSE : 구분 X
 
 <br>
 
 ### 변경
 ```sql
-ALTER SYSTEM SET sec_case_sensitive_logon=TRUE;
-ALTER SYSTEM SET sec_case_sensitive_logon=FALSE;
-```
+ALTER SYSTEM SET sort_area_size=000000;
 
 <br>

@@ -27,6 +27,7 @@ oerr sp2 591
 ### [ORA-01652: unable to extend temp segment by %s in tablespace %s](./error/01652.md)
 ### [ORA-01654: unable to extend index %s.%s by %s in tablespace %s](./error/01654.md)
 ### [ORA-01658: unable to create INITIAL extent for segment in tablespace %s](./error/01658.md)
+### [ORA-01688: unable to extend table %s.%s partition %s by %s in tablespace %s](./error/01688.md)
 ### [ORA-01790: expression must have same datatype as corresponding expression](./error/01790.md)
 ### [ORA-01795: maximum number of expressions in a list is 1000 error](./error/01795.md)
 ### [ORA-01861: literal does not match format string](./error/01861.md)

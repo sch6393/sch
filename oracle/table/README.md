@@ -27,7 +27,10 @@ ALTER TABLE owner_name.table_name RENAME TO change_name;
 ### Column 변경
 ```sql
 --추가
-ALTER TABLE owner_name.table_name ADD column_name data_type;
+ALTER TABLE owner_name.table_name ADD column_name data_type constraint_type;
+
+--기본 값
+ALTER TABLE owner_name.table_name ADD column_name data_type DEFAULT value NOT NULL;
 
 --삭제
 ALTER TABLE owner_name.table_name DROP COLUMN column_name;
@@ -41,6 +44,7 @@ ALTER TABLE owner_name.table_name RENAME COLUMN column_name_old TO column_name_n
 --코멘트
 COMMENT ON COLUMN owner_name.table_name.column_name IS 'comment';
 ```
+>11g 부터 전체 데이터에 대해 수정이 이뤄지지 않고 Dictionary에서 메타 데이터 형태로 처리하게 되므로 문제 없이 실행 가능
 
 <br>
 

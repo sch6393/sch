@@ -34,7 +34,7 @@ DESC owner_name.view_name;
 
 ### 삭제
 ```sql
-DROP VIEW owner_name.table_name;
+DROP VIEW owner_name.view_name;
 ```
 
 <br>

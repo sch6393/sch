@@ -25,6 +25,13 @@ WHERE A.column_name ...
 
 <br>
 
+### 구조 확인
+```sql
+DESC owner_name.view_name;
+```
+
+<br>
+
 ### 삭제
 ```sql
 DROP VIEW owner_name.table_name;

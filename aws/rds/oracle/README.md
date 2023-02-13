@@ -6,6 +6,7 @@ RDS Oracle
 
 <br>
 
+### [RDS에서의 권한 관리](./administering/README.md)
 ### [인스턴스 생성 방법](./create-instance/README.md)
 ### [Datapump 관련 명령어](./datapump/README.md)
 ### [자원 할당량](./quotas/README.md)

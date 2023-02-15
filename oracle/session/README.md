@@ -38,6 +38,17 @@ WHERE
 
 <br>
 
+### 세션 강제 끊기
+```sql
+--SID, SERIAL#
+ALTER SYSTEM KILL SESSION '2564, 40213';
+
+--RDS
+EXEC rdsadmin.rdsadmin_util.kill(2564, 40213);
+```
+
+<br>
+
 ### 참고
 * [Process](../process/README.md)
 

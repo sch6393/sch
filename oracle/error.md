@@ -34,6 +34,7 @@ oerr sp2 591
 ### [ORA-01922: CASCADE must be specified to drop '%s'](./error/01922.md)
 ### [ORA-01940: cannot drop a user that is currently connected](./error/01940.md)
 ### [ORA-01950: no privileges on tablespace '%s'](./error/01950.md)
+### [ORA-02082: a loopback database link must have a connection qualifier](./error/02082.md)
 ### [ORA-02287: sequence number not allowed here](./error/02287.md)
 ### [ORA-02429: cannot drop index used for enforcement of unique/primary key](./error/02429.md)
 ### [ORA-04031: unable to allocate %s bytes of shared memory ("%s","%s","%s","%s")](./error/04031.md)

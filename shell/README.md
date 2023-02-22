@@ -5,6 +5,7 @@ Shell
 ### [iconv](./iconv/README.md)
 ### [iostat](./iostat/README.md)
 ### [sar](./sar/README.md)
+### [tail](./tail/README.md)
 ### [top](./top/README.md)
 ### [VNC](./vnc/README.md)
 

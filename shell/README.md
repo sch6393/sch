@@ -3,6 +3,7 @@ Shell
 
 ### [crontab](./crontab/README.md)
 ### [export](./export/README.md)
+### [grep](./grep/README.md)
 ### [head](./head/README.md)
 ### [iconv](./iconv/README.md)
 ### [iostat](./iostat/README.md)
@@ -42,16 +43,6 @@ abspath="$( cd "$( dirname "$0" )" && pwd -P )"
 ### 하위 디렉토리 용량 확인
 ```sh
 du -sh ./* | sort -r
-```
-
-<br>
-
-### 파일 내용 검색
-```sh
-grep -r 'text' /AAA/BBB/CCC.txt
-
-# 하위 디렉토리 파일 포함
-grep -r 'text' ./*
 ```
 
 <br>

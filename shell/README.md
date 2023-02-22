@@ -69,13 +69,6 @@ find . -name "*.sh"
 
 <br>
 
-### 환경변수 확인
-```sh
-export
-```
-
-<br>
-
 ### zip 파일 압축 풀기
 ```sh
 unzip file_name.zip

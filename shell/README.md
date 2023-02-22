@@ -2,11 +2,13 @@ Shell
 ===
 
 ### [crontab](./crontab/README.md)
+### [export](./export/README.md)
 ### [head](./head/README.md)
 ### [iconv](./iconv/README.md)
 ### [iostat](./iostat/README.md)
 ### [sar](./sar/README.md)
 ### [tail](./tail/README.md)
+### [timedatectl](./timedatectl/README.md)
 ### [top](./top/README.md)
 ### [VNC](./vnc/README.md)
 

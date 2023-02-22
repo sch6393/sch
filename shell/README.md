@@ -2,6 +2,7 @@ Shell
 ===
 
 ### [crontab](./crontab/README.md)
+### [head](./head/README.md)
 ### [iconv](./iconv/README.md)
 ### [iostat](./iostat/README.md)
 ### [sar](./sar/README.md)

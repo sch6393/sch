@@ -3,6 +3,7 @@ Shell
 
 ### [crontab](./crontab/README.md)
 ### [export](./export/README.md)
+### [find](./find/README.md)
 ### [grep](./grep/README.md)
 ### [head](./head/README.md)
 ### [iconv](./iconv/README.md)
@@ -51,13 +52,6 @@ du -sh ./* | sort -r
 ```sh
 # AAA ➞ BBB
 sed 's/AAA/BBB/g' test.txt
-```
-
-<br>
-
-### 파일 이름 검색
-```sh
-find . -name "*.sh"
 ```
 
 <br>

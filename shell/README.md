@@ -82,14 +82,3 @@ unzip file_name.zip
 ```
 
 <br>
-
-### Timezone
-```sh
-# 시간 정보 표시
-timedatectl
-
-# 타임존 변경
-timedatectl set-timezone Asia/Tokyo
-```
-
-<br>

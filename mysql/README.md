@@ -10,6 +10,7 @@ MySQL
 ### [Load Data](./load-data/README.md)
 ### [Log](./log/README.md)
 ### [mysql](./mysql/README.md)
+### [mysqldump](./mysqldump/README.md)
 ### [Partition](./partition/README.md)
 ### [Procedure](./procedure/README.md)
 ### [Process](./process/README.md)

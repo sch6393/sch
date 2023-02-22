@@ -30,7 +30,16 @@ mysql -u USER -pPASSWORD -D SCHEMA
 # 쿼리를 입력하여 결과 출력 (csv)
 query="SELECT column FROM table;"
 mysql -h HOST -u USER -pPASSWORD -P PORT -D SCHEMA -e "$query" | tr '\t' ',' > /aaa/bbb/query.csv
+```
 
+<br>
+
+### 덤프 파일로부터 복원
+```sh
+mysql -u USER -p < /dumpfile.sql
+
+# 스키마 지정
+mysql -u USER -p -D SCHEMA < /dumpfile.sql
 ```
 
 <br>

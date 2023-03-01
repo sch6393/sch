@@ -21,9 +21,14 @@ mysqldump -u USER -p > /dumpfile.sql
     SET GLOBAL bulk_insert_buffer_size = ;
     SET GLOBAL key_buffer_size = ;
     SET GLOBAL innodb_buffer_pool_size = ;
-    SET GLOBAL innodb_flush_log_at_trx_commit = 0; --복원이 끝나면 1로 변경
-    SET GLOBAL foreign_key_checks = 0;             --복원이 끝나면 1로 변경
-    SET GLOBAL unique_checks = 0;                  --복원이 끝나면 1로 변경
+    SET GLOBAL innodb_flush_log_at_trx_commit = 0;
+    SET GLOBAL foreign_key_checks = 0;
+    SET GLOBAL unique_checks = 0;
+
+    --복원이 끝나면 1로 변경
+    SET GLOBAL innodb_flush_log_at_trx_commit = 1;
+    SET GLOBAL foreign_key_checks = 1;
+    SET GLOBAL unique_checks = 1;
     ```
 
 3. 복원 시작
@@ -136,6 +141,12 @@ innodb_buffer_pool_size=1G
 
 # Insert 시 로그를 기록 (1 : ON, 0 : OFF)
 innodb_flush_log_at_trx_commit=0
+
+# 외래키 체크 (1 : ON, 0 : OFF)
+foreign_key_checks=0
+
+# 유니크 체크 (1 : ON, 0 : OFF)
+unique_checks=0
 ```
 
 <br>

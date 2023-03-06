@@ -7,6 +7,7 @@ MySQL
 ### [Explain](./explain/README.md)
 ### [Function](./function/README.md)
 ### [Index](./index/README.md)
+### [Install](./install/README.md)
 ### [Load Data](./load-data/README.md)
 ### [Log](./log/README.md)
 ### [mysql](./mysql/README.md)

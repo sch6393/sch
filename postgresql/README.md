@@ -1,7 +1,5 @@
 PostgreSQL
 ===
 
-### [Postgres Session](./postgres-session.md)
-### [Timezone](./timezone.md)
-
-
+### [Session](./session/README.md)
+### [Timezone](./timezone/README.md)

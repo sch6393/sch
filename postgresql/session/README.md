@@ -1,4 +1,4 @@
-Postgres Session
+Session
 ===
 
 >[https://www.npmjs.com/package/connect-pg-simple](https://www.npmjs.com/package/connect-pg-simple)

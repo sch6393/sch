@@ -46,6 +46,21 @@ SET GLOBAL log_output = 'TABLE,FILE';
 ```sql
 --로그 저장 위치가 테이블인 경우
 SELECT * FROM mysql.slow_log;
+
+--일부 컬럼 정의
+SELECT
+    START_TIME, USER_HOST, QUERY_TIME, LOCK_TIME, ROWS_SENT, ROWS_EXAMINED, DB, CONVERT(SQL_TEXT USING UTF8) SQL_TEXT
+FROM mysql.slow_log;
+/*
+START_TIME    : 쿼리를 실행한 시간
+USER_HOST     : 쿼리를 실행한 유저
+QUERY_TIME    : 쿼리의 소요 시간 (초)
+LOCK_TIME     : 테이블 락 대기 시간 (초)
+ROWS_SENT     : 실제 클라이언트에 전달된 행 수
+ROWS_EXAMINED : 쿼리를 처리하기 위해 접근한 행 수
+DB            : 쿼리가 실행된 스키마
+SQL_TEXT      : 실제 실행한 쿼리
+*/
 ```
 
 <br>

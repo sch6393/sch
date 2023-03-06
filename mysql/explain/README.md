@@ -1,6 +1,5 @@
 Explain
 ===
-
 >[https://dev.mysql.com/doc/refman/8.0/en/explain.html](https://dev.mysql.com/doc/refman/8.0/en/explain.html)
 
 ### 기본 형식

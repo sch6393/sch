@@ -1,6 +1,5 @@
 RDS Oracle의 자원 할당량
 ===
-
 >[https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html)
 
 ### 최대 Connection 수

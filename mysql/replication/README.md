@@ -101,3 +101,21 @@ SHOW MASTER STATUS;
 ```
 
 <br>
+
+### 참고
+* 순서
+  1. 마스터에서 binary log를 만들어 이벤트를 기록
+  2. 슬레이브의 I/O 스레드를 통해 마스터한테 이벤트를 요청
+  3. 마스터는 이벤트를 요청 받으면 binlog dump 스레드를 통해 클라이언트로 이벤트를 전송
+  4. 슬레이브의 I/O 스레드는 전송 받은 이벤트를 relay log로 작성
+  5. SQL 스레드는 relay log를 읽고 이벤트를 실행해 슬레이브에 데이터 작성
+
+|항목|설명|
+|-|-|
+|[binary-log](../log/binary/README.md)|해당 문서 참조|
+|binlog dump Thread|마스터에 저장된 binary log를 슬레이브로 전송해주는 스레드<br>마스터는 슬레이브에 대한 정보를 가지고 있지 않기 때문에 슬레이브에서 요청이 오면 그에 해당하는 이벤트만 보낼 뿐이므로 부하가 적음|
+|I/O Thread|마스터한테 다음 이벤트를 요청하는 스레드|
+|[relay-log](../log/relay/README.md)|해당 문서 참조|
+|SQL Thread|I/O 스레드가 만든 relay log를 읽어 실행하고, relay log를 삭제하는 스레드|
+
+<br>

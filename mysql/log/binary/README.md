@@ -60,3 +60,28 @@ expire_logs_days	7
 ```
 
 <br>
+
+### 로그 파일 확인
+```sql
+SHOW BINARY LOGS;
+/*
+Log_name, File_size
+binary_log.000001	536871550
+binary_log.000002	536871303
+binary_log.000003	536872543
+...
+*/
+```
+
+<br>
+
+### Purge
+```sql
+--파일 기준
+PURGE BINARY LOGS TO 'binary_log.000000';
+
+--날짜 기준
+PURGE BINARY LOGS BEFORE '2023-03-08 09:00:00';
+```
+
+<br>

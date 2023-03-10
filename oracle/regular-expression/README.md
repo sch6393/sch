@@ -1,7 +1,7 @@
 Regular Expression
 ===
 
-[Regular Expression](../../etc/regular-expression.md)
+[Regular Expression](../../etc/regular-expression/README.md)
 
 ### 종류
 ```sql

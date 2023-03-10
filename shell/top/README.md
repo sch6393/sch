@@ -25,12 +25,20 @@ KiB Swap:        0 total,        0 free,        0 used.  1328400 avail Mem
 ```sh
 # 1분, 5분, 15분 동안 대기하고 있었던 태스크 수 평균
 load average: 0.00, 0.01, 0.05
+
+# 코어 수 확인
+ grep -c processor /proc/cpuinfo
 ```
+* 싱글코어 기준으로 1.00이라면 사용률이 100%라는 뜻
+* 멀티 코어의 경우 `코어 수 * 1.00` 이 사용률 100% (쿼드코어라면 4.00이 사용률 100%)
 
 <br>
 
 ### 계산
-* 커널이 CPU를 사용하기 위해 대기 중인 프로세스 (RUNNING), I/O 완료를 대기 중인 프로세스 (UNINTERRUPTIBLE) 의 수를 계산한 값 
-  >Load Average로 확인할 수 있는 시스템 부하는 CPU와 I/O 2가지
-  <br>
-  CPU 바운드인지 I/O 바운드인지 확인 ➞ [sar](../sar/README.md)
+* 커널이 CPU를 사용하기 위해 대기 중인 프로세스 (RUNNING), I/O 완료를 대기 중인 프로세스 (UNINTERRUPTIBLE) 의 수를 계산한 값
+  >https://github.com/dmgerman/original/blob/master/kernel/timer.c
+* Load Average로 확인할 수 있는 시스템 부하는 CPU와 I/O 2가지
+  >CPU 바운드인지 I/O 바운드인지 확인 ➞ [sar](../sar/README.md)
+* CPU 코어별로 확인하려면 `top` 실행 중에 1을 누르면 코어 별로 표시
+
+<br>

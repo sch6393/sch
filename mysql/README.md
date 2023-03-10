@@ -12,6 +12,7 @@ MySQL
 ### [Log](./log/README.md)
 ### [mysql](./mysql/README.md)
 ### [mysqldump](./mysqldump/README.md)
+### [Parameter](./parameter/README.md)
 ### [Partition](./partition/README.md)
 ### [Procedure](./procedure/README.md)
 ### [Process](./process/README.md)

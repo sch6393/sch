@@ -1,6 +1,6 @@
 Linux
 ===
 
-### [CentOS-Base.repo](./CentOS-Base.repo.md)
+### [CentOS-Base.repo](./centos-base.repo/README.md)
 
 <br>

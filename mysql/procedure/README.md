@@ -59,3 +59,35 @@ DELIMITER ;
 * FETCH는 오픈된 커서의 데이터를 한 행씩만 가져올 수 있음
 
 <br>
+
+### 핸들러
+```sql
+--에러 발생 시 변수 값을 1로 설정하고 다음 내용을 실행
+DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET variable_name = 1;
+
+--에러 발생 시 롤백 후 에러 메시지를 표시하고 현재 코드 단락을 나감
+DECLARE EXIT HANDLER FOR SQLEXCEPTION
+BEGIN
+	ROLLBACK;
+	SELECT 'Error Message!'; --An error has occurred, operation rollbacked and the stored procedure was terminated
+END;
+
+--SELECT INTO나 CURSOR일 때 더 이상 가져올 데이터가 없다면 변수 값을 1로 설정하고 계속 실행
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET variable_name = 1;
+
+--해당 코드에 해당하는 에러가 발생하면 에러 메시지를 표시하고 계속 실행
+--1062는 중복 키 에러
+DECLARE CONTINUE HANDLER FOR 1062
+SELECT 'Error Message!'; --Duplicate entry '1' for key 'PRIMARY'
+```
+
+<br>
+
+### 핸들러의 우선순위
+|우선순위|핸들러|
+|-|-|
+|1|MySQL 에러 코드 핸들러|
+|2|SQLSTATE 핸들러|
+|3|SQLEXCEPTION|
+
+<br>

@@ -1,6 +1,13 @@
 Procedure
 ===
 
+### 조회
+```sql
+SELECT * FROM information_schema.ROUTINES;
+```
+
+<br>
+
 ### 기본 형식
 ```sql
 DELIMITER $$

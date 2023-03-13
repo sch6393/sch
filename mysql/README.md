@@ -4,6 +4,7 @@ MySQL
 ### [Data Format](./data-format/README.md)
 ### [Date Format](./date-format/README.md)
 ### [Error](./error.md)
+### [Event Scheduler](./event-scheduler/README.md)
 ### [Explain](./explain/README.md)
 ### [Function](./function/README.md)
 ### [Index](./index/README.md)

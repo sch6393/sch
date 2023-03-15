@@ -1,6 +1,10 @@
 Index
 ===
 
+### MySQL의 인덱스는 [B-Tree 구조](../../etc/btree/README.md)
+
+<br>
+
 ### 생성
 ```sql
 --CREATE

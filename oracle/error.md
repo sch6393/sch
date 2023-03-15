@@ -38,6 +38,7 @@ oerr sp2 591
 ### [ORA-02082: a loopback database link must have a connection qualifier](./error/02082.md)
 ### [ORA-02287: sequence number not allowed here](./error/02287.md)
 ### [ORA-02429: cannot drop index used for enforcement of unique/primary key](./error/02429.md)
+### [ORA-02437: cannot validate (%s.%s) - primary key violated](./error/02437.md)
 ### [ORA-04031: unable to allocate %s bytes of shared memory ("%s","%s","%s","%s")](./error/04031.md)
 ### [ORA-10636: ROW MOVEMENT is not enabled](./error/10636.md)
 ### [ORA-12162: TNS:net service name is incorrectly specified](./error/12162.md)

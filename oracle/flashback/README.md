@@ -44,3 +44,10 @@ WHERE ... ;
 ```
 
 <br>
+
+### 플래시백 트랜잭션 쿼리 확인
+```sql
+SELECT * FROM SYS.flashback_transaction_query;
+```
+
+<br>

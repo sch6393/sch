@@ -4,6 +4,9 @@ mysqldump
 ### 기본 형식
 ```sh
 mysqldump -u USER -p > /dumpfile.sql
+
+# 데이터 없이 데이터베이스 구조만 가져오는 경우
+mysqldump -u USER -p --databases SCHEMA_NAME1 SCHEMA_NAME2 --no-data --routines --triggers > backup.sql
 ```
 
 <br>
@@ -11,7 +14,7 @@ mysqldump -u USER -p > /dumpfile.sql
 ### 덤프 속도와 복원 속도를 최대한 빠르게 하기 위한 절차
 1. 덤프 시 넣는 옵션
     ```sh
-    mysqldump --default-character-set=binary --all-databases --routines --triggers --quick --extended-insert --single-transaction --no-autocommit > /dumpfile.sql
+    mysqldump --default-character-set=utf8mb4 --all-databases --routines --triggers --quick --extended-insert --single-transaction --no-autocommit --hex-blob > /dumpfile.sql
     ```
 
 2. 복원 인스턴스에 [관련 파라미터](#관련-파라미터) 를 서버 리소스에 맞게 수정
@@ -118,6 +121,10 @@ mysqldump -u USER -p --dump-slave > /dumpfile.sql
 
 # --dump-slave 옵션인 경우 마스터 정보를 같이 포함
 mysqldump -u USER -p --dump-slave --include-master-host-port > /dumpfile.sql
+
+
+# BLOB 타입
+mysqldump -u USER -p --hex-blob > /dumpfile.sql
 ```
 
 <br>

@@ -20,7 +20,7 @@ Isolation Level (격리 수준)
   * 트랜잭션마다 번호를 할당하여 해당 번호보다 낮은 트랜잭션에서만 변경한 데이터를 읽게 함 (UNDO 영역에 데이터를 백업하고 실제 레코드 값은 변경됨)
     * 참고 - [MVCC](https://ja.wikipedia.org/wiki/MultiVersion_Concurrency_Control)
   * UNDO 영역에 백업된 데이터가 많아지면 성능 저하가 발생
-  * 다른 트랜잭션에서 실행된 변경 작업에 의해 해당 레코드가 보이거나 안 보이는 가능성이 있음 (PHANTOM READ)
+  * 다른 트랜잭션에서 실행된 변경 작업에 의해 해당 레코드가 보이거나 안 보일 가능성이 있음 (PHANTOM READ)
   * PHANTOM READ를 방지하려면 쓰기 잠금이 필요
 
 <br>

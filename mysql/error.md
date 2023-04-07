@@ -1,6 +1,7 @@
 Error
 ===
 
+### [ERROR 1045 (28000): Access denied for user 'user_name'@'host_name' (using password: NO)](./error/1045.md)
 ### [ERROR at line : Unknown command '\''.](./error/unknown-command.md)
 ### [ERROR 1227 (42000) at line 18: Access denied; you need (at least one of) the SUPER privilege(s) for this operation](./error/1227.md)
 ### [Got fatal error 1236 from master when reading data from binary log: 'Client requested master to start replication from position > file size; the first event 'binary_log.000000' at 000000000, the last event read from '/directory_name/log/binary_log.000000' at 4, the last byte read from '/directory_name/log/binary_log.000000' at 4.'](./error/1236.md)

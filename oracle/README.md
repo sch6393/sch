@@ -20,6 +20,7 @@ Oracle
 ### [Merge Into](./merge-into/README.md)
 ### [NLS Parameter](./nls-parameter/README.md)
 ### [Parameter](./parameter.md)
+### [Partition](./partition/README.md)
 ### [Patch](./patch/README.md)
 ### [PCT](./pct/README.md)
 ### [Process](./process/README.md)

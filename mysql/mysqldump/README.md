@@ -169,3 +169,9 @@ unique_checks=0
 ### [복원](../mysql/README.md#덤프-파일로부터-복원)
 
 <br>
+
+### 참고
+* [GTID](../gtid/README.md)
+* [Replication](../replication/README.md)
+
+<br>

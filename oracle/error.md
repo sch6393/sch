@@ -49,6 +49,7 @@ oerr sp2 591
 ### [ORA-12899: value too large for column %s (actual: %s, maximum: %s)](./error/12899.md)
 ### [ORA-14047: ALTER TABLE|INDEX RENAME may not be combined with other operations](./error/14047.md)
 ### [ORA-14400: inserted partition key does not map to any partition](./error/14400.md)
+### [ORA-14701: partition-extended name or bind variable must be used for DMLs on tables partitioned by the System method](./error/14701.md)
 ### [ORA-19573: cannot obtain %s enqueue for datafile %s](./error/19573.md)
 ### [ORA-22858: invalid alteration of datatype](./error/22858.md)
 ### [ORA-22868: table with LOBs contains segments in different tablespaces](./error/22868.md)

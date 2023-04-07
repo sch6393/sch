@@ -1,6 +1,6 @@
-GTID
+GTID (Global Transaction Identifier)
 ===
->Global Transaction Identifier
+>[https://dev.mysql.com/doc/refman/8.0/en/replication-gtids.html](https://dev.mysql.com/doc/refman/8.0/en/replication-gtids.html)
 
 ### 구성
 ```

@@ -125,6 +125,14 @@ mysqldump -u USER -p --dump-slave --include-master-host-port > /dumpfile.sql
 
 # BLOB 타입
 mysqldump -u USER -p --hex-blob > /dumpfile.sql
+
+# GTID 정보를 제어 여부
+# OFF  : SET @@ SESSION.SQL_LOG_BIN = 0; 해당 쿼리문이 추가되지 않음
+# ON   : SET @@ SESSION.SQL_LOG_BIN = 0; 해당 쿼리문이 추가됨
+# AUTO : SET @@ SESSION.SQL_LOG_BIN = 0; 덤프하려는 데이터베이스의 설정에 따라감
+mysqldump -u USER -p --set-gtid-purged=OFF  > /dumpfile.sql
+mysqldump -u USER -p --set-gtid-purged=ON   > /dumpfile.sql
+mysqldump -u USER -p --set-gtid-purged=AUTO > /dumpfile.sql
 ```
 
 <br>

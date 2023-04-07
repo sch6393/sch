@@ -7,6 +7,7 @@ MySQL
 ### [Event Scheduler](./event-scheduler/README.md)
 ### [Explain](./explain/README.md)
 ### [Function](./function/README.md)
+### [GTID](./gtid/README.md)
 ### [Index](./index/README.md)
 ### [Install](./install/README.md)
 ### [Isolation Level](./isolation-level/README.md)

@@ -1,7 +1,9 @@
 S3
 ===
 >[https://aws.amazon.com/s3/](https://aws.amazon.com/s3/)
+
 >[https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3.html](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3.html)
+
 >[https://docs.aws.amazon.com/cli/latest/reference/s3/](https://docs.aws.amazon.com/cli/latest/reference/s3/)
 
 ### 기본 명령어 형식
@@ -70,17 +72,21 @@ aws s3api list-objects-v2 --bucket BUCKET_NAME | jq -r '.[] | .[] | [.Key, .Last
 <br>
 
 ### 스토리지 클래스
+|스토리지 클래스|파라미터 값|다음 용도로 설계됨|가용 영역|최소 스토리지 기간|청구 가능한 최소 객체 크기|모니터링 및 자동 계층화 요금|검색 요금|
+|-|-|-|-|-|-|-|-|
+|스탠다드|`STANDARD`|자주 액세스하는 데이터 (한 달에 한 번 이상) (밀리초 단위로 액세스)|≥ 3|||||
+|지능형 계층화|`INTELLIGENT_TIERING`|액세스 패턴이 바뀌거나 알 수 없는 데이터|≥ 3|||128KB 이상인 객체에는 객체당 요금이 적용||
+|Standard-IA|`STANDARD_IA`|자주 액세스하지 않는 데이터 (한 달에 한 번) (밀리초 단위로 액세스)|≥ 3|30일|128KB||GB당 요금 적용|
+|One Zone-IA|`ONEZONE_IA`|단일 가용 영역에 저장되는 재생성 가능하고 자주 액세스하지 않는 (한 달에 한 번) 데이터 (밀리초 단위로 액세스)|1|30일|128KB||GB당 요금 적용|
+|Glacier Instant Retrieval|`GLACIER`|분기에 한 번 액세스하는 오래된 아카이브 데이터 (밀리초 내에 즉시 검색)|≥ 3|90일|128KB||GB당 요금 적용|
+|Glacier Flexible Retrieval (이전 명칭: Glacier)||일 년에 한 번 액세스하는 오래된 아카이브 데이터 (몇 분 내지 몇 시간의 검색 시간 소요)|≥ 3|90일|||GB당 요금 적용|
+|Glacier Deep Archive|`DEEP_ARCHIVE`|일 년에 한 번 미만으로 액세스하는 오래된 아카이브 데이터 (몇 시간의 검색 시간 소요)|≥ 3|180일|||GB당 요금 적용|
+|중복 감소|`REDUCED_REDUNDANCY`|중요하지 않고 자주 액세스하는 데이터 (밀리초 단위로 액세스) (S3 Standard가 더 비용 효율적이므로 권장되지 않음)|≥ 3||||GB당 요금 적용|
 >https://aws.amazon.com/s3/storage-classes/?nc1=h_ls
 
-|스토리지 클래스|다음 용도로 설계됨|가용 영역|최소 스토리지 기간|청구 가능한 최소 객체 크기|모니터링 및 자동 계층화 요금|검색 요금|
-|-|-|-|-|-|-|-|
-|스탠다드|자주 액세스하는 데이터 (한 달에 한 번 이상) (밀리초 단위로 액세스)|≥ 3|||||
-|지능형 계층화|액세스 패턴이 바뀌거나 알 수 없는 데이터|≥ 3|||128KB 이상인 객체에는 객체당 요금이 적용||
-|Standard-IA|자주 액세스하지 않는 데이터 (한 달에 한 번) (밀리초 단위로 액세스)|≥ 3|30일|128KB||GB당 요금 적용|
-|One Zone-IA|단일 가용 영역에 저장되는 재생성 가능하고 자주 액세스하지 않는 (한 달에 한 번) 데이터 (밀리초 단위로 액세스)|1|30일|128KB||GB당 요금 적용|
-|Glacier Instant Retrieval|분기에 한 번 액세스하는 오래된 아카이브 데이터 (밀리초 내에 즉시 검색)|≥ 3|90일|128KB||GB당 요금 적용|
-|Glacier Flexible Retrieval (이전 명칭: Glacier)|일 년에 한 번 액세스하는 오래된 아카이브 데이터 (몇 분 내지 몇 시간의 검색 시간 소요)|≥ 3|90일|||GB당 요금 적용|
-|Glacier Deep Archive|일 년에 한 번 미만으로 액세스하는 오래된 아카이브 데이터 (몇 시간의 검색 시간 소요)|≥ 3|180일|||GB당 요금 적용|
-|중복 감소|중요하지 않고 자주 액세스하는 데이터 (밀리초 단위로 액세스) (S3 Standard가 더 비용 효율적이므로 권장되지 않음)|≥ 3||||GB당 요금 적용|
+<br>
+
+### 스토리지 클래스 변경
+* `aws s3 cp s3://s3_bucket_name/directory_name/file_name s3://s3_bucket_name/directory_name/ --storage-class `[storage_class_name](#스토리지-클래스)
 
 <br>

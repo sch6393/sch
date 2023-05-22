@@ -12,6 +12,7 @@ Shell
 ### [tail](./tail/README.md)
 ### [timedatectl](./timedatectl/README.md)
 ### [top](./top/README.md)
+### [vi](./vi/README.md)
 ### [VNC](./vnc/README.md)
 
 <br>

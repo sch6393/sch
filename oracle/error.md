@@ -51,6 +51,7 @@ oerr sp2 591
 ### [ORA-14047: ALTER TABLE|INDEX RENAME may not be combined with other operations](./error/14047.md)
 ### [ORA-14086: a partitioned index may not be rebuilt as a whole](./error/14086.md)
 ### [ORA-14400: inserted partition key does not map to any partition](./error/14400.md)
+### [ORA-14511: cannot perform operation on a partitioned object](./error/14511.md)
 ### [ORA-14701: partition-extended name or bind variable must be used for DMLs on tables partitioned by the System method](./error/14701.md)
 ### [ORA-19573: cannot obtain %s enqueue for datafile %s](./error/19573.md)
 ### [ORA-22858: invalid alteration of datatype](./error/22858.md)

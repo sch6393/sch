@@ -17,6 +17,7 @@ Oracle
 ### [Hint](./hint/README.md)
 ### [Index](./index/README.md)
 ### [Install Oracle Client](./install-oracle-client/README.md)
+### [Literal SQL](./literal-sql/README.md)
 ### [Merge Into](./merge-into/README.md)
 ### [NLS Parameter](./nls-parameter/README.md)
 ### [Parameter](./parameter.md)

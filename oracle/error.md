@@ -12,6 +12,7 @@ oerr sp2 591
 ### [ORA-00054: resource busy and acquire with NOWAIT specified or timeout expired](./error/00054.md)
 ### [ORA-00059: maximum number of DB_FILES exceeded](./error/00059.md)
 ### [ORA-00439: feature not enabled: %s](./error/00439.md)
+### [ORA-00900: invalid SQL statement](./error/00900.md)
 ### [ORA-00911: invalid character](./error/00911.md)
 ### [ORA-00955: name is already used by an existing object](./error/00955.md)
 ### [ORA-00959: tablespace '%s' does not exist](./error/00959.md)

@@ -52,6 +52,6 @@ parallel_max_servers	0	8	        48	      3600
 <br>
 
 ### 참고
-* [Session](../Session/README.md)
+* [Session](../session/README.md)
 
 <br>

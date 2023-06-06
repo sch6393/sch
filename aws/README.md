@@ -1,6 +1,7 @@
 AWS
 ===
 
+### [Athena](./athena/README.md)
 ### [CLI](./cli/README.md)
 ### [DMS](./dms/README.md)
 ### [Glue](./glue/README.md)

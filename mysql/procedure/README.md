@@ -4,6 +4,11 @@ Procedure
 ### 조회
 ```sql
 SELECT * FROM information_schema.ROUTINES;
+
+SHOW PROCEDURE STATUS;
+
+--DDL 확인
+SHOW CREATE PROCEDURE prcedure_name;
 ```
 
 <br>

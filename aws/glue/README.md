@@ -96,7 +96,7 @@ Glue
           |Temporary path|`s3://bucket-glue/glue-temporary`|
       1. Run ETL Job
           * Parquet 파일 생성
-    * Athena
+    * [Athena](../athena/README.md)
       1. 데이터 확인
 
 <br>

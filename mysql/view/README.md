@@ -22,3 +22,10 @@ CREATE OR REPLACE VIEW schema_name.view_name AS SELECT column_name1, column_name
 ```
 
 <br>
+
+### DDL 확인
+```sql
+SHOW CREATE VIEW view_name;
+```
+
+<br>

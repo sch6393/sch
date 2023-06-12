@@ -1,6 +1,10 @@
 Oracle
 ===
 
+### [상황별 자주 쓰는 SQL](./_favorite/README.md)
+
+---
+
 ### [Active Duplication](./active-duplication/README.md)
 ### [Analyze](./analyze/README.md)
 ### [Automated Maintence Task](./automated-maintence-task/README.md)

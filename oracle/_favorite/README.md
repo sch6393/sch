@@ -28,3 +28,29 @@ ORDER BY A.TABLESPACE_NAME;
 ```
 
 <br>
+
+### 테이블 정보 간단 확인
+```sql
+--ALL_TABLES로 확인
+SELECT
+    TABLE_NAME                                       AS "TABLE NAME",
+    NUM_ROWS                                         AS "ROWS",
+    ROUND((NUM_ROWS * AVG_ROW_LEN / 1024 / 1024), 2) AS "MB"
+FROM
+    ALL_TABLES
+WHERE
+    OWNER IN ('owner_name1','owner_name2'...)
+    AND TABLE_NAME IN ('table_name1','table_name2'...);
+
+--DBA_SEGMENTS로 확인
+SELECT
+    OWNER, SEGMENT_NAME, SEGMENT_TYPE, BYTES / 1024 / 1024 AS "MB"
+FROM
+    DBA_SEGMENTS
+WHERE
+    OWNER = 'owner_name'
+    AND SEGMENT_NAME = 'table_name'
+    AND SEGMENT_TYPE = 'TABLE';
+```
+
+<br>

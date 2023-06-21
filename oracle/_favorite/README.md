@@ -54,3 +54,24 @@ WHERE
 ```
 
 <br>
+
+### 락 정보 간단 확인
+```sql
+--락이 걸린 오브젝트 확인
+SELECT A.OBJECT_NAME, A.OBJECT_TYPE, V.*
+FROM V$LOCKED_OBJECT V, ALL_OBJECTS A
+WHERE V.OBJECT_ID = A.OBJECT_ID
+
+--락 걸린 세션 확인
+SELECT S.SID, S.SERIAL#, A.OBJECT_NAME
+FROM V$SESSION S, V$LOCK L, ALL_OBJECTS A
+WHERE
+    S.SID = L.SID
+    AND L.ID1 = A.OBJECT_ID
+    AND L.TYPE = 'TM';
+
+--해당 세션 강제 끊기
+ALTER SYSTEM KILL SESSION 'SID, SERIAL#';
+```
+
+<br>

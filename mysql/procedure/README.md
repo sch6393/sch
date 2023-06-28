@@ -103,3 +103,16 @@ SELECT 'Error Message!'; # Duplicate entry '1' for key 'PRIMARY'
 |3|SQLEXCEPTION|
 
 <br>
+
+### IF
+```sql
+IF 조건식 THEN
+	실행문;
+ELSEIF 조건식 THEN
+	실행문;
+ELSE
+	실행문;
+END IF;
+```
+
+<br>

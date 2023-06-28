@@ -7,7 +7,7 @@ SELECT * FROM information_schema.ROUTINES;
 
 SHOW PROCEDURE STATUS;
 
---DDL 확인
+# DDL 확인
 SHOW CREATE PROCEDURE prcedure_name;
 ```
 
@@ -18,30 +18,30 @@ SHOW CREATE PROCEDURE prcedure_name;
 DELIMITER $$
 CREATE PROCEDURE procedure_name()
 BEGIN
-	DECLARE eor BOOLEAN DEFAULT FALSE;                --행 끝 여부
+	DECLARE eor BOOLEAN DEFAULT FALSE;                # 행 끝 여부
 
-	--변수
+	# 변수
 	DECLARE var_name VARCHAR(2);
 
-	--커서
+	# 커서
 	DECLARE cursor_name CURSOR FOR
-		SELECT column_name FROM schema_name.table_name; --해당 쿼리 결과를 사용
+		SELECT column_name FROM schema_name.table_name; # 해당 쿼리 결과를 사용
 
-	--핸들러
-	DECLARE CONTINUE HANDLER                          --더 이상 행이 없다면 eor = TRUE
+	# 핸들러
+	DECLARE CONTINUE HANDLER                          # 더 이상 행이 없다면 eor = TRUE
 		FOR NOT FOUND SET eor = TRUE;
 
-	--커서 Open
+	# 커서 Open
 	OPEN cursor_name;
-		--루프
+		# 루프
 		loop_name : LOOP
-			--Fetch
-			FETCH cursor_name INTO var_name;              --데이터 가져오기
+			# Fetch
+			FETCH cursor_name INTO var_name;              # 데이터 가져오기
 			IF eor THEN
-				LEAVE loop_name;                            --더 이상 데이터가 없다면 루프 해제
+				LEAVE loop_name;                            # 더 이상 데이터가 없다면 루프 해제
 			END IF;
 
-			--가져온 데이터 처리 (Example)
+			# 가져온 데이터 처리 (Example)
 			/*
 			IF NOT EXISTS (SELECT column_name FROM schema_name.table_name WHERE column_name = var_name)
 				THEN DELETE FROM schema_name.table_name WHERE column_name = var_name;
@@ -54,10 +54,10 @@ BEGIN
 			);
 			*/
 
-		--루프 끝
+		# 루프 끝
 		END LOOP loop_name;
 
-	--커서 Close
+	# 커서 Close
 	CLOSE cursor_name;
 END$$
 DELIMITER ;
@@ -74,23 +74,23 @@ DELIMITER ;
 
 ### 핸들러
 ```sql
---에러 발생 시 변수 값을 1로 설정하고 다음 내용을 실행
+# 에러 발생 시 변수 값을 1로 설정하고 다음 내용을 실행
 DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET variable_name = 1;
 
---에러 발생 시 롤백 후 에러 메시지를 표시하고 현재 코드 단락을 나감
+# 에러 발생 시 롤백 후 에러 메시지를 표시하고 현재 코드 단락을 나감
 DECLARE EXIT HANDLER FOR SQLEXCEPTION
 BEGIN
 	ROLLBACK;
-	SELECT 'Error Message!'; --An error has occurred, operation rollbacked and the stored procedure was terminated
+	SELECT 'Error Message!'; # An error has occurred, operation rollbacked and the stored procedure was terminated
 END;
 
---SELECT INTO나 CURSOR일 때 더 이상 가져올 데이터가 없다면 변수 값을 1로 설정하고 계속 실행
+# SELECT INTO나 CURSOR일 때 더 이상 가져올 데이터가 없다면 변수 값을 1로 설정하고 계속 실행
 DECLARE CONTINUE HANDLER FOR NOT FOUND SET variable_name = 1;
 
---해당 코드에 해당하는 에러가 발생하면 에러 메시지를 표시하고 계속 실행
---1062는 중복 키 에러
+# 해당 코드에 해당하는 에러가 발생하면 에러 메시지를 표시하고 계속 실행
+# 1062는 중복 키 에러
 DECLARE CONTINUE HANDLER FOR 1062
-SELECT 'Error Message!'; --Duplicate entry '1' for key 'PRIMARY'
+SELECT 'Error Message!'; # Duplicate entry '1' for key 'PRIMARY'
 ```
 
 <br>

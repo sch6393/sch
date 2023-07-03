@@ -4,7 +4,7 @@ Partition
 
 ### 구성
 ```sql
---테이블 생성 시 정의
+# 테이블 생성 시 정의
 CREATE TABLE schema_name.table_name (
   column_name1   type_name   constraint_name,
   column_name2   type_name   constraint_name,
@@ -12,7 +12,7 @@ CREATE TABLE schema_name.table_name (
   column_name8   type_name   constraint_name,
   column_name9   type_name   constraint_name
 )
---Range
+# Range
 PARTITION BY RANGE COLUMNS (column_name) (
   PARTITION partition_name1 VALUES LESS THAN ( value ),
   PARTITION partition_name2 VALUES LESS THAN ( value ),
@@ -21,7 +21,7 @@ PARTITION BY RANGE COLUMNS (column_name) (
   PARTITION partition_name9 VALUES LESS THAN ( value )
 );
 
---List
+# List
 PARTITION BY LIST (column_name) (
   PARTITION partition_name1 VALUES IN ( values ),
   PARTITION partition_name2 VALUES IN ( values ),
@@ -30,16 +30,16 @@ PARTITION BY LIST (column_name) (
   PARTITION partition_name9 VALUES IN ( values )
 );
 
---Hash
-PARTITION BY HASH (column_name) --표현식 가능
+# Hash
+PARTITION BY HASH (column_name) # 표현식 가능
 PARTITIONS 4;
 
---Key
+# Key
 PARTITION BY KEY ()
 PARTITIONS 2;
 
 
---테이블 생성 후 정의 (Range)
+# 테이블 생성 후 정의 (Range)
 ALTER TABLE schema_name.table_name PARTITION BY RANGE COLUMNS (column_name) (
   PARTITION partition_name1 VALUES LESS THAN ( value ),
   PARTITION partition_name2 VALUES LESS THAN ( value ),
@@ -54,7 +54,7 @@ ALTER TABLE schema_name.table_name PARTITION BY RANGE COLUMNS (column_name) (
 
 ### 추가
 ```sql
---Range
+# Range
 ALTER TABLE schema_name.table_name ADD PARTITION(
   PARTITION partition_name VALUES LESS THAN ( value )
 );
@@ -64,7 +64,7 @@ ALTER TABLE schema_name.table_name ADD PARTITION(
 
 ### 재정의
 ```sql
---Range
+# Range
 ALTER TABLE schema_name.table_name REORGANIZE PARTITION partition_name INTO (
   PARTITION partition_name1 VALUES LESS THAN ( value ),
   PARTITION partition_name2 VALUES LESS THAN ( value ),
@@ -78,10 +78,10 @@ ALTER TABLE schema_name.table_name REORGANIZE PARTITION partition_name INTO (
 
 ### 삭제
 ```sql
---파티션 별 삭제
+# 파티션 별 삭제
 ALTER TABLE schema_name.table_name DROP PARTITION partition_name;
 
---파티션 전체 삭제
+# 파티션 전체 삭제
 ALTER TABLE schema_name.table_name REMOVE PARTITIONING;
 ```
 
@@ -91,7 +91,7 @@ ALTER TABLE schema_name.table_name REMOVE PARTITIONING;
 ```sql
 SELECT * FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_NAME = 'table_name';
 
---정보 확인
+# 정보 확인
 EXPLAIN SELECT * FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_NAME = 'table_name';
 ```
 
@@ -99,7 +99,7 @@ EXPLAIN SELECT * FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_NAME = 'table_na
 
 ### 파일 오픈 개수 확인
 ```sql
---테이블을 파일 단위로 관리하고 있기 때문에 파티션 테이블의 경우 파티션 수 만큼 열어야 함
+# 테이블을 파일 단위로 관리하고 있기 때문에 파티션 테이블의 경우 파티션 수 만큼 열어야 함
 SHOW VARIABLES LIKE 'open_files_limit';
 /*
 Variable_name	Value

@@ -73,4 +73,9 @@ DROP USER 'user_name'@'hostname';
 
 <br>
 
-### 
+### 유저 정보 확인
+```sql
+SELECT * FROM MYSQL.USER;
+```
+
+<br>

@@ -78,7 +78,11 @@ ALTER TABLE schema_name.table_name REORGANIZE PARTITION partition_name INTO (
 
 ### 삭제
 ```sql
+--파티션 별 삭제
 ALTER TABLE schema_name.table_name DROP PARTITION partition_name;
+
+--파티션 전체 삭제
+ALTER TABLE schema_name.table_name REMOVE PARTITIONING;
 ```
 
 <br>

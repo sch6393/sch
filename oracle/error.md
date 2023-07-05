@@ -72,6 +72,7 @@ oerr sp2 591
 <br>
 
 ### [SP2-0591: Unable to allocate dynamic space needed (%s bytes)](./error/SP2-0591.md)
+### [SP2-0618: Cannot find the Session Identifier.  Check PLUSTRACE role is enabled](./error/SP2-0618.md)
 
 <br>
 

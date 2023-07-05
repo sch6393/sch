@@ -41,6 +41,7 @@ oerr sp2 591
 ### [ORA-02429: cannot drop index used for enforcement of unique/primary key](./error/02429.md)
 ### [ORA-02437: cannot validate (%s.%s) - primary key violated](./error/02437.md)
 ### [ORA-04031: unable to allocate %s bytes of shared memory ("%s","%s","%s","%s")](./error/04031.md)
+### [ORA-08180: no snapshot found based on specified time](./error/08180.md)
 ### [ORA-10631: SHRINK clause should not be specified for this object](./error/10631.md)
 ### [ORA-10636: ROW MOVEMENT is not enabled](./error/10636.md)
 ### [ORA-12162: TNS:net service name is incorrectly specified](./error/12162.md)

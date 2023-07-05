@@ -13,6 +13,7 @@ Oracle
 ### [Datapump](./datapump/README.md)
 ### [DB Link](./db-link/README.md)
 ### [Direct Path Load](./direct-path-load/README.md)
+### [Enqueue](./enqueue/README.md)
 ### [Error](./error.md)
 ### [Explain](./explain/README.md)
 ### [Export csv](./export-csv/README.md)

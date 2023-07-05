@@ -1,3 +1,70 @@
 Trace
 ===
 
+### Auto Trace
+```sql
+--1. Auto Trace 옵션 ON
+SET AUTOTRACE ON
+
+--2. 쿼리 실행
+SELECT * FROM owner_name.table_name;
+
+--3. 자동으로 결과 출력 후 실행 계획과 실행 통계가 출력됨
+Execution Plan
+----------------------------------------------------------
+Plan hash value: 1516826816
+
+-------------------------------------------------------------------------------
+| Id  | Operation          | Name     | Rows  | Bytes | Cost (%CPU)| Time     |
+-------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT   |            |     1 |   135 |     2   (0)| 00:00:01 |
+|*  1 |  COUNT STOPKEY     |            |       |       |            |          |
+|   2 |   TABLE ACCESS FULL| table_name |     1 |   135 |     2   (0)| 00:00:01 |
+-------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   1 - filter(ROWNUM<=1)
+
+
+Statistics
+----------------------------------------------------------
+          1  recursive calls
+          0  db block gets
+          3  consistent gets
+          0  physical reads
+          0  redo size
+       2144  bytes sent via SQL*Net to client
+         52  bytes received via SQL*Net from client
+          2  SQL*Net roundtrips to/from client
+          0  sorts (memory)
+          0  sorts (disk)
+          1  rows processed
+
+--4. Auto Trace 옵션 OFF
+SET AUTOTRACE OFF
+```
+
+<br>
+
+### 실행 옵션
+|명령어|설명|
+|-|-|
+|`SET AUTOTRACE TRACEONLY`|결과 없이 실행 계획과 실행 통계 출력|
+|`SET AUTOTRACE TRACEONLY EXPLAIN`|결과 없이 실행 계획만 출력|
+|`SET AUTOTRACE TRACEONLY STATISTICS`|결과 없이 실행 통계만 출력|
+
+<br>
+
+### Auto Trace 권한
+Auto Trace를 사용하려면 `PLUSTRACE` 권한이 필요
+```sql
+--부여
+GRANT PLUSTRACE TO owner_name;
+
+--회수
+REVOKE PLUSTRACE TO owner_name;
+```
+
+<br>

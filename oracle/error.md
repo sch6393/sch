@@ -17,6 +17,7 @@ oerr sp2 591
 ### [ORA-00955: name is already used by an existing object](./error/00955.md)
 ### [ORA-00959: tablespace '%s' does not exist](./error/00959.md)
 ### [ORA-00972: identifier is too long](./error/00972.md)
+### [ORA-01008: not all variables bound](./error/01008.md)
 ### [ORA-01013: user requested cancel of current operation](./error/01013.md)
 ### [ORA-01017: invalid username/password; logon denied](./error/01017.md)
 ### [ORA-01153: an incompatible media recovery is active](./error/01153.md)

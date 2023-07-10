@@ -16,6 +16,6 @@ db_file_multiblock_read_count integer 128
 
 ### 정보
 * `FULL SCAN` 작업 시 영향이 있음
-* [db_block_size](./db_block_%.md#db_block_size) * `db_file_multiblock_read_count` <= 최대 I/O 크기
+* [db_block_size](./db_block.md#db_block_size) * `db_file_multiblock_read_count` <= 최대 I/O 크기
 
 <br>

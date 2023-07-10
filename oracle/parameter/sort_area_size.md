@@ -17,5 +17,6 @@ sort_area_size          integer 65536
 ### 변경
 ```sql
 ALTER SYSTEM SET sort_area_size=000000;
+```
 
 <br>

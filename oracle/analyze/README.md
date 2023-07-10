@@ -44,14 +44,15 @@ ANALYZE object_type owner_name.object_name VALIDATE STRUCTURE;
 <br>
 
 ### 참고
-1. 정기적인 ANALYZE가 필요
-    1. 테이블 재생성 및 새로 클러스터링한 경우
-    1. 인덱스 추가 및 재생성한 경우
-    1. 대량의 데이터를 처리한 경우
-1. `USER_TABLES`, `USER_COLUMNS`, `USER_INDEXS`, `USER_CLUSTER` 등의 딕셔너리 관련된 항목들도 ANALYZE를 해주면 좋음
-1. 2만 레코드를 기준으로 작다면 `COMPUTE`, 많다면 `ESTIMATE` 사용을 권장
-1. [DBMS_STATS과의 차이](./analyze-DBMS_STAT.md)
-1. [ORA-38029: object statistics are locked](../error/38029.md) 에러가 발생할 경우
+* 정기적인 ANALYZE가 필요
+  1. 테이블 재생성 및 새로 클러스터링한 경우
+  1. 인덱스 추가 및 재생성한 경우
+  1. 대량의 데이터를 처리한 경우
+* `USER_TABLES`, `USER_COLUMNS`, `USER_INDEXS`, `USER_CLUSTER` 등의 딕셔너리 관련된 항목들도 ANALYZE를 해주면 좋음
+* 2만 레코드를 기준으로 작다면 `COMPUTE`, 많다면 `ESTIMATE` 사용을 권장
+* [CBO, RBO](../cbo-rbo/README.md)
+* [DBMS_STATS과의 차이](./analyze-DBMS_STAT.md)
+* [ORA-38029: object statistics are locked](../error/38029.md) 에러가 발생할 경우
 
 <br>
 

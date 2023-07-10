@@ -47,6 +47,7 @@ ORDER BY INDEX_NAME, COLUMN_POSITION;
 <br>
 
 ### 참고
+* [Block](../block/README.md)
 * [Compression](../compression/README.md#인덱스-압축)
 * [Hint](../hint/README.md#인덱스-힌트)
 * [PCT](../pct/README.md)

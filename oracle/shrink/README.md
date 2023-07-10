@@ -56,6 +56,7 @@ SELECT 'ALTER INDEX '||owner||'.'||index_name||' LOGGING;' FROM all_indexes WHER
 <br>
 
 ### 참고
+* [Block](../Block/README.md)
 * [ORA-10631: SHRINK clause should not be specified for this object](../error/10631.md) 에러가 발생할 경우
 * [ORA-10636: ROW MOVEMENT is not enabled](../error/10636.md) 에러가 발생할 경우
 

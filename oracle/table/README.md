@@ -56,6 +56,7 @@ ALTER TABLE owner_name.table_name MOVE TABLESPACE tablespace_name;
 <br>
 
 ### 참고
+* [Block](../block/README.md)
 * [Compression](../Compression/README.md#테이블-압축)
 * [PCT](../pct/README.md)
 * BIN$... Table

@@ -54,3 +54,12 @@ Threads_connected	677         현재 연결되어 있는 수
 ```
 
 <br>
+
+### 지표 계산
+|단위 : %|계산식|
+|-|-|
+|Connection 사용 비율|`(Threads_conneted / max_connections) * 100`|
+|강제로 연결이 끊긴 비율|`(aborted_clients  / connections) * 100`|
+>강제로 연결이 끊긴 비율이 높을 경우 `wait_timeout` 파라미터 조정이 필요할 수도 있음
+
+<br>

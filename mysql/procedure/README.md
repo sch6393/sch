@@ -3,12 +3,12 @@ Procedure
 
 ### 조회
 ```sql
-SELECT * FROM information_schema.ROUTINES;
+SELECT * FROM INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_TYPE = 'PROCEDURE';
 
 SHOW PROCEDURE STATUS;
 
 # DDL 확인
-SHOW CREATE PROCEDURE prcedure_name;
+SHOW CREATE PROCEDURE schema_name.prcedure_name;
 ```
 
 <br>
@@ -16,12 +16,18 @@ SHOW CREATE PROCEDURE prcedure_name;
 ### 기본 형식
 ```sql
 DELIMITER $$
-CREATE PROCEDURE procedure_name()
+CREATE DEFINER=`user_name`%`host_name` PROCEDURE procedure_name(
+	IN  pi_var_name VARCHAR2(2);             # 파라미터 선언 (IN)
+	OUT po_var_name VARCHAR2(4);             # 파라미터 선언 (OUT)
+)
 BEGIN
 	DECLARE eor BOOLEAN DEFAULT FALSE;                # 행 끝 여부
 
-	# 변수
-	DECLARE var_name VARCHAR(2);
+	# 변수 선언
+	DECLARE var_name VARCHAR(2) DEFAULT pi_var_name;
+
+	# 할당
+	SET po_var_name = varname + 'A';
 
 	# 커서
 	DECLARE cursor_name CURSOR FOR
@@ -59,8 +65,7 @@ BEGIN
 
 	# 커서 Close
 	CLOSE cursor_name;
-END$$
-DELIMITER ;
+END;
 ```
 
 <br>

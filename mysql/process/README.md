@@ -22,7 +22,7 @@ Id, User, Host, db, Command, Time, State, Info
 ```sql
 KILL process_id;
 
---RDS의 경우
+# RDS의 경우
 CALL mysql.rds_kill(process_id);
 ```
 

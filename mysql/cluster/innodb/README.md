@@ -183,6 +183,9 @@ InnoDB Cluster
       ERROR: RuntimeError: Group Replication failed to start: MySQL Error 3092 (HY000): host2:3306: The server is not configured properly to be an active member of the group. Please see more details on error log.
       ERROR: Group Replication failed to start: MySQL Error 3092 (HY000): host2:3306: The server is not configured properly to be an active member of the group. Please see more details on error log.
 
+      # mysqld.log 파일 내용
+      [Warning] Plugin group_replication reported: '[GCS] Connection attempt from IP address 0.0.51.15 refused. Address is not in the IP whitelist.'
+
       # group_replication_ip_whitelist 파라미터 값 수정 (host1, host2, host3)
       # /etc/my.cnf 파일에 각 서버의 IP, IP 대역, 호스트 이름 작성 후 MySQL 재기동
       group_replication_ip_whitelist = "0.0.50.0/24,0.0.51.0/24"

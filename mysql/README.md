@@ -3,6 +3,7 @@ MySQL
 >[https://dev.mysql.com/doc/](https://dev.mysql.com/doc/)
 
 ### [Cast](./cast/README.md)
+### [Cluster](./cluster/README.md)
 ### [Data Format](./data-format/README.md)
 ### [Date Format](./date-format/README.md)
 ### [Error](./error.md)

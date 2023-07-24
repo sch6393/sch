@@ -2,13 +2,16 @@ Install
 ===
 >[https://dev.mysql.com/downloads/](https://dev.mysql.com/downloads/)
 
-### 쉘 설치
+### yum 설치, 제거
 ```sh
-cd /usr/local/src
-sudo wget https://dev.mysql.com/get/mysql80-community-release-el7-7.noarch.rpm
-sudo yum localinstall -y mysql80-community-release-el7-7.noarch.rpm
-sudo yum install -y mysql-community-client
-mysql --version
+# Install
+yum install mysql-community-server
+
+# Remove
+yum remove mysql-community-server
+
+# Error: MySQL GPG Key Update Check!!!
+rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 ```
 
 <br>

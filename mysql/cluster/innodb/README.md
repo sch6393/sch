@@ -299,7 +299,11 @@ InnoDB Cluster
 * FAILOVER가 발생했을 때 나타나는 에러
   1. `WARNING: Instance is NOT a PRIMARY but super_read_only option is OFF.`
       ```sh
-      # /etc/my.cnf에 해당 옵션 추가 후 재기동
+      # (host1, host2, host3)
+      # super_read_only 값을 ON 으로 변경하고
+      SET GLOBAL super_read_only = 'ON';
+
+      # /etc/my.cnf에 해당 옵션 추가
       super_read_only = ON
       ```
   1. `NOTE: group_replication is stopped.`

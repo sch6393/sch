@@ -9,6 +9,7 @@ Shell
 ### [iconv](./iconv/README.md)
 ### [iostat](./iostat/README.md)
 ### [sar](./sar/README.md)
+### [sudo](./sudo/README.md)
 ### [tail](./tail/README.md)
 ### [timedatectl](./timedatectl/README.md)
 ### [top](./top/README.md)

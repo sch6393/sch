@@ -23,6 +23,7 @@ Oracle
 ### [Flashback](./flashback/README.md)
 ### [Gathering](./gathering/README.md)
 ### [Hint](./hint/README.md)
+### [HugePage](./hugepage/README.md)
 ### [Index](./index/README.md)
 ### [Install Oracle Client](./install-oracle-client/README.md)
 ### [Latch](./latch/README.md)

@@ -1,0 +1,233 @@
+HugePage
+===
+
+### 내용
+일반적인 컴퓨터 시스템에서는 가상메모리 기법을 통해 Page Table이 있고 Page 단위로 관리함. 이 Page 크기를 리눅스 기준 4k 에서 더 큰 크기인 2M ~ 256M 까지 늘려 관리할 수 있게 함
+
+<br>
+
+### 비교
+* 장점
+  1. Normal Page와는 다르게 Swap 되지 않기 때문에 Page In/Out의 오버헤드가 발생하지 않음
+  1. 적은 수의 Meta 정보로 더 많은 메모리를 대체하기 때문에 Page Hit율이 높아짐
+  1. Page Table에서 관리하는 물리적 메모리의 Entry 개수가 줄어들고 더 적은 메모리 공간을 유지함
+  1. 관리하는 Page 수 자체가 절대적으로 줄어들기 때문에 메모리 관리를 위한 오버헤드가 줄고 자원 사용율도 절약됨
+
+<br>
+
+* 단점
+  1. SGA가 최소 16GB 이상 구성될 때 권장 (물리 메모리가 적다면 문제가 발생할 가능성이 큼)
+  1. DB 인스턴스가 갑작스럽게 종료된 경우 HugePage에서 가지고 있던 메모리가 반환되기까지 시간이 걸리기 때문에 종료 직후 기동 시에 메모리 부족으로 인스턴스 기동이 되지 않을 수 있음
+
+
+<br>
+
+### 구성 방법
+1. [AMM](../automatic-memory-management/README.md)을 사용하고 있는지 확인. 사용 중이라면 HugePage 구성 불가능
+    ```sql
+    SHOW PARAMETER MEMORY_TARGET;
+    /*
+    NAME          TYPE        VALUE 
+    ------------- ----------- ----- 
+    memory_target big integer 0 
+    */
+    ```
+
+1. 이하의 스크립트 실행
+    ```sh
+    #!/bin/bash
+    #
+    # hugepages_settings.sh
+    #
+    # Linux bash script to compute values for the
+    # recommended HugePages/HugeTLB configuration
+    # on Oracle Linux
+    #
+    # Note: This script does calculation for all shared memory
+    # segments available when the script is run, no matter it
+    # is an Oracle RDBMS shared memory segment or not.
+    #
+    # This script is provided by Doc ID 401749.1 from My Oracle Support
+    # http://support.oracle.com
+    
+    # Welcome text
+    echo "
+    This script is provided by Doc ID 401749.1 from My Oracle Support
+    (http://support.oracle.com) where it is intended to compute values for
+    the recommended HugePages/HugeTLB configuration for the current shared
+    memory segments on Oracle Linux. Before proceeding with the execution please note following:
+    * For ASM instance, it needs to configure ASMM instead of AMM.
+    * The 'pga_aggregate_target' is outside the SGA and
+    you should accommodate this while calculating the overall size.
+    * In case you changes the DB SGA size,
+    as the new SGA will not fit in the previous HugePages configuration,
+    it had better disable the whole HugePages,
+    start the DB with new SGA size and run the script again.
+    And make sure that:
+    * Oracle Database instance(s) are up and running
+    * Oracle Database 11g Automatic Memory Management (AMM) is not setup
+    (See Doc ID 749851.1)
+    * The shared memory segments can be listed by command:
+        # ipcs -m
+    
+    
+    Press Enter to proceed..."
+    
+    read
+    
+    # Check for the kernel version
+    KERN=`uname -r | awk -F. '{ printf("%d.%d\n",$1,$2); }'`
+    
+    # Find out the HugePage size
+    HPG_SZ=`grep Hugepagesize /proc/meminfo | awk '{print $2}'`
+    if [ -z "$HPG_SZ" ];then
+        echo "The hugepages may not be supported in the system where the script is being executed."
+        exit 1
+    fi
+    
+    # Initialize the counter
+    NUM_PG=0
+    
+    # Cumulative number of pages required to handle the running shared memory segments
+    for SEG_BYTES in `ipcs -m | cut -c44-300 | awk '{print $1}' | grep "[0-9][0-9]*"`
+    do
+        MIN_PG=`echo "$SEG_BYTES/($HPG_SZ*1024)" | bc -q`
+        if [ $MIN_PG -gt 0 ]; then
+            NUM_PG=`echo "$NUM_PG+$MIN_PG+1" | bc -q`
+        fi
+    done
+    
+    RES_BYTES=`echo "$NUM_PG * $HPG_SZ * 1024" | bc -q`
+    
+    # An SGA less than 100MB does not make sense
+    # Bail out if that is the case
+    if [ $RES_BYTES -lt 100000000 ]; then
+        echo "***********"
+        echo "** ERROR **"
+        echo "***********"
+        echo "Sorry! There are not enough total of shared memory segments allocated for
+    HugePages configuration. HugePages can only be used for shared memory segments
+    that you can list by command:
+    
+        # ipcs -m
+    
+    of a size that can match an Oracle Database SGA. Please make sure that:
+    * Oracle Database instance is up and running
+    * Oracle Database 11g Automatic Memory Management (AMM) is not configured"
+        exit 1
+    fi
+    
+    # Finish with results
+    case $KERN in
+        '2.4') HUGETLB_POOL=`echo "$NUM_PG*$HPG_SZ/1024" | bc -q`;
+            echo "Recommended setting: vm.hugetlb_pool = $HUGETLB_POOL" ;;
+        '2.6') echo "Recommended setting: vm.nr_hugepages = $NUM_PG" ;;
+        '3.8') echo "Recommended setting: vm.nr_hugepages = $NUM_PG" ;;
+        '3.10') echo "Recommended setting: vm.nr_hugepages = $NUM_PG" ;;
+        '4.1') echo "Recommended setting: vm.nr_hugepages = $NUM_PG" ;;
+        '4.14') echo "Recommended setting: vm.nr_hugepages = $NUM_PG" ;;
+        '4.18') echo "Recommended setting: vm.nr_hugepages = $NUM_PG" ;;
+        '5.4') echo "Recommended setting: vm.nr_hugepages = $NUM_PG" ;;
+        *) echo "Kernel version $KERN is not supported by this script (yet). Exiting." ;;
+    esac
+    
+    # End
+    ```
+    >401749.1
+
+1. 스크립트 실행 결과 확인
+    ```sh
+    This script is provided by Doc ID 401749.1 from My Oracle Support
+    (http://support.oracle.com) where it is intended to compute values for
+    the recommended HugePages/HugeTLB configuration for the current shared
+    memory segments on Oracle Linux. Before proceeding with the execution please note following:
+    * For ASM instance, it needs to configure ASMM instead of AMM.
+    * The 'pga_aggregate_target' is outside the SGA and
+    you should accommodate this while calculating the overall size.
+    * In case you changes the DB SGA size,
+    as the new SGA will not fit in the previous HugePages configuration,
+    it had better disable the whole HugePages,
+    start the DB with new SGA size and run the script again.
+    And make sure that:
+    * Oracle Database instance(s) are up and running
+    * Oracle Database 11g Automatic Memory Management (AMM) is not setup
+    (See Doc ID 749851.1)
+    * The shared memory segments can be listed by command:
+        # ipcs -m
+    
+    
+    Press Enter to proceed...
+    
+    Recommended setting: vm.nr_hugepages = XXX
+    ```
+
+
+1. 권장 값으로 HugePages 변경
+```sh
+sysctl -w vm.nr_hugepages=XXX
+
+# 재기동 이후에도 적용될 수 있도록 함
+vi /etc/sysctl.conf
+
+# 추가할 내용
+vm.nr_hugepages=XXX
+```
+
+1. `USE_LARGE_PAGES` 파라미터 값 변경 후 재기동
+```sql
+SHOW PARAMETER use_large_pages;
+/*
+NAME            TYPE   VALUE 
+--------------- ------ ----- 
+use_large_pages string FALSE
+*/
+
+ALTER SYSTEM SET use_large_pages=ONLY SCOPE=SPFILE;
+```
+
+1. HugePage 사용량 확인법
+```sh
+grep Huge /proc/meminfo
+
+#AnonHugePages:         0 kB
+#ShmemHugePages:        0 kB
+#HugePages_Total:       XXX
+#HugePages_Free:        0
+#HugePages_Rsvd:        0
+#HugePages_Surp:        0
+#Hugepagesize:       2048 kB
+
+```
+
+<br>
+
+### RDS에서의 HugePages
+* https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Oracle.Concepts.HugePages.html
+    ```
+    memory_target            = IF({DBInstanceClassHugePagesDefault}, 0, {DBInstanceClassMemory*3/4})
+    memory_max_target        = IF({DBInstanceClassHugePagesDefault}, 0, {DBInstanceClassMemory*3/4})
+    pga_aggregate_target     = IF({DBInstanceClassHugePagesDefault}, {DBInstanceClassMemory*1/8}, 0)
+    sga_target               = IF({DBInstanceClassHugePagesDefault}, {DBInstanceClassMemory*3/4}, 0)
+    sga_max_size             = IF({DBInstanceClassHugePagesDefault}, {DBInstanceClassMemory*3/4}, 0)
+    use_large_pages          = {DBInstanceClassHugePagesDefault}
+    ```
+    >HugePage를 활성화시키는 파라미터 기본 템플릿 (인스턴스 메모리가 14GiB 이상이여야 함)
+
+<br>
+
+### 관련 내용
+* [AMM](../automatic-memory-management/README.md)
+* [ASMM](../automatic-shared-memory-management/README.md)
+
+<br>
+
+64 10 = 48 : x
+64x = 480
+x = 7.5
+
+100 75
+
+4 3
+
+
+

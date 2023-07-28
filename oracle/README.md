@@ -1,5 +1,6 @@
 Oracle
 ===
+>https://docs.oracle.com/en/database/oracle/oracle-database/index.html
 
 ### [상황별 자주 쓰는 SQL](./_favorite/README.md)
 

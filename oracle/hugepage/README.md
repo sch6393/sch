@@ -1,24 +1,13 @@
 HugePage
 ===
 
-### 내용
-일반적인 컴퓨터 시스템에서는 가상메모리 기법을 통해 Page Table이 있고 Page 단위로 관리함. 이 Page 크기를 리눅스 기준 4k 에서 더 큰 크기인 2M ~ 256M 까지 늘려 관리할 수 있게 함
+### [HugePage 내용](../../linux/hugepage/README.md)
 
 <br>
 
-### 비교
-* 장점
-  1. Normal Page와는 다르게 Swap 되지 않기 때문에 Page In/Out의 오버헤드가 발생하지 않음
-  1. 적은 수의 Meta 정보로 더 많은 메모리를 대체하기 때문에 Page Hit율이 높아짐
-  1. Page Table에서 관리하는 물리적 메모리의 Entry 개수가 줄어들고 더 적은 메모리 공간을 유지함
-  1. 관리하는 Page 수 자체가 절대적으로 줄어들기 때문에 메모리 관리를 위한 오버헤드가 줄고 자원 사용율도 절약됨
-
-<br>
-
-* 단점
-  1. SGA가 최소 16GB 이상 구성될 때 권장 (물리 메모리가 적다면 문제가 발생할 가능성이 큼)
-  1. DB 인스턴스가 갑작스럽게 종료된 경우 HugePage에서 가지고 있던 메모리가 반환되기까지 시간이 걸리기 때문에 종료 직후 기동 시에 메모리 부족으로 인스턴스 기동이 되지 않을 수 있음
-
+### 주의
+1. SGA가 최소 16GB 이상 구성될 때 권장 (물리 메모리가 적다면 문제가 발생할 가능성이 큼)
+1. DB 인스턴스가 갑작스럽게 종료된 경우 HugePage에서 가지고 있던 메모리가 반환되기까지 시간이 걸리기 때문에 종료 직후 기동 시에 메모리 부족으로 인스턴스 기동이 되지 않을 수 있음
 
 <br>
 
@@ -196,7 +185,6 @@ grep Huge /proc/meminfo
 #HugePages_Rsvd:        0
 #HugePages_Surp:        0
 #Hugepagesize:       2048 kB
-
 ```
 
 <br>
@@ -220,14 +208,3 @@ grep Huge /proc/meminfo
 * [ASMM](../automatic-shared-memory-management/README.md)
 
 <br>
-
-64 10 = 48 : x
-64x = 480
-x = 7.5
-
-100 75
-
-4 3
-
-
-

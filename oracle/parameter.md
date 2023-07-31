@@ -11,6 +11,7 @@ Parameter
 ### [db_writer_processes](./parameter/db_writer_processes.md)
 ### [dbwr_io_slaves](./parameter/dbwr_io_slaves.md)
 ### [sec-case-sensitive-logon](./parameter/sec-case-sensitive-logon.md)
+### [session_cached_cursors](./parameter/session_cached_cursors.md)
 ### [sort_area_size](./parameter/sort_area_size.md)
 
 <br>

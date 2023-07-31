@@ -2,13 +2,12 @@ Latch
 ===
 
 ### 설명
-오라클이 사용하는 제어 구조 중 하나. 자원에 대한 접근을 직렬화 (Serialize) 하는 것이 목적.  
-SGA의 특정 메모리 구조체에 대한 액세스 (Libaray Cache Latch, Cache Buffers Chains Latch) 혹은 메모리 할당 (Shared pool Latch) 에 사용되거나 Redo 로그 쓰기 작업 (Redo Writing Latch) 에도 사용됨.
+오라클이 사용하는 제어 구조 중 하나. 자원에 대한 접근을 직렬화 (Serialize) 하는 것이 목적. SGA의 특정 메모리 구조체에 대한 액세스 (Libaray Cache Latch, Cache Buffers Chains Latch) 혹은 메모리 할당 (Shared pool Latch) 에 사용되거나 Redo 로그 쓰기 작업 (Redo Writing Latch) 에도 사용됨
 
 <br>
 
 ### 특징
-1. [Enqueue](#참고-자료)와는 다르게 큐로 관리되지 않으므로 먼저 요청한 프로세스가 먼저 Latch를 얻는다는 보장이 없음. (대부분 Exclusive 모드로 얻음)
+1. [Enqueue](#참고-자료)와는 다르게 큐로 관리되지 않으므로 먼저 요청한 프로세스가 먼저 Latch를 얻는다는 보장이 없음 (대부분 Exclusive 모드로 얻음)
 1. 그러므로 [Enqueue](#참고-자료) 보다 하위 레벨에서 Locking 자체의 부하를 최소화하며 작동함
 
 <br>
@@ -74,6 +73,11 @@ SELECT * FROM V$LATCH_PARENT;
 SELECT * FROM V$LATCH_CHILDREN;
 ```
 동일한 기능을 가진 Child Latch들이 Set로 운영되는 Latch를 말함 (예를 들어 Cache Buffers Chains Latch의 경우 같은 이름의 Latch들이 서로 나누어서 담당함)
+
+<br>
+
+### Latch 항목
+* [Library Cache](./library-cache.md)
 
 <br>
 

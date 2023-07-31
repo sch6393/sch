@@ -152,42 +152,42 @@ HugePage
 
 
 1. 권장 값으로 HugePages 변경
-```sh
-sysctl -w vm.nr_hugepages=XXX
+    ```sh
+    sysctl -w vm.nr_hugepages=XXX
 
-# 재기동 이후에도 적용될 수 있도록 함
-vi /etc/sysctl.conf
+    # 재기동 이후에도 적용될 수 있도록 함
+    vi /etc/sysctl.conf
 
-# 추가할 내용
-vm.nr_hugepages=XXX
-```
+    # 추가할 내용
+    vm.nr_hugepages=XXX
+    ```
 
 1. [THP 비활성화](../../linux/thp/README.md#비활성화-방법)
 
 1. `USE_LARGE_PAGES` 파라미터 값 변경 후 재기동
-```sql
-SHOW PARAMETER use_large_pages;
-/*
-NAME            TYPE   VALUE 
---------------- ------ ----- 
-use_large_pages string FALSE
-*/
+    ```sql
+    SHOW PARAMETER use_large_pages;
+    /*
+    NAME            TYPE   VALUE 
+    --------------- ------ ----- 
+    use_large_pages string FALSE
+    */
 
-ALTER SYSTEM SET use_large_pages=ONLY SCOPE=SPFILE;
-```
+    ALTER SYSTEM SET use_large_pages=ONLY SCOPE=SPFILE;
+    ```
 
 1. HugePage 사용량 확인법
-```sh
-grep Huge /proc/meminfo
+    ```sh
+    grep Huge /proc/meminfo
 
-#AnonHugePages:         0 kB
-#ShmemHugePages:        0 kB
-#HugePages_Total:       XXX
-#HugePages_Free:        0
-#HugePages_Rsvd:        0
-#HugePages_Surp:        0
-#Hugepagesize:       2048 kB
-```
+    #AnonHugePages:         0 kB
+    #ShmemHugePages:        0 kB
+    #HugePages_Total:       XXX
+    #HugePages_Free:        0
+    #HugePages_Rsvd:        0
+    #HugePages_Surp:        0
+    #Hugepagesize:       2048 kB
+    ```
 
 <br>
 

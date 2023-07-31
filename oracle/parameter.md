@@ -10,7 +10,7 @@ Parameter
 ### [db_file_multiblock_read_count](./parameter/db_file_multiblock_read_count.md)
 ### [db_writer_processes](./parameter/db_writer_processes.md)
 ### [dbwr_io_slaves](./parameter/dbwr_io_slaves.md)
-### [sec-case-sensitive-logon](./parameter/sec-case-sensitive-logon.md)
+### [sec_case_sensitive_logon](./parameter/sec_case_sensitive_logon.md)
 ### [session_cached_cursors](./parameter/session_cached_cursors.md)
 ### [sort_area_size](./parameter/sort_area_size.md)
 

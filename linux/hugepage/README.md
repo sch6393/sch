@@ -15,3 +15,10 @@ Page는 메모리 관리의 단위이고 가상 메모리를 특정 사이즈 �
 1. 어플리케이션이나 데몬에서 HugePage를 지원해야만 사용 가능
 
 <br>
+
+### 확인
+```sh
+cat /proc/meminfo | grep -i huge
+```
+
+<br>

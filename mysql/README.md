@@ -11,6 +11,7 @@ MySQL
 ### [Explain](./explain/README.md)
 ### [Function](./function/README.md)
 ### [GTID](./gtid/README.md)
+### [HugePage](./hugepage/README.md)
 ### [Index](./index/README.md)
 ### [Install](./install/README.md)
 ### [Isolation Level](./isolation-level/README.md)

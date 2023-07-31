@@ -5,6 +5,6 @@ Parameter
 ### [innodb_flush_log_at_timeout](./parameter/innodb_flush_log_at_timeout.md)
 ### [innodb_flush_log_at_trx_commit](./parameter/innodb_flush_log_at_trx_commit.md)
 ### [innodb_support_xa](./parameter/innodb_support_xa.md)
-### [sync_binlog](./parameter/sync-binlog.md)
+### [sync_binlog](./parameter/sync_binlog.md)
 
 <br>

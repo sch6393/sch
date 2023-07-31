@@ -9,6 +9,7 @@ Oracle
 ### [Active Duplication](./active-duplication/README.md)
 ### [Analyze](./analyze/README.md)
 ### [Automated Maintence Task](./automated-maintence-task/README.md)
+### [Automatic Memory Management (AMM)](./automatic-memory-management/README.md)
 ### [Block](./block/README.md)
 ### [CBO, RBO](./cbo-rbo/README.md)
 ### [Compression](./compression/README.md)

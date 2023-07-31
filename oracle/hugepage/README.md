@@ -162,6 +162,8 @@ vi /etc/sysctl.conf
 vm.nr_hugepages=XXX
 ```
 
+1. [THP 비활성화](../../linux/thp/README.md#비활성화-방법)
+
 1. `USE_LARGE_PAGES` 파라미터 값 변경 후 재기동
 ```sql
 SHOW PARAMETER use_large_pages;

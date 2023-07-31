@@ -49,6 +49,8 @@ mysql soft memlock unlimited
 mysql hard memlock unlimited
 ```
 
+1. [THP 비활성화](../../linux/thp/README.md#비활성화-방법)
+
 1. MySQL 설정 변경
 ```sh
 vi /etc/my.cnf
@@ -57,9 +59,9 @@ vi /etc/my.cnf
 large-pages
 ```
 
-1. 변경된 값 확인 및 MySQL 재기동
+1. 변경한 커널 파라미터 적용 및 MySQL 재기동
 ```sh
-# 변경된 값 확인
+# 변경한 커널 파라미터 적용
 sysctl -p
 
 # HugePage 사용 현황 확인

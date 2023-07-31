@@ -86,13 +86,8 @@ PURGE BINARY LOGS BEFORE '2023-03-08 09:00:00';
 
 <br>
 
-### `sync_binlog`에 관한 내용
-* 기본 값은 Binary log와 디스크의 동기화를 MySQL이 아닌 OS에서 처리하도록 되어 있음
-* 장애 발생시 (특히 OS상이나 하드웨어 장비 문제) Binary log의 마지막 일부분들이 소실될 가능성이 있음
-* `sync_binlog` 옵션을 설정하면 설정한 값의 쿼리 개수 이후 디스크와 동기화 하도록 설정됨
-* 보통 1로 설정하나 I/O 처리 부하가 올라감
-* 1로 설정해도 Binary log와 디스크가 일치하지 않을 가능성이 있음 (커밋 요청 후 Binary log를 기록하고 InnoDB에 해당 트랜잭션을 커밋하는데 이 과정 중에 장애가 발생했을 시 InnoDB는 롤백되나 Binary log는 그대로 남아 있는 현상이 발생)
-* 위의 문제는 `innodb_support_xa` 옵션을 1로 설정함으로서 해결 가능 (다만 해당 옵션은 `5.7.10` 이후로 Deprecated 되었기 때문에 `5.7.10` 이전 버전에만 해당됨)
-* [관련 내용](https://dev.mysql.com/doc/refman/5.7/en/innodb-parameters.html#sysvar_innodb_support_xa)
+### 관련 내용
+* [sync_binlog](../../parameter/sync_binlog.md)
+* [innodb_support_xa](../../parameter/innodb_support_xa.md)
 
 <br>

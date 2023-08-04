@@ -28,6 +28,7 @@ MySQL
 ### [Process](./process/README.md)
 ### [Profiling](./profiling/README.md)
 ### [Replication](./replication/README.md)
+### [Router](./router/README.md)
 ### [Schema](./schema/README.md)
 ### [Table](./table/README.md)
 ### [Time Zone](./time-zone/README.md)

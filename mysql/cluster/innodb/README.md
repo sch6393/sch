@@ -327,7 +327,6 @@ InnoDB Cluster
   1. `NOTE: group_replication is stopped.`
       ```sh
       # MySQL Shell에 접속 후 해당 명령어 실행
-      mysqlsh
       dba.rebootClusterFromCompleteOutage()
       ```
 
@@ -341,6 +340,15 @@ InnoDB Cluster
     # 삭제
     mysqlsh icadmin@host1:3306 -- cluster remove-instance host2:3306
     ```
+
+<br>
+
+* 스냅샷으로부터 복구할 시
+  1. 쉘 접속 후 `rescan()` 실행
+      ```
+      var c = dba.getCluster();
+      c.rescan();
+      ```
 
 <br>
 

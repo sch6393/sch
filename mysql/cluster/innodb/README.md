@@ -190,6 +190,24 @@ InnoDB Cluster
       # /etc/my.cnf 파일에 각 서버의 IP, IP 대역, 호스트 이름 작성 후 MySQL 재기동
       group_replication_ip_whitelist = "0.0.50.0/24,0.0.51.0/24"
       group_replication_single_primary_mode = ON
+
+      # 아래의 에러가 발생하면서 클러스터 추가가 되지 않을 경우 쉘에 접속해 dba.rebootClusterFromCompleteOutage() 명령어 실행
+      ERROR: This function is not available through a session to a standalone instance (metadata exists, instance belongs to that metadata, but GR is not active)
+
+      # Log
+      Restoring the Cluster 'TEST_CLUSTER' from complete outage...
+
+      Cluster instances: 'host1:3306' (OFFLINE)
+      Waiting for instances to apply pending received transactions...
+      Validating instance configuration at localhost:3306...
+
+      This instance reports its own address as host1.coconefk:3306
+
+      Instance configuration is suitable.
+      
+      * Waiting for seed instance to become ONLINE...
+      host1.coconefk:3306 was restored.
+      The Cluster was successfully rebooted.
       ```
 
   1. Cluster 확인 (`host1`, `host2`. `host3`)
@@ -223,7 +241,7 @@ InnoDB Cluster
                       "role": "HA",
                       "status": "ONLINE"
                   },
-                  "host3": {
+                  "host3:3306": {
                       "address": "host3:3306",
                       "memberRole": "SECONDARY",
                       "mode": "R/O",

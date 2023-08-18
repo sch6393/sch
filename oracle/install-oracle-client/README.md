@@ -1,17 +1,22 @@
 Install Oracle Client
 ===
+>https://www.oracle.com/database/technologies/instant-client/downloads.html
 
 ### 쉘 설치
 ```sh
 cd /usr/local/src
 
-sudo wget https://download.oracle.com/otn_software/linux/instantclient/215000/oracle-instantclient-basic-21.5.0.0.0-1.x86_64.rpm
-sudo wget https://download.oracle.com/otn_software/linux/instantclient/215000/oracle-instantclient-sqlplus-21.5.0.0.0-1.x86_64.rpm
-sudo wget https://download.oracle.com/otn_software/linux/instantclient/215000/oracle-instantclient-tools-21.5.0.0.0-1.x86_64.rpm
+sudo wget https://download.oracle.com/otn_software/linux/instantclient/2111000/oracle-instantclient-basic-21.11.0.0.0-1.x86_64.rpm
+sudo wget https://download.oracle.com/otn_software/linux/instantclient/2111000/oracle-instantclient-devel-21.11.0.0.0-1.x86_64.rpm
+sudo wget https://download.oracle.com/otn_software/linux/instantclient/2111000/oracle-instantclient-jdbc-21.11.0.0.0-1.x86_64.rpm
+sudo wget https://download.oracle.com/otn_software/linux/instantclient/2111000/oracle-instantclient-sqlplus-21.11.0.0.0-1.x86_64.rpm
+sudo wget https://download.oracle.com/otn_software/linux/instantclient/2111000/oracle-instantclient-tools-21.11.0.0.0-1.x86_64.rpm
 
-sudo yum install oracle-instantclient-basic-21.5.0.0.0-1.x86_64.rpm -y
-sudo yum install oracle-instantclient-sqlplus-21.5.0.0.0-1.x86_64.rpm -y
-sudo yum install oracle-instantclient-tools-21.5.0.0.0-1.x86_64.rpm -y
+sudo yum install oracle-instantclient-basic-21.11.0.0.0-1.x86_64.rpm -y
+sudo yum install oracle-instantclient-devel-21.11.0.0.0-1.x86_64.rpm -y
+sudo yum install oracle-instantclient-jdbc-21.11.0.0.0-1.x86_64.rpm -y
+sudo yum install oracle-instantclient-sqlplus-21.11.0.0.0-1.x86_64.rpm -y
+sudo yum install oracle-instantclient-tools-21.11.0.0.0-1.x86_64.rpm -y
 ```
 
 <br>

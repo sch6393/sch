@@ -2,6 +2,7 @@ MySQL
 ===
 >[https://dev.mysql.com/doc/](https://dev.mysql.com/doc/)
 
+### [Analyze](./analyze/README.md)
 ### [Cast](./cast/README.md)
 ### [Cluster](./cluster/README.md)
 ### [Data Format](./data-format/README.md)

@@ -343,11 +343,25 @@ InnoDB Cluster
 
 <br>
 
-* 스냅샷으로부터 복구할 시
+* 스냅샷으로부터 복구 방법
   1. 쉘 접속 후 `rescan()` 실행
       ```
       var c = dba.getCluster();
       c.rescan();
+      ```
+
+<br>
+
+* `UNREACHABLE` 상태가 됐을 때 복구 방법
+  1. 클러스터 상태 확인 후 `ONLINE` 인 서버로 접속해 쉘에서 클러스터를 변경
+      ```
+      var c = dba.getCluster();
+      c.forceQuorumUsingPartitionOf('hostname_online:3306','password');
+      ```
+    
+  2. 변경하면 `UNREACHABLE` 상태였던 노드가 `MISSING` 상태로 바뀌게 되는데 이 상태에서 노드를 REJOIN
+      ```
+      c.rejoinInstance('hostname_missing:3306');
       ```
 
 <br>

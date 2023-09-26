@@ -9,6 +9,7 @@ Parameter
 ### [innodb_flush_log_at_trx_commit](./parameter/innodb_flush_log_at_trx_commit.md)
 ### [innodb_support_xa](./parameter/innodb_support_xa.md)
 ### [innodb_flush_method](./parameter/innodb_flush_method.md)
+### [innodb_flush_neighbors](./parameter/innodb_flush_neighbors.md)
 ### [sync_binlog](./parameter/sync_binlog.md)
 
 <br>

@@ -16,4 +16,5 @@ Error
 ### [ERROR 2002 (HY000): Can’t connect to local MySQL server through socket 'directory' (2)](./error/2002.md)
 
 
+### [Warning: column statistics not supported by the server.](./error/column-statistics.md)
 ### [ERROR at line : Unknown command '\''.](./error/unknown-command.md)

@@ -356,12 +356,88 @@ InnoDB Cluster
   1. 클러스터 상태 확인 후 `ONLINE` 인 서버로 접속해 쉘에서 클러스터를 변경
       ```
       var c = dba.getCluster();
-      c.forceQuorumUsingPartitionOf('hostname_online:3306','password');
+      c.forceQuorumUsingPartitionOf('mysql_user@hostname_online:3306','password');
       ```
     
   2. 변경하면 `UNREACHABLE` 상태였던 노드가 `MISSING` 상태로 바뀌게 되는데 이 상태에서 노드를 REJOIN
       ```
       c.rejoinInstance('hostname_missing:3306');
+      ```
+
+* `OFFLINE` 상태가 됐을 때 복구 방법
+  1. 클러스터 상태 확인 후 `ONLINE` 인 서버로 접속해 쉘에서 클러스터를 변경
+      ```
+      var c = dba.getCluster();
+      c.forceQuorumUsingPartitionOf('mysql_user@hostname_online:3306','password');
+      ```
+
+  1. 만약 전 노드가 `OFFLINE` 상태라면 특정 노드를 지정해서 `ONLINE` 으로 변경할 노드가 필요
+      ```
+      ERROR: RuntimeError: To reboot a Cluster with GTID conflits, both the 'force' and 'primary' options must be used to proceed with the command and to explicitly pick a new seed instance.
+      Dba.rebootClusterFromCompleteOutage: To reboot a Cluster with GTID conflits, both the 'force' and 'primary' options must be used to proceed with the command and to explicitly pick a new seed instance. (RuntimeError)
+      ```
+      위 에러가 발생했다면 아래 명령어 실행
+      ```
+      var c = dba.rebootClusterFromCompleteOutage("cluster_name",{primary: "hostname-0:3306", force: "true"})
+      ```
+      정상적으로 됐다면 아래의 로그 발생
+      ```
+      * Waiting for seed instance to become ONLINE...
+      hostname-0:3306 was restored.
+      NOTE: Not rejoining instance 'hostname-1:3306' because its GTID set isn't compatible with 'hostname-0:3306'.
+      NOTE: Not rejoining instance 'hostname-2:3306' because its GTID set isn't compatible with 'hostname-0:3306'.
+      The Cluster was successfully rebooted.
+      ```
+
+  1. `ONLINE` 인 노드에서 쉘 접속 후 `rescan()` 실행해서 메타데이터 삭제
+      ```
+      c.rescan()
+      ```
+      ```
+      The instance 'hostname-1:3306' is no longer part of the cluster.
+      The instance is either offline or left the HA group. You can try to add it to the cluster again with the cluster.rejoinInstance('hostname-1:3306') command or you can remove it from the cluster configuration.
+      Would you like to remove it from the cluster metadata? [Y/n]: y
+      Removing instance from the cluster metadata...
+      The instance 'hostname-1:3306' was successfully removed from the cluster metadata.
+
+      The instance 'hostname-2:3306' is no longer part of the cluster.
+      The instance is either offline or left the HA group. You can try to add it to the cluster again with the cluster.rejoinInstance('hostname-2:3306') command or you can remove it from the cluster configuration.
+      Would you like to remove it from the cluster metadata? [Y/n]: y
+      Removing instance from the cluster metadata...
+      The instance 'hostname-2:3306' was successfully removed from the cluster metadata.
+
+      Dropping unused recovery account: 'mysql_innodb_cluster_2638808791'@'%'
+      Dropping unused recovery account: 'mysql_innodb_cluster_3229667366'@'%'
+      ```
+
+  1. `ONLINE` 인 노드에서 백업 진행
+      ```
+      mysqldump --all-databases --add-drop-database --single-transaction --triggers --routines --user=root -p > /directory/backup_file.sql
+      ```
+
+  1. 복구할 노드에서 아래의 쿼리 실행
+      ```
+      STOP GROUP_REPLICATION;
+      RESET MASTER;
+      RESET SLAVE;
+      SHOW VARIABLES LIKE 'gtid_executed';  # 결과 값이 없어야 함
+      SET GLOBAL super_read_only = 0;
+      ```
+
+  1. 복구할 노드 복원
+      ```
+      mysql -uroot -p < /directory/backup_file.sql
+      ```
+
+  1. 복원 후 `ONLINE` 인 노드에서 쉘 접속 후 노드 추가
+      ```
+      c.addInstance("user_name@hostname-1:3306")
+      c.addInstance("user_name@hostname-2:3306")
+      ```
+
+  1. 정상적으로 됐는지 상태 확인
+      ```
+      c.status()
       ```
 
 <br>

@@ -32,6 +32,7 @@ MySQL
 ### [Replication](./replication/README.md)
 ### [Router](./router/README.md)
 ### [Schema](./schema/README.md)
+### [SQL Mode](./sql-mode/README.md)
 ### [Table](./table/README.md)
 ### [Time Zone](./time-zone/README.md)
 ### [User](./user/README.md)

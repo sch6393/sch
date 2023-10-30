@@ -8,5 +8,6 @@ RDS MySQL
 
 ### [인스턴스 생성](./create-instance/README.md)
 ### [로그 설정 방법](./log/README.md)
+### [Optimized Writes](./optimized-writes/README.md)
 
 <br>

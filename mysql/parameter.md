@@ -9,6 +9,7 @@ Parameter
 ### [innodb_doublewrite_batch_size](./parameter/innodb_doublewrite_batch_size.md)
 ### [innodb_doublewrite_dir](./parameter/innodb_doublewrite_dir.md)
 ### [innodb_doublewrite_files](./parameter/innodb_doublewrite_files.md)
+### [innodb_doublewrite_pages](./parameter/innodb_doublewrite_pages.md)
 ### [innodb_flush_log_at_timeout](./parameter/innodb_flush_log_at_timeout.md)
 ### [innodb_flush_log_at_trx_commit](./parameter/innodb_flush_log_at_trx_commit.md)
 ### [innodb_flush_method](./parameter/innodb_flush_method.md)

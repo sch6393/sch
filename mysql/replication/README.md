@@ -15,10 +15,7 @@ Duplication
 
 <br>
 
-### [InnoDB Cluster](../cluster/innodb/README.md)
-
-<br>
-
-### [NDB Cluster](../cluster/ndb/README.md)
+### 참고
+* [Semi-sync Replication](./semi-sync-replication/README.md)
 
 <br>

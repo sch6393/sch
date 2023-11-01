@@ -109,7 +109,9 @@ SHOW MASTER STATUS;
 <br>
 
 ### 참고
-* 순서
+* 기본적으로 Replication은 Async (비동기) 로 작동함
+* [Semi-sync](../semi-sync-replication/README.md) 방식은 해당 문서 참조
+* 작동 순서
   1. 마스터에서 binary log를 만들어 이벤트를 기록
   1. 슬레이브의 I/O 스레드를 통해 마스터한테 이벤트를 요청
   1. 마스터는 이벤트를 요청 받으면 binlog dump 스레드를 통해 클라이언트로 이벤트를 전송

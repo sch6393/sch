@@ -87,6 +87,7 @@ PURGE BINARY LOGS BEFORE '2023-03-08 09:00:00';
 <br>
 
 ### 관련 내용
+* [binlog_row_image](../../parameter/binlog_row_image.md)
 * [sync_binlog](../../parameter/sync_binlog.md)
 * [innodb_support_xa](../../parameter/innodb_support_xa.md)
 

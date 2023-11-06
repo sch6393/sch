@@ -18,6 +18,7 @@ Parameter
 ### [innodb_read_io_threads](./parameter/innodb_read_io_threads.md)
 ### [innodb_support_xa](./parameter/innodb_support_xa.md)
 ### [innodb_write_io_threads](./parameter/innodb_write_io_threads.md)
+### [log_bin_trust_function_creators](./parameter/log_bin_trust_function_creators.md)
 ### [sync_binlog](./parameter/sync_binlog.md)
 
 <br>

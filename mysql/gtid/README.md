@@ -69,3 +69,13 @@ SELECT @@server_uuid;
 1. [Replication 설정 및 동작 확인](../replication/README.md)
 
 <br>
+
+### GTID Mode
+|값|Master에서의 동작|Slave에서의 동작|
+|-|-|-|
+|`OFF`|트랜잭션에 GTID 값을 설정하지 않음|트랜잭션에 GTID가 없다면 처리 불가능|
+|`OFF_PERMISSIVE`|트랜잭션에 GTID 값을 설정하지 않음|트랜잭션이 어떤 방식이든 처리 가능 (GTID가 있든 없든)|
+|`ON_PERMISSIVE`|트랜잭션에 GTID 값을 설정|트랜잭션이 어떤 방식이든 처리 가능 (GTID가 있든 없든)|
+|`ON`|트랜잭션에 GTID 값을 설정|트랜잭션에 GTID가 무조건 있어야 처리 가능|
+
+<br>

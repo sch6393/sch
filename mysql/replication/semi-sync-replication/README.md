@@ -73,3 +73,139 @@ Async 방식에 비하면 성능이 조금 저하되긴 하지만 Sync 방식 (R
   * After Sync는 Binlog Dump를 Binlog Flush, Commit 이후 전송함 (Engine Commit 전)
 
 <br>
+
+### 설치
+1. 플러그인 설치
+    ```sql
+    # 5.7
+    INSTALL PLUGIN rpl_semi_sync_master SONAME 'semisync_master.so';
+    INSTALL PLUGIN rpl_semi_sync_slave SONAME 'semisync_slave.so';
+
+    # 8.0
+    INSTALL PLUGIN rpl_semi_sync_source SONAME 'semisync_source.so';
+    INSTALL PLUGIN rpl_semi_sync_replica SONAME 'semisync_replica.so';
+    ```
+
+1. 플러그인 설치 확인
+    ```sql
+    SELECT PLUGIN_NAME, PLUGIN_STATUS FROM INFORMATION_SCHEMA.PLUGINS WHERE PLUGIN_NAME LIKE '%semi%';
+
+    # 5.7
+    /*
+    +----------------------+---------------+
+    | PLUGIN_NAME          | PLUGIN_STATUS |
+    +----------------------+---------------+
+    | rpl_semi_sync_master | ACTIVE        |
+    | rpl_semi_sync_slave  | ACTIVE        |
+    +----------------------+---------------+
+    */
+
+    # 8.0
+    /*
+    +-----------------------+---------------+
+    | PLUGIN_NAME           | PLUGIN_STATUS |
+    +-----------------------+---------------+
+    | rpl_semi_sync_replica | ACTIVE        |
+    | rpl_semi_sync_source  | ACTIVE        |
+    +-----------------------+---------------+
+    */
+    ```
+
+1. 활성화 (Master, Slave 모두 다 실행 필요)
+    ```sql
+    # 5.7
+    SET GLOBAL rpl_semi_sync_master_enabled = 1;
+    SET GLOBAL rpl_semi_sync_slave_enabled = 1;
+
+    # 8.0
+    SET GLOBAL rpl_semi_sync_source_enabled = ON;
+    SET GLOBAL rpl_semi_sync_replica_enabled = ON;
+
+    # Disable : 0 / Enable : 1
+    ```
+    >[rpl_semi_sync_master_timeout](../../parameter/rpl_semi_sync_master_timeout.md) 파라미터로 Async 방식으로 변경되는 시간 설정 가능
+
+1. `my.cnf` 에 등록
+    ```
+    # 5.7
+    rpl_semi_sync_master_enabled=1
+    rpl_semi_sync_slave_enabled=1
+    rpl_semi_sync_master_timeout=10000
+
+    # 8.0
+    rpl_semi_sync_source_enabled=ON
+    rpl_semi_sync_replica_enabled=ON
+    rpl_semi_sync_source_timeout=10000
+    ```
+
+1. 상태 확인
+    ```sql
+    # 파라미터 설정 확인
+    SHOW VARIABLES WHERE VARIABLE_NAME LIKE '%rpl_semi_sync_%';
+    /*
+    +-------------------------------------------+------------+
+    | Variable_name                             | Value      |
+    +-------------------------------------------+------------+
+    | rpl_semi_sync_master_enabled              | ON         |
+    | rpl_semi_sync_master_timeout              | 10000      |
+    | rpl_semi_sync_master_trace_level          | 32         |
+    | rpl_semi_sync_master_wait_for_slave_count | 1          |
+    | rpl_semi_sync_master_wait_no_slave        | ON         |
+    | rpl_semi_sync_master_wait_point           | AFTER_SYNC |
+    | rpl_semi_sync_slave_enabled               | OFF        |
+    | rpl_semi_sync_slave_trace_level           | 32         |
+    +-------------------------------------------+------------+
+    */
+
+    # STATUS 확인
+    SHOW STATUS LIKE 'Rpl_semi_sync%';
+
+    # Master
+    /*
+    +--------------------------------------------+-------+
+    | Variable_name                              | Value |
+    +--------------------------------------------+-------+
+    | Rpl_semi_sync_master_clients               | 2     |
+    | Rpl_semi_sync_master_net_avg_wait_time     | 0     |
+    | Rpl_semi_sync_master_net_wait_time         | 0     |
+    | Rpl_semi_sync_master_net_waits             | 0     |
+    | Rpl_semi_sync_master_no_times              | 0     |
+    | Rpl_semi_sync_master_no_tx                 | 0     |
+    | Rpl_semi_sync_master_status                | ON    |
+    | Rpl_semi_sync_master_timefunc_failures     | 0     |
+    | Rpl_semi_sync_master_tx_avg_wait_time      | 0     |
+    | Rpl_semi_sync_master_tx_wait_time          | 0     |
+    | Rpl_semi_sync_master_tx_waits              | 0     |
+    | Rpl_semi_sync_master_wait_pos_backtraverse | 0     |
+    | Rpl_semi_sync_master_wait_sessions         | 0     |
+    | Rpl_semi_sync_master_yes_tx                | 0     |
+    | Rpl_semi_sync_slave_status                 | OFF   |
+    +--------------------------------------------+-------+
+    */
+
+    # Slave
+    /*
+    +--------------------------------------------+-------+
+    | Variable_name                              | Value |
+    +--------------------------------------------+-------+
+    | Rpl_semi_sync_master_clients               | 0     |
+    | Rpl_semi_sync_master_net_avg_wait_time     | 0     |
+    | Rpl_semi_sync_master_net_wait_time         | 0     |
+    | Rpl_semi_sync_master_net_waits             | 0     |
+    | Rpl_semi_sync_master_no_times              | 0     |
+    | Rpl_semi_sync_master_no_tx                 | 0     |
+    | Rpl_semi_sync_master_status                | OFF   |
+    | Rpl_semi_sync_master_timefunc_failures     | 0     |
+    | Rpl_semi_sync_master_tx_avg_wait_time      | 0     |
+    | Rpl_semi_sync_master_tx_wait_time          | 0     |
+    | Rpl_semi_sync_master_tx_waits              | 0     |
+    | Rpl_semi_sync_master_wait_pos_backtraverse | 0     |
+    | Rpl_semi_sync_master_wait_sessions         | 0     |
+    | Rpl_semi_sync_master_yes_tx                | 0     |
+    | Rpl_semi_sync_slave_status                 | ON    |
+    +--------------------------------------------+-------+
+    */
+    ```
+    >이미 Async 복제 중인 경우 복제 중지 후 다시 시작해야 Semi-sync로 동작하게 됨. 이는 Semi-sync에서 Async도 마찬가지
+
+<br>

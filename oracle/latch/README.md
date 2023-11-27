@@ -78,6 +78,7 @@ SELECT * FROM V$LATCH_CHILDREN;
 
 ### Latch 항목
 * [Library Cache](./library-cache.md)
+* [Cache Buffers Chains](./cache-buffers-chains.md)
 
 <br>
 

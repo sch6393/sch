@@ -7,6 +7,7 @@ Error
 ### [ERROR 1227 (42000) at line 18: Access denied; you need (at least one of) the SUPER privilege(s) for this operation](./error/1227.md)
 ### [Got fatal error 1236 from master when reading data from binary log: 'Client requested master to start replication from position > file size; the first event 'binary_log.000000' at 000000000, the last event read from '/directory_name/log/binary_log.000000' at 4, the last byte read from '/directory_name/log/binary_log.000000' at 4.'](./error/1236.md)
 ### [Error Code: 1248. Every derived table must have its own alias](./error/1248.md)
+### [ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement](./error/1290.md)
 ### [ERROR 1300 (HY000): Invalid utf8mb4 character string:](./error/1300.md)
 ### [Error Code: 1337. Variable or condition declaration after cursor or handler declaration](./error/1337.md)
 ### [ERROR 1418 (HY000): This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)](./error/1418.md)

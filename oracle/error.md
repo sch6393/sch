@@ -70,6 +70,7 @@ oerr sp2 591
 ### [ORA-38104: Columns referenced in the ON Clause cannot be updated: %s](./error/38104.md)
 ### [ORA-39002: invalid operation, ORA-39070: Unable to open the log file., ORA-29283: invalid file operation, ORA-06512: at "SYS.UTL_FILE", line 536, ORA-29283: invalid file operation](./error/expdp.md)
 ### [ORA-60100: dropping temporary tablespace with tablespace ID number (tsn) %s is blocked due to sort segments](./error/60100.md)
+### [ORA-65096: invalid common user or role name](./error/65096.md)
 
 <br>
 

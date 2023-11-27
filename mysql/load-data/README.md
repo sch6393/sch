@@ -75,6 +75,7 @@ load_infile=1
 # DB 파라미터 값 변경
 SET GLOBAL local_infile = 1;
 ```
+>[관련 에러 (3948)](../error/3948.md)
 
 <br>
 

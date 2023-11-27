@@ -18,6 +18,7 @@ Error
 ### [1831 Duplicate index 'index_name' defined on the table 'schema_name.table_name'. This is deprecated and will be disallowed in a future release.](./error/1831.md)
 ### [ERROR 2002 (HY000): Can’t connect to local MySQL server through socket 'directory' (2)](./error/2002.md)
 ### [Error Code: 3100. Error on observer while running replication hook 'before_commit'.](./error/3100.md)
+### [ERROR 3948 (42000): Loading local data is disabled; this must be enabled on both the client and server sides](./error/3948.md)
 
 
 ### [Warning: column statistics not supported by the server.](./error/column-statistics.md)

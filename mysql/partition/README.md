@@ -97,6 +97,14 @@ EXPLAIN SELECT * FROM INFORMATION_SCHEMA.PARTITIONS WHERE TABLE_NAME = 'table_na
 
 <br>
 
+### 파티션 SELECT
+```sql
+SELECT * FROM schema_name.table_name PARTITION (partition_name);
+SELECT * FROM schema_name.table_name PARTITION (partition_name1, partition_name2, ...);
+```
+
+<br>
+
 ### 파일 오픈 개수 확인
 ```sql
 # 테이블을 파일 단위로 관리하고 있기 때문에 파티션 테이블의 경우 파티션 수 만큼 열어야 함

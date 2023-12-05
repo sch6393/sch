@@ -16,6 +16,7 @@ MySQL
 ### [GTID](./gtid/README.md)
 ### [HugePage](./hugepage/README.md)
 ### [Index](./index/README.md)
+### [INSERT INTO ~ ON DUPLICATE KEY UPDATE](./insert-into-on-duplicate-key-update/README.md)
 ### [Install](./install/README.md)
 ### [Isolation Level](./isolation-level/README.md)
 ### [Load Data](./load-data/README.md)

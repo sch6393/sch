@@ -27,7 +27,7 @@ mysql -u user_name -p < file_name.sql
 |`--stop-position`|특정 포지션 지정 (종료 포지션)|`--stop-position=0000000`|
 |`-v`|매칭되는 컬럼의 개수와 값 표시||
 |`-vv`|매칭되는 컬럼의 개수와 값, 데이터 타입 표시||
-|`--base64-output=DECODE-ROWS`|`BINLOG` 문 제외||
+|`--base64-output=DECODE-ROWS`|`BINLOG` 문 제외|`-v` 옵션을 같이 쓰면 SQL 구문 확인 가능|
 |`--read-from-remote-server`|원격 서버로부터 Binary log 파일을 읽음|`--read-from-remote-server --host=host_name --user=user_name --password=password`|
 
 <br>

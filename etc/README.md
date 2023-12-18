@@ -7,6 +7,7 @@ etc
 
 ### [B Tree](./btree/README.md)
 ### [CPU Scheduling](./cpu-scheduling/README.md)
+### [IP Class](./ip-class/README.md)
 ### [Isolation Level](./isolation-level/README.md)
 ### [Keepalive](./keepalive/README.md)
 ### [nkf Network Kanji Filter (Shift JIS의 특수문자 처리)](./nkf/README.md)

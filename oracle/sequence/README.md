@@ -66,3 +66,22 @@ DROP SEQUENCE owner_name.seq_name;
 ```
 
 <br>
+
+### MySQL의 AUTO_INCREMENT처럼 사용
+```sql
+CREATE TABLE owner_name.table_name (
+	seq          NUMBER(22) DEFAULT owner_name.sequence_name.nextval,
+	column_name1 VARCHAR2(100),
+	column_name2 VARCHAR2(100),
+	...
+	column_name8 VARCHAR2(100),
+	column_name9 VARCHAR2(100),
+	CONSTRAINT "pk_name" PRIMARY KEY (seq)
+) TABLESPACE tablespace_name;
+
+--MySQL의 AUTO_INCREMENT처럼 시퀀스 증가 컬럼을 제외한 나머지 컬럼에 데이터를 넣으면 됨
+INSERT INTO owner_name.table_name (column_name1, column_name2, ... column_name8, column_name9) VALUES (value1, value2, ... value8, value9);
+```
+>12c부터 가능, 비슷한 기능인 [IDENTITY](../identity/README.md)도 있음
+
+<br>

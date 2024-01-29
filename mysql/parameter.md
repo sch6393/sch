@@ -16,6 +16,7 @@ Parameter
 ### [innodb_flush_method](./parameter/innodb_flush_method.md)
 ### [innodb_flush_neighbors](./parameter/innodb_flush_neighbors.md)
 ### [innodb_flush_sync](./parameter/innodb_flush_sync.md)
+### [innodb_io_capacity_max](./parameter/innodb_io_capacity_max.md)
 ### [innodb_io_capacity](./parameter/innodb_io_capacity.md)
 ### [innodb_page_size](./parameter/innodb_page_size.md)
 ### [innodb_read_io_threads](./parameter/innodb_read_io_threads.md)

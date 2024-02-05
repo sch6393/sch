@@ -3,6 +3,7 @@ Parameter
 >[https://dev.mysql.com/doc/refman/8.0/en/dynamic-system-variables.html](https://dev.mysql.com/doc/refman/8.0/en/dynamic-system-variables.html)
 
 ### [binlog_row_image](./parameter/binlog_row_image.md)
+### [innodb_additional_mem_pool_size](./parameter/innodb_additional_mem_pool_size.md)
 ### [innodb_buffer_pool_chunk_size](./parameter/innodb_buffer_pool_chunk_size.md)
 ### [innodb_buffer_pool_instances](./parameter/innodb_buffer_pool_instances.md)
 ### [innodb_buffer_pool_size](./parameter/innodb_buffer_pool_size.md)

@@ -6,9 +6,9 @@ Explain
 ```sql
 EXPLAIN query;
 /* Example
-id, select_type, table, type, possible_keys, key, key_len, ref, rows, Extra
-1	SIMPLE	b	ref	b_pk,b_ix1	b_pk	4	const	8	Using where; Using temporary; Using filesort
-1	SIMPLE	a	ref	a_pk	a_pk	4	const	216720	Using where
+id, select_type, table, partitions, type, possible_keys, key, key_len, ref, rows, filtered, Extra
+1	SIMPLE	b	p1,p2,p3	ref	b_pk,b_ix1	b_pk	4	const	8	100.00	Using where; Using temporary; Using filesort
+1	SIMPLE	a		ref	a_pk	a_pk	4	100.00	const	216720	Using where
 */
 ```
 
@@ -18,14 +18,16 @@ id, select_type, table, type, possible_keys, key, key_len, ref, rows, Extra
 |Type|설명|
 |-|-|
 |id|SELECT를 구분하는 번호|
-|table|참조하는 테이블|
 |[select_type](#selecttype)|SELECT 타입 구분|
+|table|참조하는 테이블|
+|partitions|참조하는 파티션|
 |[type](#type)|조인, 조회 타입|
 |possible_keys|사용 가능한 인덱스 목록
 |key|옵티마이저가 실제로 사용할 인덱스
 |key_len|실제로 사용할 인덱스의 길이
 |ref|인덱스에서 값을 찾기 위해 비교할 컬럼 (상수)
 |rows|쿼리 실행 시 접근할 행 (예상 값이므로 일치하지 않을 수 있음)
+|filtered|쿼리 실행 시 필터링된 비율 (rows에서 100이고 filtered에서 20%라면 필터링된 레코드 수가 20이라는 의미)
 |[extra](#extra)|옵티마이저 동작 정보
 
 <br>

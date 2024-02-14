@@ -1,4 +1,4 @@
-Perist
+Persist
 ===
 
 ### 내용
@@ -13,10 +13,10 @@ Perist
 ### 사용법
 ```sql
 # SET GLOBAL + mysqld-auto.cnf 파일 작성
-SET PERIST variable_name = value;
+SET PERSIST variable_name = value;
 
 # mysqld-auto.cnf 파일 작성
-SET PERIST_ONLY variable_name = value;
+SET PERSIST_ONLY variable_name = value;
 ```
 
 <br>

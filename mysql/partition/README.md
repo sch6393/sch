@@ -116,3 +116,27 @@ open_files_limit	65535
 ```
 
 <br>
+
+### 주의점
+1. 테이블을 파일 단위로 관리하고 있기 때문에 파티션 테이블의 경우 파티션 수 만큼 열어야 함
+    ```sql
+    SHOW VARIABLES LIKE 'open_files_limit';
+    /*
+    Variable_name	Value
+    open_files_limit	65535
+    */
+    ```
+
+1. 최대 파티션 수는 8192개 (하위 파티션 포함)
+
+1. 아래의 기능들이 지원되지 않음
+    * Foreign Key
+    * 쿼리 캐시
+    * FULLTEXT 인덱스
+    * [공간 열 (Spatial Columns)](../spatial/README.md)
+
+1. 사용자 정의 파티셔닝의 경우 생성된 시점의 [SQL 모드](../sql-mode/README.md) 를 유지하지 않으므로 테이블에 대한 함수, 연산자 결과로 인해 데이터가 손실될 수 있음. 되도록이면 SQL 모드 를 변경하지 말 것
+    * 예를 들어 `NO_UNSIGNED_SUBTRACTION` 모드가 유효한 경우에 `CREATE TABLE` 을 실행할 수 있는데 해당 모드가 유효한 상태에서 테이블을 작성 후 해당 모드를 무효화 시키면 테이블에 액세스를 할 수 없게됨
+      >[ERROR 1563 (HY000): Partition constant is out of partition function domain](../error/1563.md)
+
+<br>

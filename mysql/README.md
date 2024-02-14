@@ -27,7 +27,7 @@ MySQL
 ### [mysqldump](./mysqldump/README.md)
 ### [Parameter](./parameter.md)
 ### [Partition](./partition/README.md)
-### [Persist](./perist/README.md)
+### [Persist](./persist/README.md)
 ### [Procedure](./procedure/README.md)
 ### [Process](./process/README.md)
 ### [Profiling](./profiling/README.md)

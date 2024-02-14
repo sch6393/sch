@@ -171,7 +171,7 @@ InnoDB Cluster
       ERROR: RuntimeError: Option 'recoveryMethod=clone' not supported on target server version: '5.7.43'
       ERROR: Option 'recoveryMethod=clone' not supported on target server version: '5.7.43'
 
-      # 5.7인 경우 발생하는 경고 (SET PERIST가 8 버전부터 지원되기 때문에 나오는 경고)
+      # 5.7인 경우 발생하는 경고 (SET PERSIST가 8 버전부터 지원되기 때문에 나오는 경고)
       WARNING: Instance 'host2:3306' cannot persist Group Replication configuration since MySQL version 5.7.43 does not support the SET PERSIST command (MySQL version >= 8.0.11 required). Please use the dba.configureLocalInstance() command locally to persist the changes.
       Adding instance to the cluster...
 
@@ -256,7 +256,7 @@ InnoDB Cluster
       }
       ```
 
-  1. 5.7일 경우 `SET PERIST` 를 사용할 수 없으므로 설정 내용을 로컬에 따로 저장해주어야 함 (`host1`, `host2`. `host3`)
+  1. 5.7일 경우 `SET PERSIST` 를 사용할 수 없으므로 설정 내용을 로컬에 따로 저장해주어야 함 (`host1`, `host2`. `host3`)
       ```sh
       mysqlsh -- dba configure-local-instance { --port=3306 --host=localhost --user=admin } --clusterAdmin=icadmin --clusterAdminPassword=********** --mycnfPath=/etc/my.cnf --restart=true --interactive=true
       ```

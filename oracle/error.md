@@ -50,6 +50,7 @@ oerr sp2 591
 ### [ORA-10636: ROW MOVEMENT is not enabled](./error/10636.md)
 ### [ORA-12162: TNS:net service name is incorrectly specified](./error/12162.md)
 ### [ORA-12537: TNS:connection closed](./error/12537.md)
+### [ORA-12545: Connect failed because target host or object does not exist](./error/12545.md)
 ### [ORA-12703: this character set conversion is not supported.](./error/12703.md)
 ### [ORA-12719: operation requires database is in RESTRICTED mode](./error/12719.md)
 ### [ORA-12838: cannot read/modify an object after modifying it in parallel](./error/12838.md)

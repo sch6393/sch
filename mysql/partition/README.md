@@ -118,6 +118,12 @@ open_files_limit	65535
 <br>
 
 ### 주의점
+1. 파티션 생성 조건
+    * 파티셔닝 키가 정수 또는 정수로 해석되는 식이여야만 함
+    * 2가지 예외
+      1. LINEAR 파티션일 경우 `TEXT`, `BLOB` 이외의 데이터 형식을 키로 사용 가능
+      1. RANGE, LIST 파티션일 경우 문자열, `DATE`, `DATETIME` 형식을 키로 사용 가능. 단 `TEXT`, `BLOB` 는 예외
+
 1. 테이블을 파일 단위로 관리하고 있기 때문에 파티션 테이블의 경우 파티션 수 만큼 열어야 함
     ```sql
     SHOW VARIABLES LIKE 'open_files_limit';

@@ -365,7 +365,13 @@ InnoDB Cluster
       ```
 
 * `OFFLINE` 상태가 됐을 때 복구 방법
-  1. 클러스터 상태 확인 후 `ONLINE` 인 서버로 접속해 쉘에서 클러스터를 변경
+  1. 클러스터 상태 확인 후 `ONLINE` 인 서버로 접속해 `OFFLINE` 상태인 노드를 REJOIN
+      ```
+      var c = dba.getCluster();
+      c.rejoinInstance('hostname_missing:3306');
+      ```
+
+  1. REJOIN에 실패했다면 클러스터를 변경
       ```
       var c = dba.getCluster();
       c.forceQuorumUsingPartitionOf('mysql_user@hostname_online:3306','password');

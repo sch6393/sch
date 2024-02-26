@@ -30,15 +30,20 @@ sqlldr USERID=user_name/password CONTROL='/AAA/BBB/CCC.ctl' LOG='/AAA/BBB/CCC.lo
 
 ### 기타 옵션
 ```sql
-DIRECT = TRUE,         --다이렉트 모드
+DIRECT = TRUE,         --모드 설정 (TRUE로 할 경우 다이렉트 모드, 설정하지 않으면 Conventional 모드)
 MULTITHREADING = TRUE, --멀티스레딩 처리 (다이렉트 모드에서만 사용 가능)
 PARALLEL = TRUE        --병렬처리
 ```
-|||
-|-|-|
-|Conventional|SGA 메모리 사용 (대기가 발생할 가능성이 있음, 다이렉트보다 느림)|
-|Direct|PGA 메모리를 사용|
->다이렉트 모드를 사용하면 Path used 값이 Conventional이 아닌 Direct로 됨.
+
+|비교 목록|Conventional|Direct|
+|-|-|-|
+|속도|느림|빠름|
+|Lock|Row Level|Table Level|
+|Redo 로그 생성|항상|아카이브 모드에서만 생성|
+|제약조건 검증|모든 제약조건 가능|PK, UK, Not Null만 가능|
+|클러스터 테이블|가능|불가능|
+|트리거 동작|가능|불가능|
+|메모리|SGA|PGA|
 
 <br>
 

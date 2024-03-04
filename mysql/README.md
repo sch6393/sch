@@ -37,6 +37,7 @@ MySQL
 ### [Spatial](./spatial/README.md)
 ### [SQL Mode](./sql-mode/README.md)
 ### [Table](./table/README.md)
+### [Tablespace](./tablespace/README.md)
 ### [Time Zone](./time-zone/README.md)
 ### [User](./user/README.md)
 ### [View](./view/README.md)

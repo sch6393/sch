@@ -5,6 +5,7 @@ Parameter
 ### [binlog_row_image](./parameter/binlog_row_image.md)
 ### [group_concat_max_len](./parameter/group_concat_max_len.md)
 ### [innodb_additional_mem_pool_size](./parameter/innodb_additional_mem_pool_size.md)
+### [innodb_autoextend_increment](./parameter/innodb_autoextend_increment.md)
 ### [innodb_buffer_pool_chunk_size](./parameter/innodb_buffer_pool_chunk_size.md)
 ### [innodb_buffer_pool_instances](./parameter/innodb_buffer_pool_instances.md)
 ### [innodb_buffer_pool_size](./parameter/innodb_buffer_pool_size.md)

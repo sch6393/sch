@@ -87,6 +87,11 @@ GRANT UNLIMITED TABLESPACE to owner_name;
 
 <br>
 
+### RDS에서의 Tablespace
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.CommonDBATasks.Database.html
+
+<br>
+
 ### 구조 설명
 * 데이터 할당
   |종류|설명|

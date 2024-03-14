@@ -50,6 +50,7 @@ Oracle
 ### [Synonym](./synonym/README.md)
 ### [Table](./table/README.md)
 ### [Tablespace](./tablespace/README.md)
+### [Temporary Table](./temporary-table/README.md)
 ### [Trace](./trace/README.md)
 ### [Trigger](./trigger/README.md)
 ### [User](./user/README.md)

@@ -70,6 +70,7 @@ oerr sp2 591
 ### [ORA-30036: ORA-30036: unable to extend segment by %s in undo tablespace '%s'](./error/30036.md)
 ### [ORA-30052: invalid lower limit snapshot expression](./error/30052.md)
 ### [ORA-30926: unable to get a stable set of rows in the source tables](./error/30926.md)
+### [ORA-32463: cannot create an object with a name matching private temporary table prefix](./error/32463.md)
 ### [ORA-38029: object statistics are locked](./error/38029.md)
 ### [ORA-38104: Columns referenced in the ON Clause cannot be updated: %s](./error/38104.md)
 ### [ORA-39002: invalid operation, ORA-39070: Unable to open the log file., ORA-29283: invalid file operation, ORA-06512: at "SYS.UTL_FILE", line 536, ORA-29283: invalid file operation](./error/expdp.md)

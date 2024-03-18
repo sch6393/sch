@@ -10,11 +10,11 @@ innodb_use_sys_malloc
 ```sql
 SHOW VARIABLES WHERE VARIABLE_NAME LIKE 'innodb_use_sys_malloc';
 /*
-+-----------------------+----------+
-| Variable_name         | Value    |
-+-----------------------+----------+
-| innodb_use_sys_malloc | 16777216 |
-+-----------------------+----------+
++-----------------------+-------+
+| Variable_name         | Value |
++-----------------------+-------+
+| innodb_use_sys_malloc | ON    |
++-----------------------+-------+
 1 row in set (0.01 sec)
 */
 ```

@@ -65,6 +65,30 @@ expdp id/pw NETWORK_LINK=dblink_name TABLES=schema_name.table_name DIRECTORY=dir
     ```sql
     --압축할 데이터 지정
     COMPRESSION=ALL | DATA_ONLY | METADATA_ONLY | NONE
+
+    --갱신 내용 표시 (ATTACH의 STATUS에 설정된 시간 간격으로 갱신, 기본값은 실시간)
+    STATUS
+
+    --병렬 처리 지정 (단 지정된 갯수 만큼 데이터 파일을 만들어줘야 함)
+    PARALLEL=4
+
+    --%U로 자동으로 갯수를 맞춰줄 수 있음
+    expdp id/pw SCHEMAS=schema_name DIRECTORY=directory_name DUMPFILE=dumpfile_%U.dmp PARALLEL=4
+
+    --해당 작업에 특정 이름 지정
+    JOB_NAME=job_name
+
+    --위에서 지정한 이름으로 접근이 가능
+    ATTACH id/pw JOB_NAME=job_name
+
+    --ATTACH 접근 후 사용할 수 있는 옵션
+    ADD_FILE  : 덤프 파일 추가
+    PARALLEL  : 병렬 처리 지정
+    KILL_JOB  : 작업 삭제
+    START_JOB : 작업 재시작
+    STOP_JOB  : 작업 중단
+    EXIT      : 나가기
+    STATUS    : 갱신 시간 지정
     ```
 
 <br>
@@ -146,5 +170,25 @@ impdp id/pw DIRECTORY=directory_name DUMPFILE=dumpfile.dmp TABLES=schema_name.ta
     --제외할 데이터 (TABLE, INDEX, CONSTRAINT, GRANT)
     EXCLUDE=INDEX
     ```
+1. 기타 옵션
+    ```sql
+    --병렬 처리 지정 (단 지정된 갯수 만큼 데이터 파일을 지정해줘야 함)
+    PARALLEL=4
+
+    --%U로 자동으로 지정할 수 있음
+    impdp id/pw DIRECTORY=directory_name DUMPFILE=dumpfile_%U.dmp PARALLEL=4
+    ```
+
+<br>
+
+### 남은 시간 확인
+```sql
+SELECT SID, SERIAL#, OPNAME, SOFAR, TOTALWORK
+FROM V$SESSION_LONGOPS
+WHERE
+    OPNAME = 'DATAPUMP2'
+    AND SOFAR <> TOTALWORK
+;
+```
 
 <br>

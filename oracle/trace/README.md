@@ -68,3 +68,32 @@ REVOKE PLUSTRACE TO owner_name;
 ```
 
 <br>
+
+### SQL Trace
+```sql
+--1. SQL TRACE 활성화 (세션 레벨)
+ALTER SESSION SET SQL_TRACE = TRUE;
+ALTER SESSION SET EVENTS '10046 trace name context forever, level 12';
+
+--2. 파일 구분자 설정
+ALTER SESSION SET TRACEFILE_IDENTIFIER='identifier';
+
+--3. 쿼리 실행
+SELECT * FROM owner_name.table_name;
+
+--4. SQL TRACE 비활성화
+ALTER SESSION SET SQL_TRACE = FALSE;
+
+--5. 파일 확인
+sid_ora_processid_identifier.trc 
+
+--6. 파일 변환
+tkprof tracefile outputfile
+```
+
+<br>
+
+### SQL Trace 주의점
+* SQL Trace를 사용할 때 인스턴스 레벨과 세션 레벨을 선택할 수 있는데 인스턴스 레벨이면 데이터베이스 전체 퍼포먼스가 20 ~ 30% 감소하므로 세션 레벨로 생성하는 것이 좋음
+
+<br>

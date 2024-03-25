@@ -173,5 +173,7 @@ unique_checks=0
 ### 참고
 * [GTID](../gtid/README.md)
 * [Replication](../replication/README.md)
+* [mysqlshell dump](../mysql-shell-dump/README.md)
+* [mysqldump, mysqlpump, mydumper, mysqlshell dump의 차이](../mysqldump-pump-dumper-shell/README.md)
 
 <br>

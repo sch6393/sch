@@ -131,6 +131,9 @@ util.loadDump("/directory_name", {option_name1:value, option_name2:value, ... })
 |`s3Region`|S3 Region 지정 (Config 파일에 설정되어 있다면 불필요)|
 |`s3EndpointOverride`||
 >[AWS CLI](../../aws/cli/README.md)를 설치, 설정해야 하고 해당 계정에 대해 [S3](../../aws/s3/README.md) 권한이 있어야 함
+```sh
+mysqlsh root@localhost -e 'util.dumpInstance("Folder Name",{s3bucketName: "Bucket Name"})'
+```
 
 <br>
 

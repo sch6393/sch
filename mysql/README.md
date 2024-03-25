@@ -23,6 +23,7 @@ MySQL
 ### [Log](./log/README.md)
 ### [mysql](./mysql/README.md)
 ### [mysql Shell](./mysql-shell/README.md)
+### [mysql Shell Dump](./mysql-shell-dump/README.md)
 ### [mysqlbinlog](./mysqlbinlog/README.md)
 ### [mysqld](./mysqld/README.md)
 ### [mysqldump](./mysqldump/README.md)

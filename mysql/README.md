@@ -22,6 +22,7 @@ MySQL
 ### [Load Data](./load-data/README.md)
 ### [Log](./log/README.md)
 ### [mysql](./mysql/README.md)
+### [mysql Shell](./mysql-shell/README.md)
 ### [mysqlbinlog](./mysqlbinlog/README.md)
 ### [mysqld](./mysqld/README.md)
 ### [mysqldump](./mysqldump/README.md)

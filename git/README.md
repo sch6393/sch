@@ -7,6 +7,9 @@ git config --global user.name "Son ChangHan"
 git config --global user.email sch6393@gmail.com
 
 git config --global commit.template .gitmessage.txt
+
+# 파일, 폴더 이름의 대소문자를 구분하도록 함
+git config --global core.ignorecase
 ```
 
 <br>

@@ -16,6 +16,13 @@ ALTER TABLE schema_name.table_name ADD INDEX index_name(column_name1, column_nam
 
 <br>
 
+### 이름 변경
+```sql
+ALTER TABLE schema_name.table_name RENAME INDEX index_name_old TO index_name_new;
+```
+
+<br>
+
 ### 확인
 ```sql
 SHOW INDEX FROM schema_name.table_name;

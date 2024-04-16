@@ -63,7 +63,7 @@ InnoDB 클러스터의 구성요소이며 애플리케이션과 MySQL 사이의 
 |-|-|
 |`first-available`|새 연결이 있을 경우 사용 가능한 서버들 중 가장 첫번째 서버로 라우팅. 오류가 발생했다면 그 다음 서버로 라우팅.|
 |`next-available`|`first-available` 과 같이 새 연결이 있을 경우 사용 가능한 서버들 중 가장 첫번째 서버로 라우팅하지만 오류가 발생했다면 오류가 발생한 서버는 라우팅 대상 서버에서 아예 제외되는 특징을 가짐. 라우터를 재기동하면 서버 리스트 초기화|
-|`round-robin`|[`round-robin`](../../../etc/cpu-scheduling/README.md#preemptive-알고리즘) 로직으로 Primary, Secondary 관계 없이 사용 가능한 서버를 사용|
+|`round-robin`|[`round-robin`](../../etc/cpu-scheduling/README.md#preemptive-알고리즘) 로직으로 Primary, Secondary 관계 없이 사용 가능한 서버를 사용|
 |`round-robin-with-fallback`|`round-robin` 과 같은 로직으로 동작하지만 Secondary 서버만 사용함. Secondary 서버에 오류가 있다면 Primary 서버 리스트를 사용|
 >https://dev.mysql.com/doc/mysql-router/8.0/en/mysql-router-conf-options.html#option_mysqlrouter_routing_strategy
 

@@ -112,7 +112,7 @@ util.loadDump("/directory_name", {option_name1:value, option_name2:value, ... })
 ### 백업 옵션 설명
 |OPTION|DESCRIPTION|
 |-|-|
-|`thread`|지정한 스레드 수 만큼 병렬로 작업|
+|`threads`|지정한 스레드 수 만큼 병렬로 작업|
 |`compression`|`zstd` : zstd 방식으로 압축 (기본 값)<br>`gzip` : gzip 방식으로 압축|
 |`dryRun`|`true` : 실행 전 호환성 체크를 함 (Dump가 실행되지는 않음)<br>`false` : 실행 전 호환성 체크를 하지 않음 (Dump가 실행되지는 않음) (기본 값)|
 |`showProgress`|`true` : Dump 실행 시 진행 정보 출력 (기본 값)<br>`false` : 진행 정보 출력 하지 않음|
@@ -140,7 +140,7 @@ mysqlsh root@localhost -e 'util.dumpInstance("Folder Name",{s3bucketName: "Bucke
 ### 복원 옵션 설명
 |OPTION|DESCRIPTION|
 |-|-|
-|`thread`|지정한 스레드 수 만큼 병렬로 작업|
+|`threads`|지정한 스레드 수 만큼 병렬로 작업|
 |`skipBinlog`|`true` : Load할 때 바이너리 로그를 비활성화<br>`false` : Load할 때 바이너리 로그를 활성화|
 |`ignoreExistingObjects`|`true` : 테이블이 존재할 경우 무시하고 데이터를 Load<br>`false` : 테이블이 존재할 경우 에러 표시 (기본 값)|
 |`ignoreVersion `|`true` : Dump한 데이터베이스 버전과 Load할 데이터베이스 버전이 달라도 진행<br>`false` : 데이터베이스 버전이 다르다면 에러 표시|

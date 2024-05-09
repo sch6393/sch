@@ -53,3 +53,17 @@ git remote set-url origin https://github.com/sch6393/sch.git
 ```
 
 <br>
+
+### git unset
+```
+# 로컬 언셋
+git config --local --unset credential.helper  
+
+# 글로벌 언셋
+git config --global --unset credential.helper 
+
+# 시스템 언셋 
+git config --system --unset credential.helper
+```
+
+<br>

@@ -18,6 +18,7 @@ oerr sp2 591
 ### [ORA-00959: tablespace '%s' does not exist](./error/00959.md)
 ### [ORA-00972: identifier is too long](./error/00972.md)
 ### [ORA-00988: missing or invalid password(s)](./error/00988.md)
+### [ORA-00997: illegal use of LONG datatype](./error/00997.md)
 ### [ORA-01008: not all variables bound](./error/01008.md)
 ### [ORA-01013: user requested cancel of current operation](./error/01013.md)
 ### [ORA-01017: invalid username/password; logon denied](./error/01017.md)

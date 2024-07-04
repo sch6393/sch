@@ -7,5 +7,6 @@ AWS
 ### [DMS](./dms/README.md)
 ### [ELB](./elb/README.md)
 ### [Glue](./glue/README.md)
+### [IAM](./iam/README.md)
 ### [RDS](./rds/README.md)
 ### [S3](./s3/README.md)

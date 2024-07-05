@@ -8,7 +8,7 @@ CDK
 <br>
 
 ### 구조
-<img src="AppStacks.png">
+<img src="./AppStacks.png">
 
 >https://docs.aws.amazon.com/cdk/v2/guide/home.html
 
@@ -37,6 +37,10 @@ CDK
 >https://docs.aws.amazon.com/cdk/api/v2/
 
 >https://github.com/aws-samples/aws-cdk-examples
+
+<br>
+
+### [Example (JavaScript, TypeScript)](./example/README.md)
 
 <br>
 

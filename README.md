@@ -9,6 +9,7 @@ sch Document
 ### [ETC](./etc/README.md)
 ### [Flutter](./flutter/README.md)
 ### [git](./git/README.md)
+### [JavaScript](./js/README.md)
 ### [Linux](./linux/README.md)
 ### [Markdown](https://ja.wikipedia.org/wiki/Markdown)
 ### [MySQL](./mysql/README.md)

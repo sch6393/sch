@@ -17,5 +17,6 @@ sch Document
 ### [Python](./python/README.md)
 ### [REST API](rest-api/README.md)
 ### [Shell](./shell/README.md)
+### [Terraform](./terraform/README.md)
 ### [UiPath](./uipath/README.md)
 ### [Vue](./vue/README.md)

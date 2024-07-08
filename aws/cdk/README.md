@@ -52,7 +52,7 @@ CDK
 <br>
 
 ### 다른 IaC 서비스 툴
-1. Terraform
+1. [Terraform](../../terraform/README.md)
 1. CloudFormation
 
 <br>

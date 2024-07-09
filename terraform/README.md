@@ -16,7 +16,7 @@ Terraform
 
     테라폼과 외부 서비스를 연결해주는 기능을 하는 모듈. 예를 들어 AWS, 구글 클라우드 플랫폼 (Google Cloud Platform), Microsoft Azure와 같은 범용 클라우드 서비스를 포함해 깃허브와 같은 특정 기능을 제공하는 서비스, MySQL, Docker와 같은 로컬 서비스 등을 지원
 
-1. 리소스(자원)Resource
+1. 리소스 (Resource)
     리소스란 특정 프로바이더가 제공하는 조작 가능한 대상의 최소 단위. 예를 들어 AWS 프로바이더라면 VPC나 EC2 인스턴스, RDS, 키 페어 등이 AWS 프로바이더가 제공해주는 리소스 타입에 해당
 
 1. HCL (Hashicorp Configuration Language)
@@ -35,6 +35,7 @@ Terraform
 
 ### 시작
 * [Terraform](https://developer.hashicorp.com/terraform/install?product_intent=terraform) 다운로드 후 환경변수 설정
+* AWS CLI가 없어도 테라폼 기동 자체에는 문제가 없음
 
 <br>
 
@@ -51,6 +52,10 @@ Terraform
       # profile이 있다면 입력. 없다면 ./aws/credentials 의 정보를 이용함
       profile = "sch6393"
       region = "us-east-1"
+
+      # 직접 지정할 경우 (보안 문제가 발생할 위험이 큼, 테스트로만 사용할 것)
+      # access_key = ""
+      # secret_key = ""
     }
 
     # Resource (인프라 자원)
@@ -132,5 +137,9 @@ terraform destroy
 
 ### 리소스 및 Example 코드 확인
 >https://registry.terraform.io/
+
+<br>
+
+### [모듈화](./module/README.md)
 
 <br>

@@ -6,6 +6,7 @@ etc
 ---
 
 ### [B Tree](./btree/README.md)
+### [CIDR](./cidr/README.md)
 ### [CPU Scheduling](./cpu-scheduling/README.md)
 ### [IP Class](./ip-class/README.md)
 ### [Isolation Level](./isolation-level/README.md)

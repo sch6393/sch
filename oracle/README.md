@@ -31,6 +31,7 @@ Oracle
 ### [Install Oracle Client](./install-oracle-client/README.md)
 ### [Latch](./latch/README.md)
 ### [Literal SQL](./literal-sql/README.md)
+### [LOB](./lob/README.md)
 ### [Merge Into](./merge-into/README.md)
 ### [NLS Parameter](./nls-parameter/README.md)
 ### [Parameter](./parameter.md)

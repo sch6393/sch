@@ -1,5 +1,7 @@
 Terraform Module
 ===
+>https://registry.terraform.io/namespaces/hashicorp
+
 >https://registry.terraform.io/browse/modules
 
 >https://github.com/terraform-aws-modules
@@ -108,12 +110,13 @@ module "ID_NAME" {
 * 디렉토리 구조
   ```
   terraform-project
-  ├ modules
-  │ ├ cluster
-  │ │ └ https://github.com/terraform-aws-modules/terraform-aws-rds
-  │ ├ vpc
-  │ │ └ https://github.com/terraform-aws-modules/terraform-aws-vpc
-  │ …
+  ├ .terraform
+  │  └ modules
+  │      ├ cluster
+  │      │  └ https://github.com/terraform-aws-modules/terraform-aws-rds
+  │      ├ vpc
+  │      │  └ https://github.com/terraform-aws-modules/terraform-aws-vpc
+  │      …
   │
   └ main.tf
   ```

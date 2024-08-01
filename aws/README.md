@@ -1,6 +1,11 @@
 AWS
 ===
 
+### 대략적인 비용 계산
+>https://calculator.aws/#/
+
+<br>
+
 ### [Athena](./athena/README.md)
 ### [CDK](./cdk/README.md)
 ### [CLI](./cli/README.md)

@@ -100,3 +100,33 @@ Archive
     ```
 
 <br>
+
+### 아카이브 로그 삭제
+1. RMAN 접속
+    ```sql
+    --오라클 유저로 변경
+    su - oracle_user;
+
+    --RMAN 접속
+    rman target /
+    ```
+
+1. 아래 명령어를 확인해 필요한 작업 실행
+    ```sql
+    --아카이브 로그 리스트 확인
+    list archivelog all;
+    
+    --아카이브 로그 삭제 (Expired는 삭제되지 않음)
+    delete archivelog all;
+
+    --시간 기준으로 아카이브 로그 삭제
+    delete archivelog until time 'sysdate - 7' all;
+
+    --Expired된 아카이브 로그 삭제
+    delete expired archivelog all;
+
+    --아카이브 로그 크로스체크
+    crosscheck archivelog all;
+    ```
+
+<br>

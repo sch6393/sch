@@ -37,7 +37,7 @@ REST API
 1. URI 마지막 문자로 `/` 가 없도록 함
 1. URI에 확장자를 포함하지 않도록 함 (Accept Header를 사용)
 1. `_` 대신 `-` 를 사용
-1. 소문자로만 구성 ([https://www.rfc-editor.org/rfc/rfc3986](https://www.rfc-editor.org/rfc/rfc3986))
+1. 소문자로만 구성 (https://www.rfc-editor.org/rfc/rfc3986)
 1. Collection과 Document로 표현할 것
 
 <br>

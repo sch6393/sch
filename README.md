@@ -17,7 +17,6 @@ sch Document
 ### [Oracle](./oracle/README.md)
 ### [PostgreSQL](./postgresql/README.md)
 ### [Python](./python/README.md)
-### [REST API](rest-api/README.md)
 ### [Shell](./shell/README.md)
 ### [Terraform](./terraform/README.md)
 ### [UiPath](./uipath/README.md)

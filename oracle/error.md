@@ -1,5 +1,6 @@
 Error
 ===
+>https://docs.oracle.com/en/error-help/db/
 
 ### 에러 코드 확인
 ```
@@ -64,6 +65,7 @@ oerr sp2 591
 ### [ORA-14511: cannot perform operation on a partitioned object](./error/14511.md)
 ### [ORA-14701: partition-extended name or bind variable must be used for DMLs on tables partitioned by the System method](./error/14701.md)
 ### [ORA-19573: cannot obtain %s enqueue for datafile %s](./error/19573.md)
+### [ORA-22835: Buffer too small for CLOB to CHAR or BLOB to RAW conversion (actual: %s, maximum: %s)](./error/22835.md)
 ### [ORA-22858: invalid alteration of datatype](./error/22858.md)
 ### [ORA-22868: table with LOBs contains segments in different tablespaces](./error/22868.md)
 ### [ORA-24344: success with compilation error](./error/24344.md)

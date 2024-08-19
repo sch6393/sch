@@ -2,7 +2,12 @@ RDS Oracle
 ===
 
 ### AWS 메뉴얼
-* [https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/CHAP_Oracle.html](https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/CHAP_Oracle.html)
+>https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Oracle.html
+
+<br>
+
+### 라이센스별 지원 기능 차이
+>https://docs.aws.amazon.com/prescriptive-guidance/latest/evaluate-downgrading-oracle-edition/compare-features.html
 
 <br>
 

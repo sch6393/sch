@@ -59,5 +59,6 @@ ORDER BY INDEX_NAME, COLUMN_POSITION;
     FROM   DBA_IND_EXPRESSIONS
     WHERE  TABLE_OWNER = 'owner_name' AND TABLE_NAME = 'table_name';
     ```
+* [Bitmap Index](./bitmap-index/README.md)
 
 <br>

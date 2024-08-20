@@ -60,5 +60,6 @@ ORDER BY INDEX_NAME, COLUMN_POSITION;
     WHERE  TABLE_OWNER = 'owner_name' AND TABLE_NAME = 'table_name';
     ```
 * [Bitmap Index](./bitmap-index/README.md)
+* [Oracle Text Index](./oracle-text-index/README.md)
 
 <br>

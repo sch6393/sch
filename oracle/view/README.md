@@ -38,3 +38,7 @@ DROP VIEW owner_name.view_name;
 ```
 
 <br>
+
+### [Materialized View](./materialized-view/README.md)
+
+<br>

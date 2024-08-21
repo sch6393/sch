@@ -72,6 +72,7 @@ oerr sp2 591
 ### [ORA-24344: success with compilation error](./error/24344.md)
 ### [ORA-28000: The account is locked](./error/28000.md)
 ### [ORA-28040: No matching authentication protocol](./error/28040.md)
+### [ORA-29851: cannot build a domain index on more than one column](./error/29851.md)
 ### [ORA-30036: ORA-30036: unable to extend segment by %s in undo tablespace '%s'](./error/30036.md)
 ### [ORA-30052: invalid lower limit snapshot expression](./error/30052.md)
 ### [ORA-30926: unable to get a stable set of rows in the source tables](./error/30926.md)

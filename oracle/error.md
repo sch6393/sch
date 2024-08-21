@@ -15,6 +15,7 @@ oerr sp2 591
 ### [ORA-00439: feature not enabled: %s](./error/00439.md)
 ### [ORA-00900: invalid SQL statement](./error/00900.md)
 ### [ORA-00911: invalid character](./error/00911.md)
+### [ORA-00932: inconsistent datatypes: expected %s got %s](./error/00932.md)
 ### [ORA-00955: name is already used by an existing object](./error/00955.md)
 ### [ORA-00959: tablespace '%s' does not exist](./error/00959.md)
 ### [ORA-00972: identifier is too long](./error/00972.md)

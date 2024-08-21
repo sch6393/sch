@@ -52,6 +52,7 @@ oerr sp2 591
 ### [ORA-08180: no snapshot found based on specified time](./error/08180.md)
 ### [ORA-10631: SHRINK clause should not be specified for this object](./error/10631.md)
 ### [ORA-10636: ROW MOVEMENT is not enabled](./error/10636.md)
+### [ORA-12014: table '%s' does not contain a primary key constraint](./error/12014.md)
 ### [ORA-12162: TNS:net service name is incorrectly specified](./error/12162.md)
 ### [ORA-12537: TNS:connection closed](./error/12537.md)
 ### [ORA-12545: Connect failed because target host or object does not exist](./error/12545.md)

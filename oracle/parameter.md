@@ -31,6 +31,10 @@ ALTER SYSTEM SET parameter_name=value SCOPE=BOTH;
 
 <br>
 
+### [PFILE, SPFILE](./parameter/pfile-spfile/README.md)
+
+<br>
+
 ### [db_block_%](./parameter/db_block.md)
 ### [db_file_multiblock_read_count](./parameter/db_file_multiblock_read_count.md)
 ### [db_writer_processes](./parameter/db_writer_processes.md)

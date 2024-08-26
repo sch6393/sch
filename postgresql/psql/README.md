@@ -52,3 +52,10 @@ PGPASSWORD=password psql -U user_name -d database_name -f file_name.sql
 ```
 
 <br>
+
+### 덤프 파일로부터 복원
+```
+psql -h HOSTNAME -U USERNAME -p PORT -d DBNAME < /directory/dumpfile.dmp
+```
+
+<br>

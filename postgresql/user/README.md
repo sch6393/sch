@@ -3,6 +3,10 @@ User
 
 ### 확인
 ```sql
+--Shell
+\du
+
+--Query
 SELECT * FROM PG_USER;
 /*
  usename  | usesysid | usecreatedb | usesuper | userepl | usebypassrls |  passwd  | valuntil | useconfig
@@ -10,6 +14,8 @@ SELECT * FROM PG_USER;
  postgres |       10 | t           | t        | t       | t            | ******** |          |
 (1 rows)
 */
+
+SELECT * FROM PG_SHADOW;
 ```
 
 <br>

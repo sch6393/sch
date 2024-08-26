@@ -51,6 +51,12 @@ FROM
     SPFILE = '/directory_name/spfile_name.ora'
 ;
 
+--SPFILE을 따로 지정하지 않는다면 현재 적용 중인 SPFILE에서 PFILE로 변환함
+CREATE
+    PFILE = '/directory_name/init_pfile_name.ora'
+FROM
+    SPFILE;
+
 --PFILE을 기반으로 SPFILE 생성
 CREATE
     SPFILE = '/directory_name/spfile_name.ora'

@@ -73,6 +73,7 @@ PARAMETERS (
 <br>
 
 ### 관련 문서
+* 자세한 설명은 [해당 문서](./description.md) 참고
 * [ORA-29851](../../error/29851.md)
 
 <br>

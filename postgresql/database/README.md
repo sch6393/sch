@@ -23,7 +23,7 @@ SELECT * FROM PG_DATABASE;
 ```sql
 CREATE DATABASE database_name;
 
---특정 유저에 권한 부여
+--해당 유저에 종속
 CREATE DATABASE database_name WITH OWNER user_name;
 ```
 

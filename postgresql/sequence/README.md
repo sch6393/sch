@@ -47,6 +47,15 @@ DROP SEQUENCE seq_name;
 
 <br>
 
+### 시퀸스의 다른 속성 변경
+```sql
+ALTER SEQUENCE seq_name OWNER TO new_owner;
+ALTER SEQUENCE seq_name RENAME TO new_seq_name;
+ALTER SEQUENCE seq_name SET SCHEMA new_schema;
+```
+
+<br>
+
 ### 참고
 * [Serial](../serial/README.md)
 

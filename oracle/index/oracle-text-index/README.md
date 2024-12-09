@@ -47,7 +47,7 @@ CREATE INDEX owner_name.index_name ON owner_name.table_name(column_name) INDEXTY
 
 ### 조회
 ```sql
-SELECT COUNT(*) FROM owner_name.table_name WHERE CONTAINS(column_name, '%KETWORD') > 0;
+SELECT COUNT(*) FROM owner_name.table_name WHERE CONTAINS(column_name, '%KEYWORD') > 0;
 ```
 
 <br>
@@ -68,6 +68,45 @@ CREATE INDEX owner_name.index_name ON owner_name.table_name(column_name) INDEXTY
 PARAMETERS (
     'SYNC(EVERY SYSDATE + 1 / 24 / 60)' --1분
 );
+```
+
+<br>
+
+### 삭제
+```sql
+PURPOSE
+--------------------------------------------------------------------------------------------------
+Intermedia text 나 Oracle Text 를 사용할 때, Text index는 삭제되었는 데,  meta data가 삭제되지 않은
+경우가 생긴다. 이런 경우, 수동으로 meta data 까지 모두 삭제하는 방법을 알아보자.
+
+Explanation
+--------------------------------------------------------------------------------------------------
+이 방법은 잘못되는 경우 CTXSYS user를 다시 초기화 해야하는 문제가 발생할 수 있으므로 이를 감안하여
+작업해야 한다.
+
+수동으로 삭제하는 방법은 다음과 같은 절차를 이용하여 작업할 수 있다.
+1. 먼저 해당 user에서 다음과 같은 command로 index를 drop 해 본다.
+SQL> drop index INDEX_NAME force;
+2. drop command로 drop이 정상적으로 되지 않으면 다음과 같이 실행한다.
+sqlplus ctxsys/ctxsys
+
+select idx_id from dr$index where idx_name='<TEXT_INDEX_NAME>';
+=> 조회된 index id가 1092 인 경우 아래와 같이 실행한다.
+
+delete from dr$index_value where IXV_IDX_ID = 1092;
+delete from dr$index_object where IXO_IDX_ID = 1092;
+delete from dr$index where idx_id = 1092;
+commit;
+3. Text index를 생성한 user에서 DR$<index_name>$i 이름의 TABLE을 모두 다음과 같이 drop한다.
+SQL> drop table dr$<index_name>$i;
+SQL> drop table dr$<index_name>$k;
+SQL> drop table dr$<index_name>$n;
+SQL> drop table dr$<index_name>$r;
+4. 이제 해당 Text index를 다시 생성하면 된다.
+
+Reference Documents
+--------------------------------------------------------------------------------------------------
+<Note:133482.1>
 ```
 
 <br>

@@ -14,6 +14,7 @@ Oracle
 ### [Automatic Shared Memory Management (ASMM)](./automatic-shared-memory-management/README.md)
 ### [Block](./block/README.md)
 ### [CBO, RBO](./cbo-rbo/README.md)
+### [Compare-Features](./compare-features/README.md)
 ### [Compression](./compression/README.md)
 ### [Constraint](./constraint/README.md)
 ### [Datapump](./datapump/README.md)

@@ -86,7 +86,7 @@ Oracle Text는 텍스트 검색에 필요한 세 가지 유형의 인덱스가 �
 |`$K` (Keymap Table)|해당 테이블은 각 행 (텍스트 문서 포함) 이 단일 `DOCID / ROWID` 쌍으로 구성되어 있음. 내부 `DOCID` 값을 외부 `ROWID` 값에 매핑하고 효율적인 검색을 하기 위한 Index Organized 테이블|
 |`$R` (ROWID Table)|`$K` 테이블의 반대 검색 테이블. 즉, `DOCID` 값을 알 때 `ROWID` 를 가져오기 위해 설계된 테이블. 해당 테이블의 항목은 `DRC${index_name}$R` 형식의 이름을 가진 B Tree 인덱스를 사용하여 인덱싱됨|
 |`$N` (Negative List Table)|삭제된 `DOCID` 값 목록이 포함되어 있으며 해당 `DOCID` 값은 인덱스 최적화 프로세스에 의해 정리됨. 해당 테이블은 효율적인 정리 작업을 위해 인덱스로 구성된 테이블로 작성됨|
-|`$P`|P_TABLE_CLAUSE|
+|`$P` (Pattern Table)|P_TABLE_CLAUSE|
 |`$S`|S_TABLE_CLAUSE|
 |`$G`|텍스트 인덱스의 유지 보수 및 성능을 개선하는데에 사용되며 `$I` 테이블의 매개 역할을 함. 메모리 (버퍼 캐시) 에 보관될 수 있음|
 

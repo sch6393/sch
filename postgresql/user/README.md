@@ -58,6 +58,16 @@ CREATE ROLE user_name role_name;
 
 <br>
 
+### 슈퍼유저 권한 부여
+```sql
+ALTER ROLE user_name WITH SUPERUSER;
+
+# RDS PostgreSQL
+GRANT rds_superuser TO user_name;
+```
+
+<br>
+
 ### 권한 해제
 ```sql
 DROP ROLE user_name;

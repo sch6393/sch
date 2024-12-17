@@ -11,6 +11,7 @@ sch Document
 ### [Excel](./excel/README.md)
 ### [Flutter](./flutter/README.md)
 ### [git](./git/README.md)
+### [HAProxy](./haproxy/README.md)
 ### [JavaScript](./js/README.md)
 ### [Linux](./linux/README.md)
 ### [Markdown](https://ja.wikipedia.org/wiki/Markdown)

@@ -1,6 +1,7 @@
 PostgreSQL
 ===
 
+### [Cluster](./cluster/README.md)
 ### [Database](./database/README.md)
 ### [psql](./psql/README.md)
 ### [Schema](./schema/README.md)

@@ -10,6 +10,35 @@ Redo 로그는 DML이 발생하는 경우 오직 변경된 컬럼의 데이터�
 
 <br>
 
+### 분류
+* Supplemental Logging
+  * Database Level
+    * Minimal
+    * Identification Key
+      * Unconditional
+      * Conditional
+  * Table Level
+    * Identification
+      * Unconditional
+      * Conditional
+    * User Defined Groups
+      * Unconditional (With Always Keyword)
+      * Conditional (Without Always Keyword)
+
+|분류|범위|조건|로깅|
+|-|-|-|-|
+|Minimal|전체 테이블|한 개 이상 컬럼 변경 시|LogMinor가 동작하기 위한 최소한의 데이터|
+|Unconditional Database Level Identification Key|전체 테이블|한 개 이상 컬럼 변경 시|`ALL` : 모든 컬럼<br>`PRIMARY KEY` : PK 컬럼, 변경|
+|Conditional Database Level Identification Key|전체 테이블|UNIQUE INDEX, UNIQUE KEY 컬럼 변경 시|`UNIQUE` : UNIQUE INDEX, UNIQUE KEY 컬럼, 변경|
+|Conditional Database Level Identification Key|전체 테이블|FOREIGN KEY 컬럼 변경 시|`FOREIGN KEY` : FOREIGN KEY 컬럼, 변경|
+|Unconditional Table Level Identification Key|지정한 테이블|한 개 이상 컬럼 변경 시|`ALL` : 모든 컬럼<br>`PRIMARY KEY` : PK 컬럼, 변경|
+|Conditional Table Level Identification Key|지정한 테이블|UNIQUE INDEX, UNIQUE KEY 컬럼 변경 시|`UNIQUE` : UNIQUE INDEX, UNIQUE KEY 컬럼, 변경|
+|Conditional Table Level Identification Key|지정한 테이블|FOREIGN KEY 컬럼 변경 시|`FOREIGN KEY` : FOREIGN KEY 컬럼, 변경|
+|Unconditional Table Level User Defined Supplemental Log Groups|지정한 테이블|한 개 이상 컬럼 변경 시|`(COLUMN_NAME1, COLUMN_NAME2, ...) ALWAYS` : 사용자가 지정한 컬럼, 변경|
+|Conditional Table Level User Defined Supplemental Log Groups|지정한 테이블|사용자가 지정한 컬럼 변경 시|`(COLUMN_NAME1, COLUMN_NAME2, ...)` : 사용자가 지정한 컬럼, 변경|
+
+<br>
+
 ### 확인
 ```sql
 SELECT SUPPLEMENTAL_LOG_DATA_MIN FROM V$DATABASE;
@@ -42,6 +71,12 @@ ALTER TABLE owner_name.table_name ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMN
 
 --테이블의 특정 컬럼에 로깅 설정
 ALTER TABLE owner_name.table_name ADD SUPPLEMENTAL LOG DATA (column_name1, column_name2, ...);
+
+--로그 그룹
+ALTER DATABASE ADD SUPPLEMENTAL LOG GROUP group_name (column_name1, column_name2, ...);
+
+--로그 그룹 (ALWAYS)
+ALTER DATABASE ADD SUPPLEMENTAL LOG GROUP group_name (column_name1, column_name2, ...) ALWAYS;
 ```
 
 <br>

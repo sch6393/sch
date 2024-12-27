@@ -47,8 +47,6 @@ CREATE PRIVATE TEMPORARY TABLE ORA$PTT_table_name (
   ,column_name9  data_type
 ) ON COMMIT DROP DEFINITION;
 
-
-
 --삭제 (일반 테이블 삭제하는 것과 같음)
 DROP TABLE owner_name.table_name;
 ```
@@ -72,8 +70,8 @@ DROP TABLE owner_name.table_name;
 <br>
 
 ### 참고
-* [Table](../table/README.md)
-* [ORA-14451](../error/14451.md)
-* [ORA-32463](../error/32463.md)
+* [Table](../../table/README.md)
+* [ORA-14451](../../error/14451.md)
+* [ORA-32463](../../error/32463.md)
 
 <br>

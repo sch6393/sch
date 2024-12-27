@@ -8,7 +8,6 @@ Oracle
 
 ### [Active Duplication](./active-duplication/README.md)
 ### [Analyze](./analyze/README.md)
-### [Archive](./archive/README.md)
 ### [Automated Maintence Task](./automated-maintence-task/README.md)
 ### [Automatic Memory Management (AMM)](./automatic-memory-management/README.md)
 ### [Automatic Shared Memory Management (ASMM)](./automatic-shared-memory-management/README.md)
@@ -54,8 +53,6 @@ Oracle
 ### [Synonym](./synonym/README.md)
 ### [Table](./table/README.md)
 ### [Tablespace](./tablespace/README.md)
-### [Temporary Table](./temporary-table/README.md)
-### [Trace](./trace/README.md)
 ### [Trigger](./trigger/README.md)
 ### [User](./user/README.md)
 ### [View](./view/README.md)

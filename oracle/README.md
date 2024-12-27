@@ -34,6 +34,7 @@ Oracle
 ### [Latch](./latch/README.md)
 ### [Literal SQL](./literal-sql/README.md)
 ### [LOB](./lob/README.md)
+### [Log](./log/README.md)
 ### [Merge Into](./merge-into/README.md)
 ### [NLS Parameter](./nls-parameter/README.md)
 ### [Parameter](./parameter.md)

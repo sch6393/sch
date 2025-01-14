@@ -90,6 +90,10 @@ pgbackrest
     repo1-s3-key-secret=<s3-secret-key>
     repo1-s3-region=<default-region-name>
 
+    # KMS KEY
+    repo1-s3-key-type=<type>
+    repo1-s3-kms-key-id=<kms-key>
+
     [global:archive-push]
     compress-level=3
     ```

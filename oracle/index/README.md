@@ -25,6 +25,15 @@ DROP INDEX owner_name.index_name;
 ### Rebuild
 ```sql
 ALTER INDEX owner_name.index_name REBUILD;
+
+--PARALLEL
+ALTER INDEX owner_name.index_name REBUILD PARALLEL 8;
+ 
+-- INDEX REBUILD (PARALLEL + ONLINE)
+ALTER INDEX owner_name.index_name REBUILD ONLINE PARALLEL 8;
+ 
+-- INDEX REBUILD (PARALLEL + ONLINE + MOVE)
+ALTER INDEX owner_name.index_name REBUILD ONLINE PARALLEL 8 TABLESPACE tablespace_name;
 ```
 
 <br>

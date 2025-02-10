@@ -67,6 +67,14 @@ ALTER TABLE owner_name.table_name RENAME CONSTRAINT constraint_name to constrain
 
 <br>
 
+### 활성화 / 비활성화
+```sql
+ALTER TABLE owner_name.table_name ENABLE CONSTRAINT constraint_name;
+ALTER TABLE owner_name.table_name DISABLE CONSTRAINT constraint_name;
+```
+
+<br>
+
 ### 삭제
 ```sql
 ALTER TABLE owner_name.table_name DROP CONSTRAINT constraint_name;

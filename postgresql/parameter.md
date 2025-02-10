@@ -2,6 +2,8 @@ Parameter
 ===
 >https://www.postgresql.org/docs/current/config-setting.html
 
+>https://pgtune.leopard.in.ua/
+
 ### 파라미터 확인
 ```sql
 SHOW parameter_name;

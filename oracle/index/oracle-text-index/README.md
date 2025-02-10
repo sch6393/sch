@@ -2,7 +2,7 @@ Oracle Text
 ===
 
 ### 정의
-SQL 작성시 `LIKE` 연산을 자주 사용하는데 검색문자열 앞에 `%` 가 있는 경우에는 인덱스를 사용하지 않거나 Index Fast Full Scan을 사용함
+SQL 작성시 검색문자열 앞에 `%` 가 있는 경우에는 인덱스를 사용하지 않거나 Index Fast Full Scan을 사용함
 ```sql
 SELECT * FROM table_name WHERE column_name LIKE '%KEYWORD'; --검색 시간이 오래 걸림
 ```
@@ -74,40 +74,31 @@ PARAMETERS (
 
 ### 삭제
 ```sql
-PURPOSE
---------------------------------------------------------------------------------------------------
-Intermedia text 나 Oracle Text 를 사용할 때, Text index는 삭제되었는 데,  meta data가 삭제되지 않은
-경우가 생긴다. 이런 경우, 수동으로 meta data 까지 모두 삭제하는 방법을 알아보자.
+DROP INDEX owner_name.index_name;
 
-Explanation
---------------------------------------------------------------------------------------------------
-이 방법은 잘못되는 경우 CTXSYS user를 다시 초기화 해야하는 문제가 발생할 수 있으므로 이를 감안하여
-작업해야 한다.
+--Meta Data가 삭제되지 않은 경우
+--1. 강제 삭제 시도
+DROP INDEX owner_name.index_name FORCE;
 
-수동으로 삭제하는 방법은 다음과 같은 절차를 이용하여 작업할 수 있다.
-1. 먼저 해당 user에서 다음과 같은 command로 index를 drop 해 본다.
-SQL> drop index INDEX_NAME force;
-2. drop command로 drop이 정상적으로 되지 않으면 다음과 같이 실행한다.
-sqlplus ctxsys/ctxsys
+--2. 강제 삭제에 실패했을 경우 CTXSYS로 접속
+sqlplus ctxsys/pw
 
-select idx_id from dr$index where idx_name='<TEXT_INDEX_NAME>';
-=> 조회된 index id가 1092 인 경우 아래와 같이 실행한다.
+--3. 해당 인덱스 ID 검색
+SELECT IDX_ID FROM DR$INDEX WHERE IDX_NAME = 'index_name';
 
-delete from dr$index_value where IXV_IDX_ID = 1092;
-delete from dr$index_object where IXO_IDX_ID = 1092;
-delete from dr$index where idx_id = 1092;
-commit;
-3. Text index를 생성한 user에서 DR$<index_name>$i 이름의 TABLE을 모두 다음과 같이 drop한다.
-SQL> drop table dr$<index_name>$i;
-SQL> drop table dr$<index_name>$k;
-SQL> drop table dr$<index_name>$n;
-SQL> drop table dr$<index_name>$r;
-4. 이제 해당 Text index를 다시 생성하면 된다.
+--4. 해당 인덱스 ID를 가진 오브젝트 삭제
+DELETE FROM DR$INDEX_VALUE WHERE IXV_IDX_ID = idx_id;
+DELETE FROM DR$INDEX_OBJECT WHERE IXO_IDX_ID = idx_id;
+DELETE FROM DR$INDEX WHERE IDX_ID = idx_id;
+COMMIT;
 
-Reference Documents
---------------------------------------------------------------------------------------------------
-<Note:133482.1>
+--5. DR$TABLE 삭제
+DROP TABLE DR$index_name$I;
+DROP TABLE DR$index_name$K;
+DROP TABLE DR$index_name$N;
+DROP TABLE DR$index_name$R;
 ```
+>Doc ID 133482.1
 
 <br>
 

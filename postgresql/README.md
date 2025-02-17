@@ -8,6 +8,7 @@ PostgreSQL
 ### [Database](./database/README.md)
 ### [Extension](./extension/README.md)
 ### [Parameter](./parameter.md)
+### [pgbadger](./pgbadger/README.md)
 ### [psql](./psql/README.md)
 ### [Schema](./schema/README.md)
 ### [Sequence](./sequence/README.md)

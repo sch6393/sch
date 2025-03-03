@@ -8,12 +8,16 @@ SELINUX가 비활성화여야함. 각 OS의 SELINUX 비활성화 방법에 따�
 * https://docs.aws.amazon.com/linux/al2023/ug/disable-option-selinux.html#disable-selinux
 * https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/using_selinux/changing-selinux-states-and-modes_using-selinux#Enabling_and_Disabling_SELinux-Disabling_SELinux_changing-selinux-states-and-modes
 
+<br>
+
 ### 동작 로직
 >https://raft.github.io/
 
 Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
 
 때문에 ETCD의 최소 구성 노드 수는 3이 되고 안정적인 동작을 위해선 __3 이상의 홀수__ 여야 함
+
+<br>
 
 ### 설치
 * 해당 방법은 수동 설치를 기재 (EPEL 레포지토리가 활성화 되어 있다면 `dnf` 같은 패키지 설치가 가능하나 Amazon Linux 2023이라던지 지원하지 않는 경우는 수동 설치를 해야함
@@ -44,7 +48,6 @@ Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
     chown root:root /usr/bin/etcdutl
     ```
 
-
 1. 압축해제한 파일 삭제
     ```sh
     rm -rf /tmp/etcd-${ETCD_VER}-linux-amd64*
@@ -59,6 +62,8 @@ Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
     chown etcd:etcd /var/lib/etcd
     chmod 700 /var/lib/etcd
     ```
+
+<br>
 
 ### 설정파일
 1. 설정파일 작성
@@ -81,6 +86,8 @@ Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
     ```sh
     chown etcd:etcd /etc/etcd/etcd.conf
     ```
+
+<br>
 
 ### 서비스 설정
 1. 서비스 파일 작성
@@ -115,6 +122,8 @@ Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
     ```sh
     journalctl -u etcd
     ```
+
+<br>
 
 ### 동작 확인 및 사용 방법
 * 상태 확인
@@ -165,6 +174,8 @@ Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
     #1
     ```
 
+<br>
+
 ### 멤버 추가
 1. __「추가할 서버」__ etcd 설정 파일 작성
     ```sh
@@ -198,6 +209,8 @@ Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
 
 1. __「그 외 서버」__ (옵션) etcd 재시작
 
+<br>
+
 ### 멤버 삭제
 1. __「Leader 서버」__ MEMBER 삭제
     ```sh
@@ -213,6 +226,8 @@ Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
 
 1. __「그 외 서버」__ (옵션) etcd 재시작
 
+<br>
+
 ### 백업
 1. __「Leader 서버」__ 스냅샷 파일 작성
     ```sh
@@ -221,14 +236,20 @@ Raft Consensus 알고리즘을 사용. 자세한 내용은 해당 URL을 참조.
 
 1. 각 노드 설정파일 백업
 
+<br>
+
 ### 복원
 1. 스냅샷 파일 복원
     ```sh
     etcdctl snapshot restore /backup-directory/yyyymmdd-etcd-backup.db
     ```
 
+<br>
+
 ### 참고 링크
 * https://docs.redhat.com/en/documentation/openshift_container_platform/3.11/html/cluster_administration/assembly_replace-etcd-member
 * https://docs.redhat.com/en/documentation/openshift_container_platform/3.11/html/cluster_administration/assembly_restore-etcd-quorum
 * https://docs.microfocus.com/doc/SMAX/24.4/HASQLPatroni
 * https://docs.percona.com/postgresql/13/solutions/high-availability.html
+
+<br>

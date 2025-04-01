@@ -45,25 +45,29 @@ SELECT * FROM PG_EXTENTION;
 
 ### 설치
 ```sql
-CREATE EXTENSION extension-name;
+-- 확장 설치
+CREATE EXTENSION extension_name;
 
 -- PostgreSQL을 수동 설치 했을 경우
 -- 1. PostgreSQL을 설치할 때 사용한 소스 디렉토리/contrib 으로 이동
 cd /usr/local/src/postgresql-16/contrib
 
 -- 2. 해당 확장 디렉토리로 이동
-cd extension-name
+cd extension_name
 
 -- 3. Make, Install
 make -f Makefile
 make install
+
+-- 패키지로 설치 했을 경우
+dnf install postgresql-contrib
 ```
 
 <br>
 
 ### 삭제
 ```sql
-DROP EXTENSION extension-name;
+DROP EXTENSION extension_name;
 ```
 
 <br>

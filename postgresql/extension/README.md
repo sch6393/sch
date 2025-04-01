@@ -1,6 +1,11 @@
 Extension
 ===
 
+### 확장 리스트
+* [oracle_fdw](./oracle-fdw/README.md)
+
+<br>
+
 ### 확인
 ```sql
 \dx

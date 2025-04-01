@@ -15,6 +15,7 @@ PostgreSQL
 ### [Schema](./schema/README.md)
 ### [Sequence](./sequence/README.md)
 ### [Serial](./serial/README.md)
+### [Server](./server/README.md)
 ### [Session](./session/README.md)
 ### [Timezone](./timezone/README.md)
 ### [User](./user/README.md)

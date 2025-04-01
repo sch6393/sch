@@ -43,6 +43,7 @@ Oracle
 ### [Patch](./patch/README.md)
 ### [PCT](./pct/README.md)
 ### [Process](./process/README.md)
+### [Query Rewrite](./query-rewrite/README.md)
 ### [Regular Expression](./regular-expression/README.md)
 ### [Report](./report/README.md)
 ### [Row Level Lock](./row-level-lock/README.md)

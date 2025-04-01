@@ -104,6 +104,7 @@ DROP TABLE DR$index_name$R;
 
 ### 관련 문서
 * 자세한 설명은 [해당 문서](./description.md) 참고
+* Oracle Text 인덱스와 `%` 의 성능 비교는 [해당 문서](./performance.md) 참고
 * [ORA-29851](../../error/29851.md)
 
 <br>

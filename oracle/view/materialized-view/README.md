@@ -149,6 +149,8 @@ GRANT ALTER ANY MATERIALIZED VIEW TO owner_name_other; --전체 대상
 <br>
 
 ### 관련문서
+* [Dimension](../../dimension/README.md)
+* [Query Rewrite](../../query-rewrite/README.md)
 * [ORA-12014](../../error/12014.md)
 
 <br>

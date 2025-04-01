@@ -6,6 +6,7 @@ etc
 ---
 
 ### [B Tree](./btree/README.md)
+### [CHAR, VARCHAR](./char-varchar/README.md)
 ### [CIDR](./cidr/README.md)
 ### [CPU Scheduling](./cpu-scheduling/README.md)
 ### [End of Line](./eol/README.md)

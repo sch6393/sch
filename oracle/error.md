@@ -70,6 +70,7 @@ oerr sp2 591
 ### [ORA-22835: Buffer too small for CLOB to CHAR or BLOB to RAW conversion (actual: %s, maximum: %s)](./error/22835.md)
 ### [ORA-22858: invalid alteration of datatype](./error/22858.md)
 ### [ORA-22868: table with LOBs contains segments in different tablespaces](./error/22868.md)
+### [ORA-22998: CLOB or NCLOB in multibyte character set not supported](./error/22998.md)
 ### [ORA-24344: success with compilation error](./error/24344.md)
 ### [ORA-28000: The account is locked](./error/28000.md)
 ### [ORA-28040: No matching authentication protocol](./error/28040.md)

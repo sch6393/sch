@@ -18,6 +18,7 @@ Oracle
 ### [Constraint](./constraint/README.md)
 ### [Datapump](./datapump/README.md)
 ### [DB Link](./db-link/README.md)
+### [Dimension](./dimension/README.md)
 ### [Direct Path Load](./direct-path-load/README.md)
 ### [Enqueue](./enqueue/README.md)
 ### [Error](./error.md)

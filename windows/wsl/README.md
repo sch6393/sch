@@ -64,6 +64,13 @@ wsl --import NAME C:\wsl\NAME C:\wsl\export\exp_rocky_yyyymmdd
 
 <br>
 
+### 정지
+```ps
+wsl --terminate NAME
+```
+
+<br>
+
 ### 삭제
 ```ps
 wsl --unregister NAME

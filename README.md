@@ -23,4 +23,4 @@ sch Document
 ### [Terraform](./terraform/README.md)
 ### [UiPath](./uipath/README.md)
 ### [Vue](./vue/README.md)
-### [WSL](./wsl/README.md)
+### [Windows](./windows/README.md)

@@ -59,3 +59,25 @@ powershell.exe -ExecutionPolicy Bypass
 ```
 
 <br>
+
+### 암호를 별도 파일로 실행하는 방법
+1. 암호화된 텍스트 파일로 저장해서 실행
+    ```ps1
+    # 암호 입력
+    read-host -assecurestring | convertfrom-securestring | out-file "C:\password.txt"
+    *****
+
+    # 파일 읽기
+    $encrypted = Get-Content "C:\password.txt" | ConvertTo-SecureString
+    $ptr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($encrypted)
+    $userPW = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($ptr)
+    ```
+
+1. 실행할 때마다 직접 입력
+    ```ps1
+    # 스크립트 맨 위에 추가
+    $credential = Get-Credential -UserName "administrator" -Message "비밀번호 입력"
+    $userPW = $credential.GetNetworkCredential().Password
+    ```
+
+<br>

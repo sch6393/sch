@@ -1,26 +1,24 @@
-sch Document
-===
->[https://sch6393.github.io](https://sch6393.github.io)
+# sch Document
 
----
+### Setup
+* [MKDocs](https://www.mkdocs.org/)
+* [Python 3](https://www.python.org/downloads/)
 
-### [AWS](./aws/README.md)
-### [C#](./csharp/README.md)
-### [ETC](./etc/README.md)
-### [ETCD](./etcd/README.md)
-### [Excel](./excel/README.md)
-### [Flutter](./flutter/README.md)
-### [git](./git/README.md)
-### [HAProxy](./haproxy/README.md)
-### [JavaScript](./js/README.md)
-### [Linux](./linux/README.md)
-### [Markdown](https://ja.wikipedia.org/wiki/Markdown)
-### [MySQL](./mysql/README.md)
-### [Oracle](./oracle/README.md)
-### [PostgreSQL](./postgresql/README.md)
-### [Python](./python/README.md)
-### [Shell](./shell/README.md)
-### [Terraform](./terraform/README.md)
-### [UiPath](./uipath/README.md)
-### [Vue](./vue/README.md)
-### [Windows](./windows/README.md)
+### Local
+```py
+# Install
+pip install mkdocs mkdocs-material
+
+# Run
+mkdocs serve
+python -m mkdocs serve # No environment variable
+
+# Console Log
+INFO    -  Documentation built in 0.87 seconds
+INFO    -  [00:00:00] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [00:00:00] Serving on http://127.0.0.1:8000/
+INFO    -  [00:00:00] Browser connected: http://127.0.0.1:8000/
+```
+
+### Example
+* [https://github.com/sch6393/example-mkdocs](https://github.com/sch6393/example-mkdocs)

@@ -1,0 +1,17 @@
+site_name: sch Document
+site_url: https://sch6393.github.io/sch/
+repo_url: https://github.com/sch6393/sch
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+  language: ko

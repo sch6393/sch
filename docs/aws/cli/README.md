@@ -15,6 +15,15 @@ CLI
     Default output format : 
     ```
 
+* `aws sts get-caller-identity` 명령어로 인증정보 확인
+    ```
+    {
+      "UserId": "XXXXXXXXXXXXXXXXXXXXX",
+      "Account": "000000000000",
+      "Arn": "arn:aws:iam::000000000000:user/sonchanghan"
+    }
+    ```
+
 * `aws configure --profile profile_name` 명령어로 프로파일 설정
   * 프로파일 전환
     ```sh
@@ -27,7 +36,6 @@ CLI
     ```sh
     aws configure list
     ```
-    
 
 <br>
 

@@ -2,6 +2,7 @@ Extension
 ===
 
 ### 확장 리스트
+* [dblink](./dblink/README.md)
 * [oracle_fdw](./oracle-fdw/README.md)
 
 <br>
@@ -34,7 +35,7 @@ SELECT * FROM PG_AVAILABLE_EXTENSIONS;
 */
 
 -- 설치가 되어 있는 확장 목록
-SELECT * FROM PG_EXTENTION;
+SELECT * FROM PG_EXTENSION;
 /*
   oid  |      extname       | extowner | extnamespace | extrelocatable | extversion | extconfig | extcondition
 -------+--------------------+----------+--------------+----------------+------------+-----------+--------------

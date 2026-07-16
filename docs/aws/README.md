@@ -6,6 +6,7 @@ AWS
 
 ---
 
+### [Amplify](./amplify/README.md)
 ### [Athena](./athena/README.md)
 ### [CDK](./cdk/README.md)
 ### [CLI](./cli/README.md)
@@ -17,3 +18,4 @@ AWS
 ### [RDS](./rds/README.md)
 ### [S3](./s3/README.md)
 ### [Snapshot](./snapshot/README.md)
+### [SSM](./ssm/README.md)
